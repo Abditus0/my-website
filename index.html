@@ -869,11 +869,12 @@
         Whether you're looking for someone to join your IT or security team, or just want to connect — feel free to reach out.
       </p>
       <div class="contact-links reveal">
-        <a href="mailto:your@email.com" class="contact-link">
-  <div class="contact-link-icon"><i class="fa-solid fa-envelope" style="color: #EA4335;"></i></div>
-  <div class="contact-link-text">
-    <div class="contact-link-label">Email</div>
-    <div class="contact-link-val">hustle022@yahoo.com</div>
+  <div class="contact-link" onclick="copyEmail()" style="cursor: pointer;">
+    <div class="contact-link-icon"><i class="fa-solid fa-envelope" style="color: #EA4335;"></i></div>
+    <div class="contact-link-text">
+      <div class="contact-link-label">Email</div>
+      <div class="contact-link-val" id="email-val">hustle022@yahoo.com</div>
+    </div>
   </div>
 </a>
 <a href="https://www.linkedin.com/in/ivaylo-atanassov-072105176/" target="_blank" class="contact-link">
@@ -901,11 +902,9 @@
     <a href="#contact">Contact</a>
   </div>
 </footer>
-
 <script>
   // year
   document.getElementById('yr').textContent = new Date().getFullYear();
-
   // scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const obs = new IntersectionObserver((entries) => {
@@ -918,7 +917,6 @@
     });
   }, { threshold: 0.12 });
   reveals.forEach(r => obs.observe(r));
-
   // active nav highlight on scroll
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
@@ -932,6 +930,13 @@
         ? 'var(--blue)' : '';
     });
   });
+  // copy email
+  function copyEmail() {
+    navigator.clipboard.writeText("hustle022@yahoo.com");
+    const el = document.getElementById("email-val");
+    el.textContent = "Copied!";
+    setTimeout(() => el.textContent = "hustle022@yahoo.com", 2000);
+  }
 </script>
 </body>
 </html>
