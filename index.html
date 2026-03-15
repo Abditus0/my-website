@@ -425,12 +425,20 @@
       padding: 3px 10px; border-radius: 3px;
     }
     .project-link {
-      font-size: 0.78rem; color: var(--blue);
-      display: flex; align-items: center; gap: 4px;
-      transition: gap 0.2s;
-    }
-    .project-link:hover { gap: 8px; }
-
+  font-size: 0.78rem; color: var(--blue);
+  display: flex; align-items: center; gap: 4px;
+  transition: gap 0.2s;
+}
+.project-link:hover { gap: 8px; }
+.project-github-link {
+  position: absolute;
+  top: 16px; right: 16px;
+  color: var(--muted);
+  font-size: 1.3rem;
+  transition: color 0.2s;
+}
+.project-github-link:hover { color: var(--heading); }
+    
     /* ───────────────── BLOG ───────────────── */
     .blog-list {
       display: flex; flex-direction: column; gap: 2px;
@@ -773,46 +781,51 @@
     <div class="section-line"></div>
   </div>
 
-  <div class="projects-grid">
-    <div class="project-card reveal">
-      <div class="project-tag">// Project Type</div>
-      <div class="project-title">Project Title Here</div>
-      <div class="project-desc">Describe what this project does, the problem it solves, and what you learned or built. Replace this with your real project details.</div>
-      <div class="project-footer">
-        <div class="project-stack">
-          <span class="tag">Tool</span>
-          <span class="tag">Language</span>
-        </div>
-        <a href="#" class="project-link">View →</a>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-tag">// Project Type</div>
-      <div class="project-title">Project Title Here</div>
-      <div class="project-desc">Describe what this project does, the problem it solves, and what you learned or built. Replace this with your real project details.</div>
-      <div class="project-footer">
-        <div class="project-stack">
-          <span class="tag">Tool</span>
-          <span class="tag">Language</span>
-        </div>
-        <a href="#" class="project-link">View →</a>
-      </div>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-tag">// Project Type</div>
-      <div class="project-title">Project Title Here</div>
-      <div class="project-desc">Describe what this project does, the problem it solves, and what you learned or built. Replace this with your real project details.</div>
-      <div class="project-footer">
-        <div class="project-stack">
-          <span class="tag">Tool</span>
-          <span class="tag">Language</span>
-        </div>
-        <a href="#" class="project-link">View →</a>
+<div class="projects-grid">
+  <div class="project-card reveal">
+    <a href="https://github.com/yourusername/yourrepo" target="_blank" class="project-github-link">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <div class="project-tag">// Project Type</div>
+    <div class="project-title">Project Title Here</div>
+    <div class="project-desc">Your description here.</div>
+    <div class="project-footer">
+      <div class="project-stack">
+        <span class="tag">Tool</span>
+        <span class="tag">Tool</span>
       </div>
     </div>
   </div>
+  <div class="project-card reveal">
+    <a href="https://github.com/yourusername/yourrepo" target="_blank" class="project-github-link">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <div class="project-tag">// Project Type</div>
+    <div class="project-title">Project Title Here</div>
+    <div class="project-desc">Your description here.</div>
+    <div class="project-footer">
+      <div class="project-stack">
+        <span class="tag">Tool</span>
+        <span class="tag">Tool</span>
+      </div>
+    </div>
+  </div>
+  <div class="project-card reveal">
+    <a href="https://github.com/yourusername/yourrepo" target="_blank" class="project-github-link">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <div class="project-tag">// Project Type</div>
+    <div class="project-title">Project Title Here</div>
+    <div class="project-desc">Your description here.</div>
+    <div class="project-footer">
+      <div class="project-stack">
+        <span class="tag">Tool</span>
+        <span class="tag">Tool</span>
+      </div>
+    </div>
+  </div>
+</div>
 </section>
-
 <!-- ─── BLOG ─── -->
 <section id="blog">
   <div class="section-header reveal">
