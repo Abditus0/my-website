@@ -374,15 +374,17 @@
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
     }
-    .project-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 32px;
-      display: flex; flex-direction: column;
-      transition: border-color 0.25s, box-shadow 0.25s;
-      position: relative; overflow: hidden;
-    }
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 32px;
+  display: flex; flex-direction: column;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  position: relative; overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
     .project-card::after {
       content: '';
       position: absolute; inset: 0;
