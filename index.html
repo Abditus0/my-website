@@ -1123,16 +1123,6 @@
     el.textContent = "Copied!";
     setTimeout(() => el.textContent = "hustle022@yahoo.com", 2000);
   }
-  const barObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      setTimeout(() => document.getElementById('secplus-bar').style.width = '65%', 300);
-      barObs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.5 });
-const secBar = document.getElementById('secplus-bar');
-if (secBar) barObs.observe(secBar);
 </script>
 </body>
 </html>
