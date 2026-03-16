@@ -228,13 +228,13 @@
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s, background 0.25s, box-shadow 0.25s;
   position: relative;
 }
-.stat:hover {
+a.stat:hover {
   transform: scale(1.1) translateY(-4px);
   border-color: var(--border-hi);
   background: rgba(0,178,255,0.04);
   box-shadow: 0 8px 32px rgba(0,178,255,0.1);
 }
-.stat::after {
+a.stat::after {
   content: '↓';
   position: absolute; bottom: -2px; right: 16px;
   font-family: 'DM Mono', monospace;
@@ -242,14 +242,14 @@
   opacity: 0; transform: translateY(-4px);
   transition: opacity 0.2s, transform 0.2s;
 }
-.stat:hover::after { opacity: 1; transform: translateY(0); }
+a.stat:hover::after { opacity: 1; transform: translateY(0); }
 .stat-num {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 4rem; font-weight: 800;
   color: var(--heading); line-height: 1;
   transition: color 0.2s;
 }
-.stat:hover .stat-num { color: var(--blue); }
+a.stat:hover .stat-num { color: var(--blue); }
 .stat-num span { color: var(--blue); }
 .stat-label {
   font-family: 'DM Mono', monospace;
@@ -258,7 +258,7 @@
   margin-top: 4px;
   transition: color 0.2s;
 }
-.stat:hover .stat-label { color: var(--text); }
+a.stat:hover .stat-label { color: var(--text); }
 
     /* ───────────────── SECTIONS ───────────────── */
     section {
