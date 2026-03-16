@@ -212,24 +212,53 @@
     }
     .btn-secondary:hover { background: var(--blue-dim); border-color: var(--blue); color: var(--heading); }
 
-    .hero-stats {
-      position: absolute; right: clamp(24px, 8vw, 120px); bottom: 80px;
-      display: flex; flex-direction: column; gap: 32px;
-      opacity: 0; animation: fadeLeft 0.8s 0.8s forwards;
-    }
-    .stat { text-align: right; }
-    .stat-num {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 4rem; font-weight: 800;
-      color: var(--heading); line-height: 1;
-    }
-    .stat-num span { color: var(--blue); }
-    .stat-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.95rem; color: var(--muted);
-      letter-spacing: 0.1em; text-transform: uppercase;
-      margin-top: 4px;
-    }
+.hero-stats {
+  position: absolute; right: clamp(24px, 8vw, 120px); bottom: 80px;
+  display: flex; flex-direction: column; gap: 32px;
+  opacity: 0; animation: fadeLeft 0.8s 0.8s forwards;
+}
+.stat {
+  text-align: right;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s, background 0.25s, box-shadow 0.25s;
+  position: relative;
+}
+.stat:hover {
+  transform: scale(1.1) translateY(-4px);
+  border-color: var(--border-hi);
+  background: rgba(0,178,255,0.04);
+  box-shadow: 0 8px 32px rgba(0,178,255,0.1);
+}
+.stat::after {
+  content: '↓';
+  position: absolute; bottom: -2px; right: 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem; color: var(--blue);
+  opacity: 0; transform: translateY(-4px);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.stat:hover::after { opacity: 1; transform: translateY(0); }
+.stat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 4rem; font-weight: 800;
+  color: var(--heading); line-height: 1;
+  transition: color 0.2s;
+}
+.stat:hover .stat-num { color: var(--blue); }
+.stat-num span { color: var(--blue); }
+.stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.95rem; color: var(--muted);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-top: 4px;
+  transition: color 0.2s;
+}
+.stat:hover .stat-label { color: var(--text); }
 
     /* ───────────────── SECTIONS ───────────────── */
     section {
@@ -729,20 +758,20 @@
     </div>
   </div>
 
-  <div class="hero-stats">
-    <div class="stat">
-      <div class="stat-num">7<span>+</span></div>
-      <div class="stat-label">Projects Completed</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">4<span>+</span></div>
-      <div class="stat-label">Certifications</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">70<span>+</span></div>
-      <div class="stat-label">Completed TryHackMe Rooms</div>
-    </div>
+<div class="hero-stats">
+  <a href="#projects" class="stat">
+    <div class="stat-num">7<span>+</span></div>
+    <div class="stat-label">Projects Completed</div>
+  </a>
+  <a href="#certifications" class="stat">
+    <div class="stat-num">4<span>+</span></div>
+    <div class="stat-label">Certifications</div>
+  </a>
+  <div class="stat">
+    <div class="stat-num">70<span>+</span></div>
+    <div class="stat-label">Completed TryHackMe Rooms</div>
   </div>
+</div>
 </section>
 
 <!-- ─── ABOUT ─── -->
