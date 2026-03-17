@@ -1155,9 +1155,10 @@ a.skill-card:hover {
   </div>
 
   {{ $posts := where .Site.RegularPages "Section" "blog" }}
-  {{ $capped := first 21 $posts }}
+  {{ $capped := first 20 $posts }}
   {{ $remaining := sub (len $capped) 4 }}
 
+    <div style="position:relative;">
   <div class="blog-grid" id="blog-grid">
     {{ range first 4 $posts }}
     <a href="{{ .Permalink }}" class="blog-card reveal">
@@ -1198,6 +1199,8 @@ a.skill-card:hover {
     {{ end }}
     {{ end }}
   </div>
+  <div style="position:absolute; bottom:0; left:0; right:0; height:280px; background: linear-gradient(to bottom, transparent, var(--bg)); pointer-events:none;"></div>
+  </div>
 
   {{ if gt $remaining 0 }}
   <div id="blog-expand-bar" style="margin-top: 32px;">
@@ -1225,7 +1228,7 @@ a.skill-card:hover {
   </div>
   {{ end }}
 
-  {{ if gt (len $posts) 21 }}
+  {{ if gt (len $posts) 20 }}
   {{ $totalRemaining := sub (len $posts) 21 }}
   <div id="view-all-btn" style="text-align:center; margin-top:32px; display:none;">
     <p style="font-family:'DM Mono',monospace; font-size:1rem; color:var(--text); margin-bottom:16px; letter-spacing:0.1em;">
