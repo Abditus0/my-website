@@ -101,8 +101,9 @@
     .page-subtitle { font-size: 1.1rem; color: var(--muted); max-width: 600px; margin: 0 auto; }
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 380px);
   gap: 24px;
+  justify-content: center;
 }
     .blog-card {
       background: var(--surface); border: 1px solid var(--border);
@@ -160,7 +161,6 @@
     .footer-right a:hover { color: var(--blue); }
     @media (max-width: 900px) {
   .nav-links { display: none; }
-  .blog-grid { grid-template-columns: 1fr; }
 }
     .shooting-star {
       position: fixed; width: 2px; height: 2px; background: var(--blue);
