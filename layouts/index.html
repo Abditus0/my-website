@@ -484,7 +484,7 @@ a.stat:hover .stat-label { color: var(--text); }
     /* ───────────────── BLOG ───────────────── */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -1152,58 +1152,100 @@ a.skill-card:hover {
     <div class="section-line"></div>
   </div>
 
-  <div class="blog-grid">
-    
-    <a href="/blog/test-post" class="blog-card reveal">
+  {{ $posts := where .Site.RegularPages "Section" "blog" }}
+  {{ $capped := first 21 $posts }}
+  {{ $remaining := sub (len $capped) 3 }}
+
+  <div class="blog-grid" id="blog-grid">
+    {{ range first 3 $posts }}
+    <a href="{{ .Permalink }}" class="blog-card reveal">
+      {{ with .Params.image }}
       <div class="blog-card-image">
-        <img src="images/blog/post-1.png" alt="Blue Room Writeup">
+        <img src="{{ . }}" alt="{{ $.Title }}">
       </div>
+      {{ end }}
       <div class="blog-card-content">
-        <div class="blog-card-category">TryHackMe · Writeup</div>
-        <div class="blog-card-title">Blue Room Writeup</div>
-        <div class="blog-card-excerpt">Complete walkthrough of exploiting MS17-010 EternalBlue vulnerability on a Windows machine.</div>
+        <div class="blog-card-category">{{ .Params.category }}</div>
+        <div class="blog-card-title">{{ .Title }}</div>
+        <div class="blog-card-excerpt">{{ .Params.excerpt }}</div>
         <div class="blog-card-meta">
-          <span>March 15, 2026</span>
-          <span>8 min read</span>
+          <span>{{ .Date.Format "January 2, 2006" }}</span>
+          <span>{{ .Params.readtime }}</span>
         </div>
       </div>
     </a>
-
-    <a href="/blog" class="blog-card reveal">
-      <div class="blog-card-image">
-        <img src="images/blog/post-2.png" alt="Post 2">
-      </div>
-      <div class="blog-card-content">
-        <div class="blog-card-category">HackTheBox · Writeup</div>
-        <div class="blog-card-title">Your Second Post Title</div>
-        <div class="blog-card-excerpt">A short description of what this writeup covers.</div>
-        <div class="blog-card-meta">
-          <span>March 12, 2026</span>
-          <span>10 min read</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="/blog" class="blog-card reveal">
-      <div class="blog-card-image">
-        <img src="images/blog/post-3.png" alt="Post 3">
-      </div>
-      <div class="blog-card-content">
-        <div class="blog-card-category">Tutorial · Security</div>
-        <div class="blog-card-title">Your Third Post Title</div>
-        <div class="blog-card-excerpt">A short description of what this tutorial covers.</div>
-        <div class="blog-card-meta">
-          <span>March 10, 2026</span>
-          <span>12 min read</span>
-        </div>
-      </div>
-    </a>
-
+    {{ end }}
   </div>
 
-  <div style="text-align: center; margin-top: 48px;">
+  {{ if gt $remaining 0 }}
+  <div id="blog-hidden" style="display:none;">
+    <div style="position:relative;">
+      <div class="blog-grid" style="margin-top:24px;" id="blog-hidden-grid">
+        {{ range after 3 $capped }}
+        <a href="{{ .Permalink }}" class="blog-card reveal">
+          {{ with .Params.image }}
+          <div class="blog-card-image">
+            <img src="{{ . }}" alt="{{ $.Title }}">
+          </div>
+          {{ end }}
+          <div class="blog-card-content">
+            <div class="blog-card-category">{{ .Params.category }}</div>
+            <div class="blog-card-title">{{ .Title }}</div>
+            <div class="blog-card-excerpt">{{ .Params.excerpt }}</div>
+            <div class="blog-card-meta">
+              <span>{{ .Date.Format "January 2, 2006" }}</span>
+              <span>{{ .Params.readtime }}</span>
+            </div>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+      {{ if gt (len $posts) 21 }}
+      <div style="
+        position:absolute; bottom:0; left:0; right:0;
+        height:280px;
+        background: linear-gradient(to bottom, transparent, var(--bg));
+        pointer-events:none;">
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <div id="blog-expand-bar" style="margin-top: 32px;">
+    <button onclick="expandBlog()" style="
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border-hi);
+      border-radius: 8px;
+      padding: 20px 32px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;"
+      onmouseover="this.style.background='var(--blue-dim)'; this.style.boxShadow='0 4px 24px rgba(0,178,255,0.1)';"
+      onmouseout="this.style.background='var(--surface)'; this.style.boxShadow='none';">
+      <div style="flex:1; height:1px; background: linear-gradient(to right, transparent, var(--border-hi));"></div>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+        <span style="font-family:'DM Mono',monospace; font-size:0.78rem; color:var(--blue); letter-spacing:0.14em; text-transform:uppercase;">{{ $remaining }} more writeups</span>
+        <span style="font-size:1rem; color:var(--muted);">↓</span>
+      </div>
+      <div style="flex:1; height:1px; background: linear-gradient(to left, transparent, var(--border-hi));"></div>
+    </button>
+  </div>
+  {{ end }}
+
+  {{ if gt (len $posts) 21 }}
+  {{ $totalRemaining := sub (len $posts) 21 }}
+  <div id="view-all-btn" style="text-align:center; margin-top:32px; display:none;">
+    <p style="font-family:'DM Mono',monospace; font-size:1rem; color:var(--text); margin-bottom:16px; letter-spacing:0.1em;">
+      + {{ $totalRemaining }} more writeups on the blog page
+    </p>
     <a href="/blog" class="btn-primary">View All Posts →</a>
   </div>
+  {{ end }}
+
 </section>
 
 <!-- ─── CONTACT ─── -->
@@ -1310,7 +1352,14 @@ function scheduleNextStar() {
   }, delay);
 }
 
-scheduleNextStar();
+function expandBlog() {
+  const hidden = document.getElementById('blog-hidden');
+  const bar = document.getElementById('blog-expand-bar');
+  const viewAll = document.getElementById('view-all-btn');
+  hidden.style.display = 'block';
+  bar.style.display = 'none';
+  if (viewAll) viewAll.style.display = 'block';
+}
 </script>
 </body>
 </html>
