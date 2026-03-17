@@ -89,9 +89,10 @@
     .nav-cta:hover { background: var(--blue-dim); color: var(--heading) !important; }
     .nav-cta::after { display: none !important; }
     main {
-      position: relative; z-index: 1; min-height: 100vh;
-      padding: calc(var(--nav-h) + 80px) clamp(24px, 5vw, 72px) 80px;
-    }
+  position: relative; z-index: 1; min-height: 100vh;
+  padding: calc(var(--nav-h) + 80px) clamp(24px, 5vw, 72px) 80px;
+  min-width: fit-content;
+}
     .page-header { margin-bottom: 64px; text-align: center; }
     .page-title {
       font-family: 'Space Grotesk', sans-serif;
