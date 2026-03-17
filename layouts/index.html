@@ -1177,40 +1177,26 @@ a.skill-card:hover {
       </div>
     </a>
     {{ end }}
-  </div>
-
-  {{ if gt $remaining 0 }}
-  <div id="blog-hidden" style="display:none;">
-    <div style="position:relative;">
-      <div class="blog-grid" style="margin-top:24px;" id="blog-hidden-grid">
-        {{ range after 4 $capped }}
-        <a href="{{ .Permalink }}" class="blog-card reveal">
-          {{ with .Params.image }}
-          <div class="blog-card-image">
-            <img src="{{ . }}" alt="{{ $.Title }}">
-          </div>
-          {{ end }}
-          <div class="blog-card-content">
-            <div class="blog-card-category">{{ .Params.category }}</div>
-            <div class="blog-card-title">{{ .Title }}</div>
-            <div class="blog-card-excerpt">{{ .Params.excerpt }}</div>
-            <div class="blog-card-meta">
-              <span>{{ .Date.Format "02/01/2006" }}</span>
-              <span>{{ .Params.readtime }}</span>
-            </div>
-          </div>
-        </a>
-        {{ end }}
-      </div>
-      {{ if gt (len $posts) 21 }}
-      <div style="
-        position:absolute; bottom:0; left:0; right:0;
-        height:280px;
-        background: linear-gradient(to bottom, transparent, var(--bg));
-        pointer-events:none;">
+    {{ if gt $remaining 0 }}
+    {{ range after 4 $capped }}
+    <a href="{{ .Permalink }}" class="blog-card reveal hidden-card" style="display:none;">
+      {{ with .Params.image }}
+      <div class="blog-card-image">
+        <img src="{{ . }}" alt="{{ $.Title }}">
       </div>
       {{ end }}
-    </div>
+      <div class="blog-card-content">
+        <div class="blog-card-category">{{ .Params.category }}</div>
+        <div class="blog-card-title">{{ .Title }}</div>
+        <div class="blog-card-excerpt">{{ .Params.excerpt }}</div>
+        <div class="blog-card-meta">
+          <span>{{ .Date.Format "02/01/2006" }}</span>
+          <span>{{ .Params.readtime }}</span>
+        </div>
+      </div>
+    </a>
+    {{ end }}
+    {{ end }}
   </div>
 
   <div id="blog-expand-bar" style="margin-top: 32px;">
@@ -1355,11 +1341,11 @@ function scheduleNextStar() {
 }
 
 function expandBlog() {
-  const hidden = document.getElementById('blog-hidden');
-  const bar = document.getElementById('blog-expand-bar');
+  document.querySelectorAll('.hidden-card').forEach(card => {
+    card.style.display = 'flex';
+  });
+  document.getElementById('blog-expand-bar').style.display = 'none';
   const viewAll = document.getElementById('view-all-btn');
-  hidden.style.display = 'block';
-  bar.style.display = 'none';
   if (viewAll) viewAll.style.display = 'block';
 }
 </script>
