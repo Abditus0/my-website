@@ -1156,10 +1156,10 @@ a.skill-card:hover {
 
   {{ $posts := where .Site.RegularPages "Section" "blog" }}
   {{ $capped := first 21 $posts }}
-  {{ $remaining := sub (len $capped) 3 }}
+  {{ $remaining := sub (len $capped) 4 }}
 
   <div class="blog-grid" id="blog-grid">
-    {{ range first 3 $posts }}
+    {{ range first 4 $posts }}
     <a href="{{ .Permalink }}" class="blog-card reveal">
       {{ with .Params.image }}
       <div class="blog-card-image">
@@ -1183,7 +1183,7 @@ a.skill-card:hover {
   <div id="blog-hidden" style="display:none;">
     <div style="position:relative;">
       <div class="blog-grid" style="margin-top:24px;" id="blog-hidden-grid">
-        {{ range after 3 $capped }}
+        {{ range after 4 $capped }}
         <a href="{{ .Permalink }}" class="blog-card reveal">
           {{ with .Params.image }}
           <div class="blog-card-image">
