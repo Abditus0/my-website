@@ -1,6 +1,6 @@
 ---
 title: "Offensive Security Intro"
-date: 17-03-2026
+date: 2026-03-17
 category: "TryHackMe · Writeup"
 excerpt: "Complete walkthrough of TryHackMe's Offensive Security Intro"
 image: "/images/blog/post-1.png"
