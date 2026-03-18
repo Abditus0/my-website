@@ -59,3 +59,31 @@ The malware types mentioned here are ones you'll see constantly going forward: v
 
 ---
 
+## Task 3 — Practical Example of Defensive Security {#task-3}
+
+This task puts you in the role of a SOC analyst at a bank. The bank uses a **SIEM (Security Information and Event Management)** tool, which collects security events from various sources and displays them in one dashboard. When something suspicious shows up, it generates an alert.
+
+Not every alert means an actual attack though. Part of the job is figuring out which ones are real threats and which ones are just normal activity that looks suspicious, like a user failing to log in multiple times because they forgot their password.
+
+Looking through the alerts, two stand out, an unauthorized connection attempt and then a **successful SSH authentication**, both from IP **143.110.250.149**. The failed logins from John Doe look like someone who forgot their password, not an attack.
+
+![](/images/blog/defensive-security/defensive-security1.png)
+
+Next step is checking if that IP is malicious. The simulation gives you an IP scanner, and it comes back at **100% confidence of being malicious**, traced to China Mobile Communications Corporation.
+
+![](/images/blog/defensive-security/defensive-security2.png)
+
+![](/images/blog/defensive-security/defensive-security3.png)
+
+
+Now we need to escalate. The correct choice is **Will Griffin, SOC Team Lead** — you escalate security incidents to your team lead, not to people outside your department.
+
+![](/images/blog/defensive-security/defensive-security4.png)
+
+After getting the green light, the last step is blocking the IP on the firewall. You add **143.110.250.149** to the block list, and the flag appears.
+
+![](/images/blog/defensive-security/defensive-security5.png)
+
+![](/images/blog/defensive-security/defensive-security6.png)
+
+**Question: What is the flag that you obtained by following along?** `THM{THREAT-BLOCKED}`
