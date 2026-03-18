@@ -37,7 +37,7 @@ A **SOC** (Security Operations Center) is basically a team that watches the netw
 
 Connected to that is **Threat Intelligence**, gathering information about potential attackers, understanding their tactics, and using that to build better defenses.
 
-**DFIR (Digital Forensics and Incident Response)** covers three things. Digital Forensics, Incident Response, and Malware Analysis. Forensics is about investigating what happened after an attack. 
+**DFIR (Digital Forensics and Incident Response)** covers three things. Digital Forensics, Incident Response, and Malware Analysis.
 
 **Digital Forensics** — investigating what happened after an attack by analyzing file systems, memory, logs, and network traffic.
 
@@ -76,11 +76,11 @@ Next step is checking if that IP is malicious. The simulation gives you an IP sc
 ![](/images/blog/defensive-security/defensive-security3.png)
 
 
-Now we need to escalate. The correct choice is **Will Griffin, SOC Team Lead** — you escalate security incidents to your team lead, not to people outside your department.
+Now we need to escalate. The correct choice is **Will Griffin, SOC Team Lead**. You escalate security incidents to your team lead, not to people outside your department.
 
 ![](/images/blog/defensive-security/defensive-security4.png)
 
-After getting the green light, the last step is blocking the IP on the firewall. You add **143.110.250.149** to the block list, and the flag appears.
+After getting the green light, the last step is blocking the IP on the firewall. Add **143.110.250.149** to the block list.
 
 ![](/images/blog/defensive-security/defensive-security5.png)
 

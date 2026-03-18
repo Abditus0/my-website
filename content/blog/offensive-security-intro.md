@@ -29,9 +29,8 @@ the weak points. All legally, all with permission.
 
 One question to answer.
 
-**Question: Which better represents simulating a hacker's actions to find vulnerabilities?**
+**Question: Which better represents simulating a hacker's actions to find vulnerabilities?** `Offensive Security`
 
-**Answer:** `Offensive Security`
 
 ---
 
