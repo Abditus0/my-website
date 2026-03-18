@@ -42,7 +42,7 @@ just hit Start Machine and it loads.
 
 The goal is to find a hidden page using **Gobuster**. I opened the terminal and ran:
 
-![](/images/blog/offensive-security1.png)
+![](/images/blog/offensive-security/offensive-security1.png)
 
 Got this back:
 ```
