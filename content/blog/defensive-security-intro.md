@@ -20,7 +20,9 @@ draft: false
 
 ## Task 1 — What is Defensive Security? {#task-1}
 If offensive security is about breaking in, defensive security is the other side, preventing attacks from happening and dealing with them when they do.
+
 The Blue Team handles this. Things like keeping systems updated, monitoring the network, setting up firewalls, training users not to click sketchy links. Less glamorous than red teaming but just as important.
+
 The room also mentions some topics coming up later in the path such as SOC, Threat Intelligence, DFIR, Malware Analysis.
 
 **Question: Which team focuses on defensive security?**
@@ -40,16 +42,16 @@ DFIR covers three things. Digital Forensics, Incident Response, and Malware Anal
 
 The malware types mentioned here are ones you'll see constantly going forward: viruses, trojans, and ransomware.
 
-**Question: What would you call a team of cyber security professionals that monitors a network for malicious events?**
-
-**Answer:** `Security Operations Center`
-
-**Question: What does DFIR stand for?**
-
-**Answer:** `Digital Forensics and Incident Response`
-
-**Question: Which kind of malware requires the user to pay money to regain access to their files?**
-
-**Answer:** `Ransomware`
+>**Question: What would you call a team of cyber security professionals that monitors a network for malicious events?**
+>
+>**Answer:** `Security Operations Center`
+>
+>**Question: What does DFIR stand for?**
+>
+>**Answer:** `Digital Forensics and Incident Response`
+>
+>**Question: Which kind of malware requires the user to pay money to regain access to their files?**
+>
+>**Answer:** `Ransomware`
 
 ---
