@@ -19,14 +19,14 @@ draft: false
 
 ## Task 1 — What is Offensive Security? {#task-1}
 
-Pretty much just an intro. TryHackMe explains the concept in one line that I actually like —
+TryHackMe explains the concept in one line that I actually like.
 *"To outsmart a hacker, you need to think like one."*
 
 Offensive security is exactly that. Instead of sitting back and defending,
-you're the one actively trying to break in — finding the bugs, the loopholes,
+you're the one actively trying to break in. Finding the bugs, the loopholes,
 the weak points. All legally, all with permission.
 
-One question to answer, easy one:
+One question to answer.
 
 **Question: Which better represents simulating a hacker's actions to find vulnerabilities?**
 
@@ -36,7 +36,7 @@ One question to answer, easy one:
 
 ## Task 2 — Hacking Your First Machine {#task-2}
 
-They spin up a fake bank called **FakeBank** directly in the browser — no setup needed,
+They spin up a fake bank called **FakeBank** directly in the browser, no setup needed,
 just hit Start Machine and it loads.
 
 The goal is to find a hidden page using **Gobuster**. I opened the terminal and ran:
@@ -62,7 +62,7 @@ I transferred **$2000** from account **2276** to **8881**.
 
 Refreshed the account page and the flag was there.
 
-![](/images/blog/offensive-security3.png)
+![](/images/blog/offensive-security5.png)
 
 **Answer:** `BANK-HACKED`
 
