@@ -9,8 +9,6 @@ draft: false
 ---
 # Offensive Security Intro
 
-_This is part of my ongoing series where I go through every room in the TryHackMe Pre Security path. I'll cover each room and explain everything as simply as possible so anyone can follow along, whether you're brand new to cybersecurity or just getting started on TryHackMe._
-
 ---
 
 ## Tasks
@@ -21,88 +19,58 @@ _This is part of my ongoing series where I go through every room in the TryHackM
 
 ## Task 1 — What is Offensive Security? {#task-1}
 
-In cybersecurity, there are two sides.
+Pretty much just an intro. TryHackMe explains the concept in one line that I actually like —
+*"To outsmart a hacker, you need to think like one."*
 
-The **defensive side** — people who protect systems, monitor for attacks, and stop bad things from happening.
+Offensive security is exactly that. Instead of sitting back and defending,
+you're the one actively trying to break in — finding the bugs, the loopholes,
+the weak points. All legally, all with permission.
 
-And the **offensive side** — people who try to break in to find weaknesses before the real attackers do.
+One question to answer, easy one:
 
-Offensive security is that second one. You think like a hacker. You try to find the holes in a system so a company can fix them before someone with bad intentions finds them first. And this is always done with permission.
+**Question: Which better represents simulating a hacker's actions to find vulnerabilities?**
 
-Think of it like this. You own a shop. You hire someone to pretend to be a thief — try to break in, test the locks, check if the alarm works. They're not actually stealing anything. They're helping you make your shop safer. That's offensive security. Same idea.
-
-**The answer TryHackMe is looking for:** Offensive Security is the practice that simulates a hacker's actions to find vulnerabilities — weaknesses that could be exploited.
+**Answer:** `Offensive Security`
 
 ---
 
 ## Task 2 — Hacking Your First Machine {#task-2}
 
-This is where you actually do something hands on. TryHackMe has set up a fake bank website called **FakeBank** just for this exercise. Your goal is to find a hidden page on this website that you're not supposed to have access to.
+They spin up a fake bank called **FakeBank** directly in the browser — no setup needed,
+just hit Start Machine and it loads.
 
-To do that, you'll use a tool called **Gobuster**.
+The goal is to find a hidden page using **Gobuster**. I opened the terminal and ran:
 
-### What is Gobuster?
+![](/images/blog/offensive-security1.png)
 
-Gobuster is a command-line tool that takes a list of words — things like "admin", "login", "dashboard", "transfer" — and tries each one as a web address. It checks: does this page exist? It tries hundreds of words automatically, one by one, until it finds something real.
-
-This technique is called **directory busting** or **brute-forcing directories**. A directory is just another word for a folder. You're trying to find hidden folders or pages that aren't linked anywhere on the website.
-
-### Running the Scan
-
-Start your machine, open the terminal, and run this command:
-
+Got this back:
 ```
-gobuster -u http://fakebank.thm -w wordlist.txt dir
+/images        (Status: 301)
+/bank-transfer (Status: 200)
 ```
 
-Here's what each part means:
+`/bank-transfer` is the one we want. I navigated to it and found a completely open transfer page. No login, no verification, nothing.
 
-- `gobuster` — the tool you're running
-- `-u` — stands for URL, the web address you want to scan
-- `http://fakebank.thm` — the address of the fake bank
-- `-w` — stands for wordlist, a file full of words to try
-- `wordlist.txt` — the wordlist file
-- `dir` — tells Gobuster you're looking for directories and pages
+![](/images/blog/offensive-security2.png)
 
-After a few seconds, Gobuster will finish and show you results. You'll see two things:
 
-- `/images` — probably just where the website stores its pictures
-- `/bank-transfer` — this one is interesting
+I transferred **$2000** from account **2276** to **8881**.
 
-That's a hidden page. It wasn't linked anywhere on the website. You wouldn't find it just by clicking around. But Gobuster found it because the word "bank-transfer" was in the wordlist.
+![](/images/blog/offensive-security3.png)
 
-### Accessing the Hidden Page
+![](/images/blog/offensive-security4.png)
 
-Go to your browser and navigate to:
+Refreshed the account page and the flag was there.
 
-```
-http://fakebank.thm/bank-transfer
-```
+![](/images/blog/offensive-security3.png)
 
-There it is. A page where you can transfer money between bank accounts. No login. No password. Just open to anyone who finds it.
-
-This is a real type of vulnerability. In real life, developers sometimes build admin pages and forget to protect them properly. An attacker who finds one could do serious damage.
-
-For the task, transfer **$2000** from account **2276** to account **8881**. Once done, go back to your account page, refresh it, and you'll see a message. That message contains the answer TryHackMe is asking for.
+**Answer:** `BANK-HACKED`
 
 ---
 
 ## Task 3 — Careers in Cyber Security {#task-3}
 
-TryHackMe ends this room by talking about real people who changed careers to get into cybersecurity. A construction worker who became a security engineer. A music teacher who became a security professional. A student who used TryHackMe to land his first job.
-
-The point is simple — you don't need a special background. You just need to be consistent. A little bit every day adds up fast.
-
-Here are the main offensive security career paths:
-
-**Penetration Tester** — Companies hire you to legally hack their systems and find weaknesses. You write a report at the end detailing what you found and how to fix it.
-
-**Red Teamer** — Similar to pen testing but more advanced. You simulate a real attacker over weeks — tricking employees, attempting physical access, running a full attack scenario. The goal is to test not just technology but the entire organization.
-
-**Security Engineer** — More on the builder side. You design and build the systems that keep a company safe. Understanding how attacks work is essential so you can build proper defenses.
-
-No question to answer here — TryHackMe just asks you to read through and continue.
+TryHackMe talks about the different offensive security roles. Penetration Tester, Red Teamer, Security Engineer. They also share stories of people who completely switched careers to get into cyber.
+You'll learn more about every role as you go through the rooms anyway.
 
 ---
-
-_That wraps up Offensive Security Intro. If you're following along on the Pre Security path, the next room is up next. See you there._
