@@ -42,19 +42,10 @@ DFIR covers three things. Digital Forensics, Incident Response, and Malware Anal
 
 The malware types mentioned here are ones you'll see constantly going forward: viruses, trojans, and ransomware.
 
-**Question: What would you call a team of cyber security professionals that monitors a network for malicious events?**
+**Question: What would you call a team of cyber security professionals that monitors a network for malicious events?** `Security Operations Center`
 
-**Answer:** `Security Operations Center`
+**Question: What does DFIR stand for?** `Digital Forensics and Incident Response`
 
-**Question: What does DFIR stand for?**
-
-**Answer:** `Digital Forensics and Incident Response`
-
-**Question: Which kind of malware requires the user to pay money to regain access to their files?**
-
-**Answer:** `Ransomware`
-
-**Q:** What would you call a team of cyber security professionals that monitors a network for malicious events?
-**A:** `Security Operations Center`
+**Question: Which kind of malware requires the user to pay money to regain access to their files?** `Ransomware`
 
 ---
