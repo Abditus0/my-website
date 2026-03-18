@@ -1,5 +1,5 @@
 ---
-title: "Offensive Security Intro"
+title: "Offensive Security Intro — TryHackMe Pre Security Path"
 date: 2026-03-17
 category: "TryHackMe · Writeup"
 excerpt: "Complete walkthrough of TryHackMe's Offensive Security Intro"
@@ -7,13 +7,19 @@ image: "/images/blog/1.png"
 readtime: "8 min read"
 draft: false
 ---
-# Offensive Security Intro — TryHackMe Pre Security Path
+# Offensive Security Intro
 
 _This is part of my ongoing series where I go through every room in the TryHackMe Pre Security path. I'll cover each room and explain everything as simply as possible so anyone can follow along, whether you're brand new to cybersecurity or just getting started on TryHackMe._
 
 ---
 
-## Task 1 — What is Offensive Security?
+## Tasks
+
+- [Task 1 — What is Offensive Security?](#task-1)
+- [Task 2 — Hacking Your First Machine](#task-2)
+- [Task 3 — Careers in Cyber Security](#task-3)
+
+## Task 1 — What is Offensive Security? {#task-1}
 
 In cybersecurity, there are two sides.
 
@@ -29,7 +35,7 @@ Think of it like this. You own a shop. You hire someone to pretend to be a thief
 
 ---
 
-## Task 2 — Hacking Your First Machine
+## Task 2 — Hacking Your First Machine {#task-2}
 
 This is where you actually do something hands on. TryHackMe has set up a fake bank website called **FakeBank** just for this exercise. Your goal is to find a hidden page on this website that you're not supposed to have access to.
 
@@ -81,7 +87,7 @@ For the task, transfer **$2000** from account **2276** to account **8881**. Once
 
 ---
 
-## Task 3 — Careers in Cyber Security
+## Task 3 — Careers in Cyber Security {#task-3}
 
 TryHackMe ends this room by talking about real people who changed careers to get into cybersecurity. A construction worker who became a security engineer. A music teacher who became a security professional. A student who used TryHackMe to land his first job.
 
