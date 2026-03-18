@@ -25,9 +25,7 @@ The Blue Team handles this. Things like keeping systems updated, monitoring the 
 
 The room also mentions some topics coming up later in the path such as SOC, Threat Intelligence, DFIR, Malware Analysis.
 
-**Question: Which team focuses on defensive security?**
-
-**Answer:** `Blue Team`
+**Question: Which team focuses on defensive security?** `Blue Team`
 
 ---
 
@@ -38,7 +36,7 @@ A SOC (Security Operations Center) is basically a team that watches the network 
 
 Connected to that is Threat Intelligence, gathering information about potential attackers, understanding their tactics, and using that to build better defenses.
 
-DFIR covers three things. Digital Forensics, Incident Response, and Malware Analysis. Forensics is about investigating what happened after an attack. Incident Response is the plan you follow when an attack occurs. Malware Analysis is figuring out what a malicious program does and how.
+DFIR (Digital Forensics and Incident Response) covers three things. Digital Forensics, Incident Response, and Malware Analysis. Forensics is about investigating what happened after an attack. Incident Response is the plan you follow when an attack occurs. Malware Analysis is figuring out what a malicious program does and how.
 
 The malware types mentioned here are ones you'll see constantly going forward: viruses, trojans, and ransomware.
 

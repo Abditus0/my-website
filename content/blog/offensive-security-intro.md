@@ -52,18 +52,18 @@ Got this back:
 
 `/bank-transfer` is the one we want. I navigated to it and found a completely open transfer page. No login, no verification, nothing.
 
-![](/images/blog/offensive-security2.png)
+![](/images/blog/offensive-security/offensive-security2.png)
 
 
 I transferred **$2000** from account **2276** to **8881**.
 
-![](/images/blog/offensive-security3.png)
+![](/images/blog/offensive-security/offensive-security3.png)
 
-![](/images/blog/offensive-security4.png)
+![](/images/blog/offensive-security/offensive-security4.png)
 
 Refreshed the account page and the flag was there.
 
-![](/images/blog/offensive-security5.png)
+![](/images/blog/offensive-security/offensive-security5.png)
 
 **Answer:** `BANK-HACKED`
 
