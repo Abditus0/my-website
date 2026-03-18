@@ -46,13 +46,13 @@ The malware types mentioned here are ones you'll see constantly going forward: v
 
 **Answer:** `Security Operations Center`
 
-<br>
+<br><br>
 
 **Question: What does DFIR stand for?**
 
 **Answer:** `Digital Forensics and Incident Response`
 
-<br>
+<br><br>
 
 **Question: Which kind of malware requires the user to pay money to regain access to their files?**
 
