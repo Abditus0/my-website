@@ -47,17 +47,17 @@ Devices connect directly to each other in a loop. Data travels around the ring f
 
 Since data only travels in one direction, faults are easy to trace. It's also less prone to bottlenecks than bus. But it's slow, data might pass through several devices before reaching its destination. And like bus, there's no redundancy. One broken cable or failed device kills the whole network.
 
-**Switches and Routers**
+**Switch**
+
+![](/images/blog/intro-to-lan/4.png)
 
 Switches connect multiple devices on a local network. Unlike hubs which blast packets to every port, switches are smart. They track which device is on which port and only send data where it needs to go. This cuts down traffic significantly.
 
-**Switch**
-![](/images/blog/intro-to-lan/4.png)
+**Router**
+
+![](/images/blog/intro-to-lan/5.png)
 
 Routers connect different networks together and handle getting data from one to the other. Connecting switches and routers together adds redundancy. If one path goes down, data takes another route and the network stays up.
-
-**Router**
-![](/images/blog/intro-to-lan/5.png)
 
 **Practical**
 
