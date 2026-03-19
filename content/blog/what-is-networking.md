@@ -77,3 +77,22 @@ The interactive lab simulates a hotel Wi-Fi network. Bob's packets are being blo
 
 ---
 
+## Task 4 — Ping (ICMP) {#task-4}
+Ping is one of the most basic network tools, but it's useful. It uses **ICMP (Internet Control Message Protocol)** to check if a connection between two devices exists and how reliable it is. It works by sending an echo packet and waiting for an echo reply, then measuring how long that took.
+
+The syntax is simple: `ping IP address or website URL`
+
+The practical gives you a terminal and asks you to ping **8.8.8.8**. You run `8.8.8.8` and the flag appears in the output.
+
+**Question: What protocol does ping use?** `ICMP`
+
+**Question: What is the syntax to ping 10.10.10.10?** `ping 10.10.10.10`
+
+**Question: What flag do you get when you ping 8.8.8.8?** `THM{I_PINGED_THE_SERVER}`
+
+---
+
+## Task 5 — Continue Your Learning: Intro to LAN {#task-5}
+This task just points to the next room in the path: Intro to LAN.
+
+---
