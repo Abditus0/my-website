@@ -77,3 +77,73 @@ The interactive lab shows the weak points of each topology in action. You cut th
 
 ---
 
+## Task 2 — A Primer on Subnetting {#task-2}
+Subnetting is the process of splitting a network into smaller networks within itself. Think of it like slicing a cake. There's only so much to go around, and subnetting is how you decide who gets what piece.
+
+A business is a good example. Different departments like Accounting, Finance, and Human Resources all need network access, but they shouldn't necessarily all be on the same network. Subnetting lets admins carve things up to reflect that.
+
+**How it works**
+
+A subnet mask controls how many devices can fit in a network. Just like an IP address, it's made up of four octets. Four sections ranging from 0 to 255.
+
+Subnets use IP addresses in three ways:
+
+- **Network Address**: identifies the start of the network itself. Example: `192.168.1.0`
+- **Host Address**: identifies a specific device on the network. Example: `192.168.1.100`
+- **Default Gateway**: a special device that handles sending data outside the network. Usually takes the first or last host address, like `192.168.1.1` or `192.168.1.254`
+
+**Why it matters**
+
+At home you probably don't need subnetting. One network with up to 254 devices is more than enough. But in offices and businesses with PCs, printers, cameras, and sensors all over the place, subnetting becomes essential.
+
+The benefits are efficiency, security, and control. A simple real world example is a café. They'll run one network for staff and registers, and a completely separate one for customer Wi-Fi. Same building, same router, but fully separated. That's subnetting in action.
+
+**Question: What is the technical term for dividing a network up into smaller pieces?** `Subnetting`
+
+**Question: How many bits are in a subnet mask?** `32`
+
+**Question: What is the range of a section (octet) of a subnet mask?** `0-255`
+
+**Question: What address is used to identify the start of a network?** `Network Address`
+
+**Question: What address is used to identify devices within a network?** `Host Address`
+
+**Question: What is the name used to identify the device responsible for sending data to another network?** `Default Gateway`
+
+---
+
+## Task 3 — ARP {#task-3}
+ARP (Address Resolution Protocol) is what allows devices on a network to connect a MAC address to an IP address. Every device keeps a record of the MAC addresses of other devices it has communicated with, stored in something called an ARP cache.
+
+**How it works**
+
+When a device wants to talk to another device but only knows its IP address, it needs to find the matching MAC address first. It does this by sending an ARP Request to the entire network, essentially asking "who has this IP address?" The device that owns that IP responds with an ARP Reply containing its MAC address. The requesting device then saves that pairing in its ARP cache so it doesn't have to ask again next time.
+
+**Question: What does ARP stand for?** `Address Resolution Protocol`
+
+**Question: What category of ARP Packet asks a device whether or not it has a specific IP address?** `ARP Request`
+
+**Question: What address is used as a physical identifier for a device on a network?** `MAC Address`
+
+**Question: What address is used as a logical identifier for a device on a network?** `IP Address`
+
+---
+
+## Task 4 — DHCP {#task-4}
+IP addresses can be assigned manually or automatically. **DHCP (Dynamic Host Configuration Protocol)** is what handles the automatic side. When a device joins a network without a pre assigned IP, it goes through a four step process called **DORA** to get one.
+
+- **DHCP Discover**: the device broadcasts (send to all) a message to the network asking if any DHCP servers are available
+- **DHCP Offer**: the DHCP server responds with an available IP address the device can use
+- **DHCP Request**: the device replies confirming it wants that IP address
+- **DHCP ACK**: the server acknowledges the request and the device can now start using the IP address
+
+**Question: What type of DHCP packet is used by a device to retrieve an IP address?** `DHCP Discover`
+
+**Question: What type of DHCP packet does a device send once it has been offered an IP address by the DHCP server?** `DHCP Request`
+
+**Question: Finally, what is the last DHCP packet that is sent to a device from a DHCP server?** `DHCP ACK`
+
+---
+
+## Task 5 — Continue Your Learning: OSI Model {#task-5}
+This task just points to the next room in the path: OSI Model. See you there :)
