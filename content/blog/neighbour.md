@@ -46,3 +46,5 @@ We're now logged in as admin which in a real scenario would be extremely dangero
 - Always check page source for comments. Developers leave sensitive info there more often than you'd think
 - When there's nothing to interact with as a low privilege user, look at the URL
 - IDOR is dead simple to exploit when there's no server side permission checking in place
+
+**Flag:** `flag{66be95c478473d91a5358f2440c7af1f}`
