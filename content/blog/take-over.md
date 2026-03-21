@@ -4,7 +4,7 @@ date: 2026-03-21
 category: "TryHackMe · Writeup"
 excerpt: "Walkthrough of TryHackMe's TakeOver CTF"
 image: "/images/blog/7.png"
-readtime: "5 min read"
+readtime: "8 min read"
 draft: false
 ---
 
@@ -82,13 +82,11 @@ Scrolling down to **Subject Alternative Names**, there's a subdomain that was cl
 secrethelpdesk934752.support.futurevera.thm
 ```
 
-Let's add it to `/etc/hosts` and see where it leads.
-
-It loads the main website. Interesting. The certificate reveals nothing new either.
+Let's add it to `/etc/hosts` and see where it leads. I navigate to `https://secrethelpdesk934752.support.futurevera.thm` and it just loads the main FutureVera website. Weird. I check the certificate too, nothing new there either.
 
 ## Nmap Scan
 
-I'm a bit stuck so I run an `nmap` scan to check what services are running. Ideally this is something you do at the start, but better late than never:
+At this point I got a bit stuck so I run an `nmap` scan to check what services are running. Ideally this is something you do at the start, but better late than never:
 
 ```bash
 nmap -sV futurevera.thm
