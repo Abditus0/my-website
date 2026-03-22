@@ -2,7 +2,7 @@
 title: "TakeOver CTF"
 date: 2026-03-21
 category: "TryHackMe · Writeup"
-excerpt: "Walkthrough of TryHackMe's TakeOver CTF"
+excerpt: "Walkthrough of TryHackMe's TakeOver CTF — This challenge revolves around subdomain enumeration."
 image: "/images/blog/7.png"
 readtime: "8 min read"
 draft: false
