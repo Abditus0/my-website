@@ -20,6 +20,7 @@ First thing I do is run an `nmap` scan to check for open ports:
 nmap -sV 10.80.130.2
 ```
 
+
 Open ports: `22`, `80`, and `5000`. Port 80 is HTTP so let's check the website.
 
 ![](/images/blog/md2pdf/1.png)
