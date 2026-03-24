@@ -3,6 +3,7 @@ title: "W1seGuy CTF"
 date: 2026-03-24
 category: "TryHackMe · Writeup"
 excerpt: "Walkthrough of a TryHackMe W1seGuy challenge - A w1se guy 0nce said, the answer is usually as plain as day."
+image: "/images/blog/12.png"
 readtime: "12 min read"
 draft: false
 ---
