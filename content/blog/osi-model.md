@@ -4,7 +4,7 @@ date: 2026-03-24
 category: "TryHackMe · Writeup"
 excerpt: "Complete walkthrough of TryHackMe's OSI Model room"
 image: "/images/blog/11.png"
-readtime: "25 min read"
+readtime: "15 min read"
 draft: false
 ---
 
@@ -71,14 +71,14 @@ Data Link = MAC addresses, and switches.
 
 This layer is all about routing.
 
-We talked about how Layer 2 uses MAC addresses — now Layer 3 is all about IP addresses.
+We talked about how Layer 2 uses MAC addresses. Now Layer 3 is all about IP addresses.
 
 We need a way to find the best path when sending data. Think of it like going to a friend's house: there are multiple routes, and you want the best one. That’s what this layer does.
 
-TryHackMe mentions two routing protocols: OSPF and RIP (just examples, there are more).
+TryHackMe mentions two routing protocols: **OSPF** and **RIP** (just examples, there are more).
 
-- OSPF (Open Shortest Path First): finds the "cheapest" path (lowest cost route)
-- RIP (Routing Information Protocol): chooses routes based on hop count (how many routers it passes through)
+- **OSPF (Open Shortest Path First)**: finds the "cheapest" path (lowest cost route)
+- **RIP (Routing Information Protocol)**: chooses routes based on hop count (how many routers it passes through)
 
 When you hear Layer 3, think: IPs, routing, routers.
 
@@ -92,14 +92,14 @@ When you hear Layer 3, think: IPs, routing, routers.
 
 ## Task 5 — Layer 4 - Transport {#task-5}
 
-There are two protocols here you’ll see everywhere: TCP and UDP.
+There are two protocols here you’ll see everywhere: **TCP** and **UDP**.
 
-TCP (Transmission Control Protocol) uses a 3-way handshake and guarantees delivery with no errors.  
-Example: sending files — you don’t want half a file.
+**TCP (Transmission Control Protocol)** uses a 3-way handshake (you will learn more about this in another room) and guarantees delivery with no errors.  
+Example: sending files. You don’t want half a file.
 
-UDP (User Datagram Protocol) is connectionless (no handshake). It’s faster, but there’s no guarantee data arrives or is correct.
+**UDP (User Datagram Protocol)** is connectionless (no handshake). It’s faster, but there’s no guarantee data arrives or is correct.
 
-Example: video or audio calls — they can’t really be “re-sent”.
+Example: video or audio calls. They can’t really be “re-sent”.
 
 **Question: What is the name of this Layer?** `Transport`  
 **Question: What does TCP stand for?** `Transmission Control Protocol`  
@@ -116,7 +116,7 @@ Example: video or audio calls — they can’t really be “re-sent”.
 
 For now, just know this:
 
-When two devices communicate, they create a connection — that’s called a session.
+When two devices communicate, they create a connection. That’s called a session.
 
 This layer is responsible for keeping that session alive and closing it if the connection is lost or inactive for too long.
 
@@ -133,7 +133,7 @@ Different apps (like email clients) work differently behind the scenes, but the 
 
 This layer acts like a translator between the application layer and everything below it.
 
-Example: you send an email from one app, someone opens it on another — it still looks correct.
+Example: you send an email from one app, someone opens it on another. It still looks correct.
 
 It also handles formatting, conversion, and things like encryption (HTTPS is usually associated with this layer).
 
@@ -144,13 +144,13 @@ It also handles formatting, conversion, and things like encryption (HTTPS is usu
 
 ## Task 8 — Layer 7 - Application {#task-8}
 
-This one is easy — it’s what you actually see and interact with.
+This one is easy. It’s what you actually see and interact with.
 
-Anything with a GUI (Graphical User Interface) is part of this layer.
+Anything with a **GUI (Graphical User Interface)** is part of this layer.
 
-Things like browsers, email clients, and tools like FileZilla all live here.
+Things like browsers, email clients, and tools. All live here.
 
-Protocols like DNS (Domain Name System) also work here, translating domain names into IP addresses.
+Protocols like **DNS (Domain Name System)** also work here, translating domain names into IP addresses.
 
 **Question: What is the name of this Layer?** `Application`  
 **Question: What is the technical term that is given to the name of the software that users interact with?** `Graphical User Interface`
@@ -159,7 +159,7 @@ Protocols like DNS (Domain Name System) also work here, translating domain names
 
 ## Task 9 — Practical - OSI Game {#task-9}
 
-Here’s a fun game to help you remember the OSI layers — go try it out and grab the flag.
+Here’s a fun game to help you remember the OSI layers. Go try it out and grab the flag.
 
 **Flag:** `THM{OSI_DUNGEON_ESCAPED}`
 
