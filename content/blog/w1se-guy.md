@@ -97,17 +97,13 @@ For the second flag, we have to enter the encryption key to gain access to the s
 
 ![](/images/blog/w1se-guy/10.png)
 
-```
-Enter key: cHnT9
-```
-
 Access granted. The second flag appears:
 
 **Flag 2:** `THM{BrUt3_ForC1nG_XOR_cAn_B3_FuN_nO?}`
 
 ---
 
-- If you know any part of the plaintext, you can recover part of the XOR key — this is called a **known plaintext attack**
+- If you know any part of the plaintext, you can recover part of the XOR key. This is called a **known plaintext attack**
 - XOR keys repeat in a cycle, which is exactly what lets us figure out the flag length
-- Always read the source code when it's available — it told us the key length and character set, which saved a lot of time
+- Always read the source code when it's available. Tt told us the key length and character set, which saved a lot of time
 - Short keys with a limited character set can be brute forced manually, no scripting required
