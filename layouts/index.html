@@ -1226,12 +1226,11 @@ a.skill-card:hover {
   </div>
 
   {{ $posts := where .Site.RegularPages "Section" "blog" }}
-  {{ $capped := first 20 $posts }}
-  {{ $remaining := sub (len $capped) 4 }}
+  {{ $capped := first 24 $posts }}
 
     <div style="position:relative;">
   <div class="blog-grid" id="blog-grid">
-    {{ range first 4 $posts }}
+    {{ range first 24 $posts }}
     <a href="{{ .Permalink }}" class="blog-card reveal">
       {{ with .Params.image }}
       <div class="blog-card-image">
@@ -1249,59 +1248,13 @@ a.skill-card:hover {
       </div>
     </a>
     {{ end }}
-    {{ if gt $remaining 0 }}
-    {{ range after 4 $capped }}
-    <a href="{{ .Permalink }}" class="blog-card reveal hidden-card" style="display:none;">
-      {{ with .Params.image }}
-      <div class="blog-card-image">
-        <img src="{{ . }}" alt="{{ $.Title }}">
-      </div>
-      {{ end }}
-      <div class="blog-card-content">
-        <div class="blog-card-category">{{ .Params.category }}</div>
-        <div class="blog-card-title">{{ .Title }}</div>
-        <div class="blog-card-excerpt">{{ .Params.excerpt }}</div>
-        <div class="blog-card-meta">
-          <span>{{ .Date.Format "02/01/2006" }}</span>
-          <span>{{ .Params.readtime }}</span>
-        </div>
-      </div>
-    </a>
-    {{ end }}
-    {{ end }}
   </div>
   <div style="position:absolute; bottom:0; left:0; right:0; height:400px; background: linear-gradient(to bottom, transparent 0%, rgba(5,10,18,0.6) 40%, rgba(5,10,18,0.92) 70%, var(--bg) 100%); pointer-events:none;"></div>
   </div>
 
-  {{ if gt $remaining 0 }}
-  <div id="blog-expand-bar" style="margin-top: 32px;">
-    <button onclick="expandBlog()" style="
-      width: 100%;
-      background: var(--surface);
-      border: 1px solid var(--border-hi);
-      border-radius: 8px;
-      padding: 20px 32px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;"
-      onmouseover="this.style.background='var(--blue-dim)'; this.style.boxShadow='0 4px 24px rgba(0,178,255,0.1)';"
-      onmouseout="this.style.background='var(--surface)'; this.style.boxShadow='none';">
-      <div style="flex:1; height:1px; background: linear-gradient(to right, transparent, var(--border-hi));"></div>
-      <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
-        <span style="font-family:'DM Mono',monospace; font-size:0.78rem; color:var(--blue); letter-spacing:0.14em; text-transform:uppercase;">{{ $remaining }} more writeups</span>
-        <span style="font-size:1rem; color:var(--muted);">↓</span>
-      </div>
-      <div style="flex:1; height:1px; background: linear-gradient(to left, transparent, var(--border-hi));"></div>
-    </button>
-  </div>
-  {{ end }}
-
-  {{ if gt (len $posts) 20 }}
-  {{ $totalRemaining := sub (len $posts) 21 }}
-  <div id="view-all-btn" style="text-align:center; margin-top:32px; display:none;">
+  {{ if gt (len $posts) 24 }}
+  {{ $totalRemaining := sub (len $posts) 24 }}
+  <div id="view-all-btn" style="text-align:center; margin-top:32px;">
     <p style="font-family:'DM Mono',monospace; font-size:1rem; color:var(--text); margin-bottom:16px; letter-spacing:0.1em;">
       + {{ $totalRemaining }} more writeups on the blog page
     </p>
@@ -1358,9 +1311,7 @@ a.skill-card:hover {
   </div>
 </footer>
 <script>
-  // year
   document.getElementById('yr').textContent = new Date().getFullYear();
-  // scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
@@ -1372,7 +1323,6 @@ a.skill-card:hover {
     });
   }, { threshold: 0.12 });
   reveals.forEach(r => obs.observe(r));
-  // active nav highlight on scroll
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
@@ -1385,7 +1335,6 @@ a.skill-card:hover {
         ? 'var(--blue)' : '';
     });
   });
-  // copy email
   function copyEmail() {
     navigator.clipboard.writeText("hustle022@yahoo.com");
     const el = document.getElementById("email-val");
