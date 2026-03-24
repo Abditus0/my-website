@@ -1,6 +1,6 @@
 ---
 title: "OSI Model — TryHackMe Pre Security Path"
-date: 2026-03-24
+date: 2026-03-25
 category: "TryHackMe · Writeup"
 excerpt: "Complete walkthrough of TryHackMe's OSI Model room"
 image: "/images/blog/11.png"
