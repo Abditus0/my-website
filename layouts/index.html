@@ -357,39 +357,53 @@ a.stat:hover .stat-label { color: var(--text); }
 
     /* ───────────────── SKILLS ───────────────── */
     .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-    .skill-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 28px;
-      transition: border-color 0.25s, transform 0.25s;
-      cursor: default;
-    }
-    .skill-card:hover {
-      border-color: var(--border-hi);
-      transform: translateY(-3px);
-    }
-    .skill-icon {
-      width: 44px; height: 44px;
-      background: var(--blue-dim);
-      border: 1px solid var(--border-hi);
-      border-radius: 8px;
-      display: grid; place-items: center;
-      margin-bottom: 18px;
-      font-size: 1.2rem;
-    }
-    .skill-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1rem; font-weight: 700;
-      color: var(--heading); margin-bottom: 8px;
-    }
-    .skill-desc {
-      font-size: 0.82rem; color: var(--muted); line-height: 1.6;
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 320px));
+  gap: 20px;
+  justify-content: center;
+}
+.skill-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 28px;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--teal));
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.skill-card:hover {
+  border-color: var(--border-hi);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px rgba(0,178,255,0.08);
+}
+.skill-card:hover::before { opacity: 1; }
+.skill-icon {
+  width: 44px; height: 44px;
+  background: var(--blue-dim);
+  border: 1px solid var(--border-hi);
+  border-radius: 8px;
+  display: grid; place-items: center;
+  margin-bottom: 18px;
+  font-size: 1.2rem;
+}
+.skill-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem; font-weight: 700;
+  color: var(--heading); margin-bottom: 10px;
+}
+.skill-desc {
+  font-size: 0.82rem; color: var(--muted); line-height: 1.65;
+}
 
     .certs-row {
       display: flex; flex-wrap: wrap; gap: 12px;
@@ -1042,34 +1056,29 @@ a.skill-card:hover {
 
 <div class="skills-grid">
   <div class="skill-card reveal">
-    <div class="skill-icon"><i class="fa-solid fa-headset" style="color:var(--blue);"></i></div>
-    <div class="skill-name">IT Support & Helpdesk</div>
-    <div class="skill-desc">1 year of on-site IT support, hardware troubleshooting, Windows 10/11, software issues, system setup, and end user support with a focus on minimizing downtime.</div>
-  </div>
-  <div class="skill-card reveal">
     <div class="skill-icon"><i class="fa-solid fa-network-wired" style="color:var(--blue);"></i></div>
     <div class="skill-name">Networking</div>
-    <div class="skill-desc">Hands-on experience with TCP/IP, DNS, DHCP, VLANs, subnetting, firewalls, and pfSense, including designing and deploying segmented enterprise networks from scratch.</div>
+    <div class="skill-desc">Designed and deployed enterprise-grade segmented networks using pfSense, VLANs, and firewall rules. Not just theory, built from scratch in real lab environments.</div>
   </div>
   <div class="skill-card reveal">
     <div class="skill-icon"><i class="fa-solid fa-server" style="color:var(--blue);"></i></div>
     <div class="skill-name">Systems Administration</div>
-    <div class="skill-desc">Built Windows Server environments with Active Directory, Group Policy, DNS, DHCP, file shares, and NTFS permissions, simulating real-world 25-user business infrastructure.</div>
+    <div class="skill-desc">Built full Windows Server 2022 environments from scratch. Active Directory, Group Policy, NTFS permissions, DHCP/DNS, simulating real infrastructure for a 25-user business.</div>
   </div>
   <div class="skill-card reveal">
     <div class="skill-icon"><i class="fa-solid fa-shield-halved" style="color:var(--blue);"></i></div>
     <div class="skill-name">Security</div>
-    <div class="skill-desc">Network analysis with Wireshark, vulnerability assessment, SSH hardening, DMZ architecture, email security (SPF/DKIM/DMARC), and continuous learning through TryHackMe labs.</div>
+    <div class="skill-desc">Active on TryHackMe and HackTheBox. Hands-on with SSH hardening, DMZ architecture, email authentication (SPF/DKIM/DMARC), and network traffic analysis with Wireshark.</div>
   </div>
   <div class="skill-card reveal">
     <div class="skill-icon"><i class="fa-solid fa-code" style="color:var(--blue);"></i></div>
     <div class="skill-name">Scripting & Automation</div>
-    <div class="skill-desc">PowerShell and Python scripts for backup automation, AD password resets, and system health reporting with built-in error handling, logging, and verification.</div>
+    <div class="skill-desc">Built PowerShell and Python tools. Automated backups, AD password resets, and health reports. With proper error handling, logging, and output verification.</div>
   </div>
   <div class="skill-card reveal">
     <div class="skill-icon"><i class="fa-solid fa-layer-group" style="color:var(--blue);"></i></div>
     <div class="skill-name">Virtualization & Cloud</div>
-    <div class="skill-desc">Experienced with Hyper-V, VMware, and VirtualBox for building lab environments including cross hypervisor VM migration, Docker basics, and GitHub for version control.</div>
+    <div class="skill-desc">Built and migrated lab environments across Hyper-V, VMware, and VirtualBox. Hands-on with Docker, AWS, Azure, and Google Workspace and Microsoft 365 administration.</div>
   </div>
 </div>
 </section>
