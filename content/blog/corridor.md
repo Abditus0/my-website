@@ -4,7 +4,7 @@ date: 2026-03-25
 category: "TryHackMe · Writeup"
 excerpt: "Walkthrough of the TryHackMe Corridor challenge - Can you escape the Corridor?"
 image: "/images/blog/13.png"
-readtime: "5 min read"
+readtime: "6 min read"
 draft: false
 ---
 
