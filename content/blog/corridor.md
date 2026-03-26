@@ -1,6 +1,6 @@
 ---
 title: "Corridor CTF"
-date: 2026-03-25
+date: 2026-03-26
 category: "TryHackMe · Writeup"
 excerpt: "Walkthrough of the TryHackMe Corridor challenge - Can you escape the Corridor?"
 image: "/images/blog/13.png"
