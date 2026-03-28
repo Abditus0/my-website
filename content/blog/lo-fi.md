@@ -1,6 +1,6 @@
 ---
 title: "Lo-Fi CTF"
-date: 2026-03-21
+date: 2026-03-28
 category: "TryHackMe · Writeup"
 excerpt: "Walkthrough of TryHackMe's Lo-Fi CTF — Want to hear some lo-fi beats, to relax or study to? We've got you covered!"
 image: "/images/blog/8.png"
