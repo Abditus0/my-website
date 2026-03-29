@@ -1,7 +1,7 @@
 ---
 title: "What is Networking? — TryHackMe Pre Security Path"
 date: 2026-03-18
-category: "TryHackMe · Writeup"
+category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's What is Networking? room"
 image: "/images/blog/4.png"
 readtime: "25 min read"

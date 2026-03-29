@@ -1,7 +1,7 @@
 ---
 title: "Defensive Security Intro — TryHackMe Pre Security Path"
 date: 2026-03-16
-category: "TryHackMe · Writeup"
+category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Defensive Security Intro"
 image: "/images/blog/2.png"
 readtime: "10 min read"

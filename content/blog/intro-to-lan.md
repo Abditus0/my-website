@@ -1,7 +1,7 @@
 ---
 title: "Intro to LAN — TryHackMe Pre Security Path"
 date: 2026-03-19
-category: "TryHackMe · Writeup"
+category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Intro to LAN room"
 image: "/images/blog/5.png"
 readtime: "30 min read"

@@ -1,7 +1,7 @@
 ---
 title: "Packets & Frames — TryHackMe Pre Security Path"
 date: 2026-03-27
-category: "TryHackMe · Writeup"
+category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Packets & Frames room"
 image: "/images/blog/14.png"
 readtime: "12 min read"

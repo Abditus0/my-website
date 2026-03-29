@@ -1,7 +1,7 @@
 ---
 title: "Offensive Security Intro — TryHackMe Pre Security Path"
 date: 2026-03-15
-category: "TryHackMe · Writeup"
+category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Offensive Security Intro"
 image: "/images/blog/1.png"
 readtime: "8 min read"
