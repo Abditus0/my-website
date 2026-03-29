@@ -1,7 +1,7 @@
 ---
 title: "Extending Your Network — TryHackMe Pre Security Path"
 date: 2026-03-29
-category: "TryHackMe · Writeup"
+category: "TryHackMe · writeup"
 excerpt: "Complete walkthrough of TryHackMe's Extending Your Network room"
 image: "/images/blog/15.png"
 readtime: "12 min read"
