@@ -107,6 +107,19 @@
       color: var(--heading); letter-spacing: -0.02em; margin-bottom: 16px;
     }
     .page-subtitle { font-size: 1.1rem; color: var(--muted); max-width: 600px; margin: 0 auto; }
+    .filter-tabs {
+      display: flex; justify-content: center; gap: 12px;
+      margin-bottom: 48px;
+    }
+    .filter-tab {
+      font-family: 'DM Mono', monospace; font-size: 0.75rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 8px 20px; border-radius: 4px; cursor: pointer;
+      border: 1px solid var(--border); color: var(--muted);
+      background: transparent; transition: all 0.2s;
+    }
+    .filter-tab:hover { border-color: var(--border-hi); color: var(--blue); }
+    .filter-tab.active { border-color: var(--border-hi); color: var(--blue); background: var(--blue-dim); }
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 380px));
@@ -213,9 +226,15 @@
     <p class="page-subtitle">CTF writeups, cybersecurity labs, and technical documentation from my learning journey.</p>
   </div>
 
+  <div class="filter-tabs">
+    <button class="filter-tab active" data-filter="all">All</button>
+    <button class="filter-tab" data-filter="writeup">Writeups</button>
+    <button class="filter-tab" data-filter="ctf">CTF Challenges</button>
+  </div>
+
   <div class="blog-grid">
     {{ range (where .Site.RegularPages "Section" "blog") }}
-    <a href="{{ .Permalink }}" class="blog-card">
+    <a href="{{ .Permalink }}" class="blog-card" data-category="{{ .Params.category }}">
       {{ with .Params.image }}
       <div class="blog-card-image">
         <img src="{{ . }}" alt="{{ $.Title }}">
@@ -262,6 +281,17 @@
     setTimeout(() => { createShootingStar(); scheduleNextStar(); }, Math.random() * 10000 + 10000);
   }
   scheduleNextStar();
+
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+      document.querySelectorAll('.blog-card').forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'flex' : 'none';
+      });
+    });
+  });
 </script>
 </body>
 </html>
