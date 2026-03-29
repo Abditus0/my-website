@@ -122,6 +122,7 @@ When there are multiple paths between two devices, the router picks the best one
 One more concept introduced here: **VLAN (Virtual Local Area Network)**. VLANs let you logically split up devices on the same physical switch into separate groups. For example, the Sales team and the Accounting team might be on the same switch, but a VLAN keeps them isolated from each other. They can both access the Internet, but they can't talk directly to each other. Clean network separation without needing extra hardware.
 
 **Question: What is the verb for the action that a router does?** `Routing`
+
 **Question: What are the two different layers of switches?** `Layer 2, Layer 3`
 
 ---
