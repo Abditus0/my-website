@@ -43,6 +43,7 @@ Packets also have headers. Little pieces of extra info attached to the data. Her
 - **Destination Address**: the IP address of wherever the packet is going
 
 **Question: What is the name for a piece of data when it does have IP addressing information?** `Packet`
+
 **Question: What is the name for a piece of data when it does not have IP addressing information?** `Frame`
 
 ---
@@ -79,6 +80,7 @@ TCP packets also have headers just like regular packets. The important ones:
 - **Flag**: tells both devices what kind of message this is (SYN, ACK, FIN, etc.)
 
 **Question: What is the header in a TCP packet that ensures the integrity of data?** `Checksum`
+
 **Question: Provide the order of a normal Three-way handshake (with each step separated by a comma):** `SYN, SYN/ACK, ACK`
 
 ---
@@ -118,8 +120,11 @@ UDP packets are simpler than TCP packets. Here are the headers they carry:
 No checksum, no sequence numbers, no flags. Just send it and move on.
 
 **Question: What does the term "UDP" stand for?** `User Datagram Protocol`
+
 **Question: What type of connection is "UDP"?** `Stateless`
+
 **Question: What protocol would you use to transfer a file?** `TCP`
+
 **Question: What protocol would you use to have a video call?** `UDP`
 
 ---

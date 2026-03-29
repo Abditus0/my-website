@@ -33,8 +33,10 @@ OSI stands for **Open Systems Interconnection**, and it's made up of 7 layers.
 
 Something else that's important: the process of adding information to data is called **encapsulation**.
 
-**Question: What does the "OSI" in "OSI Model" stand for?** `Open Systems Interconnection`  
+**Question: What does the "OSI" in "OSI Model" stand for?** `Open Systems Interconnection` 
+
 **Question: How many layers (in digits) does the OSI model have?** `7`  
+
 **Question: What is the key term for when pieces of information get added to data?** `Encapsulation`
 
 ---
@@ -46,7 +48,9 @@ This one is the easiest. It's literally anything physical that connects devices 
 For example, ethernet cables that transfer data using a binary system (0s and 1s).
 
 **Question: What is the name of this Layer?** `Physical`  
+
 **Question: What is the name of the numbering system that is both 0's and 1's?** `Binary`  
+
 **Question: What is the name of the cables that are used to connect devices?** `Ethernet Cables`
 
 ---
@@ -63,6 +67,7 @@ You’ll learn this stuff more in depth later in other TryHackMe rooms, but for 
 Data Link = MAC addresses, and switches.
 
 **Question: What is the name of this Layer?** `Data Link`  
+
 **Question: What is the name of the piece of hardware that all networked devices come with?** `Network Interface Card`
 
 ---
@@ -83,9 +88,13 @@ TryHackMe mentions two routing protocols: **OSPF** and **RIP** (just examples, t
 When you hear Layer 3, think: IPs, routing, routers.
 
 **Question: What is the name of this Layer?** `Network`  
+
 **Question: Will packets take the most optimal route across a network? (Y/N)** `Y`  
+
 **Question: What does the acronym "OSPF" stand for?** `Open Shortest Path First`  
+
 **Question: What does the acronym "RIP" stand for?** `Routing Information Protocol`  
+
 **Question: What type of addresses are dealt with at this layer?** `IP Addresses`
 
 ---
@@ -102,12 +111,19 @@ Example: sending files. You don’t want half a file.
 Example: video or audio calls. They can’t really be “re-sent”.
 
 **Question: What is the name of this Layer?** `Transport`  
+
 **Question: What does TCP stand for?** `Transmission Control Protocol`  
+
 **Question: What does UDP stand for?** `User Datagram Protocol`  
+
 **Question: What protocol guarantees the accuracy of data?** `TCP`  
+
 **Question: What protocol doesn't care if data is received or not by the other device?** `UDP`  
+
 **Question: What protocol would an application such as an email client use?** `TCP`  
+
 **Question: What protocol would an application that downloads files use?** `TCP`  
+
 **Question: What protocol would an application that streams video use?** `UDP`
 
 ---
@@ -121,6 +137,7 @@ When two devices communicate, they create a connection. That’s called a sessio
 This layer is responsible for keeping that session alive and closing it if the connection is lost or inactive for too long.
 
 **Question: What is the name of this Layer?** `Session`  
+
 **Question: What is the technical term for when a connection is successfully established?** `Session`
 
 ---
@@ -138,6 +155,7 @@ Example: you send an email from one app, someone opens it on another. It still l
 It also handles formatting, conversion, and things like encryption (HTTPS is usually associated with this layer).
 
 **Question: What is the name of this Layer?** `Presentation`  
+
 **Question: What is the main purpose that this Layer acts as?** `Translator`
 
 ---
@@ -153,6 +171,7 @@ Things like browsers, email clients, and tools. All live here.
 Protocols like **DNS (Domain Name System)** also work here, translating domain names into IP addresses.
 
 **Question: What is the name of this Layer?** `Application`  
+
 **Question: What is the technical term that is given to the name of the software that users interact with?** `Graphical User Interface`
 
 ---
