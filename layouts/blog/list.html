@@ -112,12 +112,12 @@
       margin-bottom: 48px;
     }
     .filter-tab {
-      font-family: 'DM Mono', monospace; font-size: 0.75rem;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 8px 20px; border-radius: 4px; cursor: pointer;
-      border: 1px solid var(--border); color: var(--muted);
-      background: transparent; transition: all 0.2s;
-    }
+  font-family: 'DM Mono', monospace; font-size: 0.75rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 12px 32px; border-radius: 4px; cursor: pointer;
+  border: 1px solid var(--border); color: var(--muted);
+  background: transparent; transition: all 0.2s;
+}
     .filter-tab:hover { border-color: var(--border-hi); color: var(--blue); }
     .filter-tab.active { border-color: var(--border-hi); color: var(--blue); background: var(--blue-dim); }
 .blog-grid {
@@ -227,10 +227,10 @@
   </div>
 
   <div class="filter-tabs">
-    <button class="filter-tab active" data-filter="all">All</button>
-    <button class="filter-tab" data-filter="writeup">Writeups</button>
-    <button class="filter-tab" data-filter="ctf">CTF Challenges</button>
-  </div>
+  <button class="filter-tab" data-filter="ctf">CTF Challenges</button>
+  <button class="filter-tab" data-filter="writeup">Writeups</button>
+  <button class="filter-tab active" data-filter="all">All</button>
+</div>
 
   <div class="blog-grid">
     {{ range (where .Site.RegularPages "Section" "blog") }}
