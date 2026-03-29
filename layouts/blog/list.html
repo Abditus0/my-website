@@ -227,9 +227,9 @@
   </div>
 
   <div class="filter-tabs">
-  <button class="filter-tab" data-filter="ctf">CTF Challenges</button>
+  <button class="filter-tab active" data-filter="ctf">CTF Challenges</button>
   <button class="filter-tab" data-filter="writeup">Writeups</button>
-  <button class="filter-tab active" data-filter="all">All</button>
+  <button class="filter-tab" data-filter="all">All</button>
 </div>
 
   <div class="blog-grid">
@@ -292,6 +292,9 @@
       });
     });
   });
+  document.querySelectorAll('.blog-card').forEach(card => {
+  card.style.display = card.dataset.category === 'ctf' ? 'flex' : 'none';
+});
 </script>
 </body>
 </html>
