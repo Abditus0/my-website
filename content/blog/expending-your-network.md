@@ -61,7 +61,9 @@ Firewalls inspect packets to answer these questions. There are two main types:
 Firewalls operate at **Layers 3 and 4** of the OSI model. The Network and Transport layers. That's where IP addresses and ports live.
 
 **Question: What layers of the OSI model do firewalls operate at?** `3 & 4`
+
 **Question: What category of firewall inspects the entire connection?** `Stateful`
+
 **Question: What category of firewall inspects individual packets?** `Stateless`
 
 ---
@@ -95,6 +97,7 @@ There are a few different VPN technologies in use:
 TryHackMe actually uses a VPN to connect you to their vulnerable machines. Keeping them off the public Internet while still letting you reach them.
 
 **Question: What VPN technology only encrypts & provides the authentication of data?** `PPP`
+
 **Question: What VPN technology uses the IP framework?** `IPSec`
 
 ---
@@ -130,6 +133,7 @@ Fun interactive task. You get a network simulator that breaks down every single 
 The task is to send a TCP packet from `computer1` to `computer3` and watch it all unfold in the network log.
 
 **Question: What is the flag from the network simulator?** `THM{YOU'VE_GOT_DATA}`
+
 **Question: How many HANDSHAKE entries are there in the Network Log?** `5`
 
 ---
