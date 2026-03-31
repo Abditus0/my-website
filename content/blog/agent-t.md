@@ -1,6 +1,6 @@
 ---
-title: "PHP 8.1.0-dev Backdoor RCE"
-date: 2026-03-26
+title: "Agent T"
+date: 2026-03-31
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Agent T challenge - Something seems a little off with the server."
 image: "/images/blog/17.png"
