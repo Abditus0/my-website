@@ -124,7 +124,7 @@ cat /flag.txt
 
 ---
 
-- Running nmap with `-sCV` was important here to hind the version	
+- Running nmap with `-sCV` was important here to find the version	
 - When you spot a version number, search it on Exploit-DB, even old CVEs can still be sitting on unpatched servers
 - **Supply chain attacks** are scary because the malicious code comes from a trusted source, not from the attacker directly targeting you	
 - This backdoor worked because PHP was executing the header value as code with zero checks. 
