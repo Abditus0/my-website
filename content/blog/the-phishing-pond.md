@@ -3,7 +3,7 @@ title: "The Phishing Pond"
 date: 2026-04-01
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Phishing Pond challenge - Catch the phish before the phish catches you."
-image: "/images/blog/20.png"
+image: "/images/blog/19.png"
 readtime: "10 min read"
 draft: false
 ---
