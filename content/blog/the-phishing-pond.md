@@ -36,7 +36,7 @@ This one checked out. Nothing suspicious.
 
 ## Email 3 - Legit
 
-![](/images/blog/phishing-pond/5.png)
+![](/images/blog/the-phishing-pond/5.png)
 
 Legit again. Moving on.
 
