@@ -1,6 +1,6 @@
 ---
 title: "Agent T"
-date: 2026-03-31
+date: 2026-04-01
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Agent T challenge - Something seems a little off with the server."
 image: "/images/blog/17.png"
