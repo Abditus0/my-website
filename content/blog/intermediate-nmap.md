@@ -1,6 +1,5 @@
 ---
-title: "Intermediate Nmap
-"
+title: "Intermediate Nmap"
 date: 2026-04-01
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Intermediate Nmap challenge - Can you combine your great nmap skills with other tools to log in to this machine?"
