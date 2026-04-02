@@ -1,6 +1,6 @@
 ---
 title: "Computer Types — TryHackMe Pre Security Path"
-date: 2026-04-02
+date: 2026-03-18
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Computer Types room - Explore the different types of computers, from laptops to the tiny chips inside your coffee machine."
 image: "/images/blog/27.png"
