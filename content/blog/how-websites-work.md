@@ -10,7 +10,7 @@ draft: false
 
 # How Websites Work
 
-This room is about how websites actually work. What they are made of, how the browser shows them to you, and some basic ways they can go wrong from a security point of view.
+This room is about how websites work. What they are made of, how the browser shows them to you, and some basic ways they can go wrong from a security point of view.
 
 ---
 
