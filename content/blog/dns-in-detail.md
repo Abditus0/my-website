@@ -2,7 +2,7 @@
 title: "DNS in Detail — TryHackMe Pre Security Path"
 date: 2026-03-30
 category: "writeup"
-excerpt: "Complete walkthrough of TryHackMe's DNS in Detail room"
+excerpt: "Complete walkthrough of TryHackMe's DNS in Detail room - Learn how DNS works and how it helps you access internet services."
 image: "/images/blog/16.png"
 readtime: "10 min read"
 draft: false

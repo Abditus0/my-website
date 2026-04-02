@@ -2,7 +2,7 @@
 title: "Extending Your Network — TryHackMe Pre Security Path"
 date: 2026-03-29
 category: "writeup"
-excerpt: "Complete walkthrough of TryHackMe's Extending Your Network room"
+excerpt: "Complete walkthrough of TryHackMe's Extending Your Network room - Learn about some of the technologies used to extend networks out onto the Internet and the motivations for this."
 image: "/images/blog/15.png"
 readtime: "12 min read"
 draft: false

@@ -2,7 +2,7 @@
 title: "OSI Model — TryHackMe Pre Security Path"
 date: 2026-03-24
 category: "writeup"
-excerpt: "Complete walkthrough of TryHackMe's OSI Model room"
+excerpt: "Complete walkthrough of TryHackMe's OSI Model room - Learn about the fundamental networking framework that determines the various stages in which data is handled across a network."
 image: "/images/blog/11.png"
 readtime: "15 min read"
 draft: false
