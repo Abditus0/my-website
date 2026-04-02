@@ -1,6 +1,6 @@
 ---
 title: "The Game"
-date: 2026-04-01
+date: 2026-03-21
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe The Game challenge - Practice your Game Hacking skills."
 image: "/images/blog/20.png"

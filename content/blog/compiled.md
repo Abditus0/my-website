@@ -1,6 +1,6 @@
 ---
 title: "Compiled CTF"
-date: 2026-03-22
+date: 2026-03-14
 category: "ctf"
 excerpt: "Walkthrough of TryHackMe's Compiled CTF — Strings can only help you so far."
 image: "/images/blog/9.png"

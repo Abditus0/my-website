@@ -1,6 +1,6 @@
 ---
 title: "W1seGuy CTF"
-date: 2026-03-25
+date: 2026-03-16
 category: "ctf"
 excerpt: "Walkthrough of a TryHackMe W1seGuy challenge - A w1se guy 0nce said, the answer is usually as plain as day."
 image: "/images/blog/12.png"

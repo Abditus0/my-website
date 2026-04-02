@@ -1,6 +1,6 @@
 ---
 title: "CyberHeroes"
-date: 2026-04-02
+date: 2026-03-24
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe CyberHeroes challenge - Want to be a part of the elite club of CyberHeroes? Prove your merit by finding a way to log in!"
 image: "/images/blog/21.png"
