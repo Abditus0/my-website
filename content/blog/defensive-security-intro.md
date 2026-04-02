@@ -1,6 +1,6 @@
 ---
 title: "Defensive Security Intro — TryHackMe Pre Security Path"
-date: 2026-03-16
+date: 2026-03-06
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Defensive Security Intro - Introducing defensive security and related topics, such as Threat Intelligence, SOC, DFIR, Malware Analysis, and SIEM."
 image: "/images/blog/2.png"

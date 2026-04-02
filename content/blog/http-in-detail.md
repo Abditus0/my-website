@@ -1,6 +1,6 @@
 ---
 title: "HTTP in Detail — TryHackMe Pre Security Path"
-date: 2026-04-02
+date: 2026-04-14
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's HTTP in Detail room - Learn about how you request content from a web server using the HTTP protocol"
 image: "/images/blog/23.png"

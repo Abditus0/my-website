@@ -1,6 +1,6 @@
 ---
 title: "How Websites Work — TryHackMe Pre Security Path"
-date: 2026-04-02
+date: 2026-04-15
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's How Websites Work room - To exploit a website, you first need to know how they are created."
 image: "/images/blog/24.png"

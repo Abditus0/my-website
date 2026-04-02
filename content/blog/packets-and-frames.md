@@ -1,6 +1,6 @@
 ---
 title: "Packets & Frames — TryHackMe Pre Security Path"
-date: 2026-03-27
+date: 2026-03-11
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Packets & Frames room - Understand how data is divided into smaller pieces and transmitted across a network to another device."
 image: "/images/blog/14.png"

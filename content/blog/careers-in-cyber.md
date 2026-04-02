@@ -1,6 +1,6 @@
 ---
 title: "Careers in Cyber — TryHackMe Pre Security Path"
-date: 2026-03-17
+date: 2026-03-07
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Careers in Cyber room - Learn about the different careers in cyber security."
 image: "/images/blog/3.png"

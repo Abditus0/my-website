@@ -1,6 +1,6 @@
 ---
 title: "Offensive Security Intro — TryHackMe Pre Security Path"
-date: 2026-03-15
+date: 2026-03-05
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Offensive Security Intro - Hack your first website (legally in a safe environment) and experience an ethical hacker's job."
 image: "/images/blog/1.png"
