@@ -1,6 +1,6 @@
 ---
 title: "Putting It All Together — TryHackMe Pre Security Path"
-date: 2026-04-16
+date: 2026-03-16
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Putting It All Together room - Learn how all the individual components of the web work together to bring you access to your favourite web sites."
 image: "/images/blog/25.png"
