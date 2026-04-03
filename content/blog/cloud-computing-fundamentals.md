@@ -3,7 +3,7 @@ title: "Cloud Computing Fundamentals — TryHackMe Pre Security Path"
 date: 2026-04-03
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Cloud Computing Fundamentals room - Discover how cloud computing helps businesses move faster, do more, and scale with less effort."
-image: "/images/blog/31.png"
+image: "/images/blog/32.png"
 readtime: "15 min read"
 draft: false
 ---
