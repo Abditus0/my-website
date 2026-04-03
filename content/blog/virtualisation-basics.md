@@ -3,7 +3,7 @@ title: "Virtualization — TryHackMe Pre Security Path"
 date: 2026-03-20
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Virtualization room - Learn why virtualisation powers modern IT, improving efficiency and safely isolating environments."
-image: "/images/blog/30.png"
+image: "/images/blog/31.png"
 readtime: "12 min read"
 draft: false
 ---
