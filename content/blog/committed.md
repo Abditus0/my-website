@@ -4,7 +4,7 @@ date: 2026-03-28
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Committed challenge - One of our developers accidentally committed some sensitive code to our GitHub repository. Well, at least, that is what they told us..."
 image: "/images/blog/34.png"
-readtime: "7 min read"
+readtime: "12 min read"
 draft: false
 ---
 
