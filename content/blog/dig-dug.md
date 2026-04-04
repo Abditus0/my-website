@@ -30,7 +30,7 @@ When you query a specific DNS server instead of your default one, the `dig` synt
 dig @(dns server ip) example.com (record type)
 ```
 
-The `@` tells dig to go ask that specific server instead of whatever your system normally uses. So in my case, I will start with an A record query:
+The `@` tells dig to go ask that specific server instead of whatever your system normally uses. So in my case, I will start with an `A` record query:
 ```bash
 dig @10.112.180.174 givemetheflag.com A
 ```
@@ -41,18 +41,18 @@ I was not expecting to get the flag that fast, but okay.
 
 ---
 
-## We Asked for A But Got TXT?
+## We Asked for `A` But Got `TXT`?
 
-Yeah, a little weird. We asked for an A record, which normally returns an IP address. But the server shot back a TXT record with the flag in it instead.
+Yeah, a little weird. We asked for an `A` record, which normally returns an IP address. But the server shot back a `TXT` record with the flag in it instead.
 
-This is just a misconfigured server doing its own thing, basically set up to dump the TXT record no matter what record type you ask for. Not something you would see in the wild, but it works for a CTF.
+This is just a misconfigured server doing its own thing, basically set up to dump the `TXT` record no matter what record type you ask for. Not something you would see in the wild, but it works for a CTF.
 
-The more interesting takeaway is why TXT records are worth checking in real engagements. Companies use them for all kinds of things:
+The more interesting takeaway is why `TXT` records are worth checking in real engagements. Companies use them for all kinds of things:
 
 - Domain verification tokens for services like Google or Microsoft
 - SPF and DMARC email config, which can tell you a lot about how their email security is set up
 - Sometimes just plain sensitive info that someone forgot was public (this challenge)
 
-So whenever you are doing recon on a domain, always throw a TXT query in there.
+So whenever you are doing recon on a domain, always throw a `TXT` query in there.
 
 **Flag:** `flag{0767ccd06e79853318f25aeb08ff83e2}`
