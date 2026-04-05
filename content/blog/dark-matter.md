@@ -83,7 +83,7 @@ print('d =', d)
 "
 ```
 
-It ran, printed `d`, and used it to unlock the machine. That was it.
+It ran, printed `d`, and I used it to unlock the machine. That was it.
 
 ![](/images/blog/dark-matter/5.png)
 
