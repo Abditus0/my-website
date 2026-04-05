@@ -1,6 +1,6 @@
 ---
 title: "Windows Basics — TryHackMe Pre Security Path"
-date: 2026-04-04
+date: 2026-03-23
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Windows Basics room - Learn to navigate Windows, manage files, and use essential system tools."
 image: "/images/blog/36.png"
