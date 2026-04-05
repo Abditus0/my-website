@@ -29,19 +29,23 @@ Here is what is there:
 
 ![](/images/blog/dark-matter/2.png)
 
-- `public_key.txt` - the RSA public key, just two values: `n` and `e`
-- `encrypted_aes_key.bin` - the AES key, encrypted with the RSA key
-- `dock-replace.log` - Nothing useful
+`public_key.txt`: The RSA public key, just two values: `n` and `e`
+`encrypted_aes_key.bin`: The AES key, encrypted with the RSA key
+`dock-replace.log`: Nothing useful
 
-So the flow here is: RSA was used to lock the AES key, and the AES key was used to encrypt the actual files on the machine. To get anything back we need to break the RSA key first.
+So the flow here is: RSA was used to lock the AES key. To get the AES key back we need to break the RSA first.
 
 ---
 
 ## The Weak Link
 
-![](/images/blog/dark-matter/3.png)
+I opened `public_key.txt` and it had two things in it:
+```
+n=340282366920938460843936948965011886881
+e=65537
+```
 
-I opened `public_key.txt` and looked at the `n` value. This is where things got interesting.
+![](/images/blog/dark-matter/3.png)
 
 The `n` value is only **128 bits**.
 
@@ -79,9 +83,9 @@ print('d =', d)
 "
 ```
 
-![](/images/blog/dark-matter/5.png)
+It ran, printed `d`, and used it to unlock the machine. That was it.
 
-It ran, printed `d`, and the machine unlocked. That was it.
+![](/images/blog/dark-matter/5.png)
 
 ![](/images/blog/dark-matter/6.png)
 
@@ -89,7 +93,7 @@ It ran, printed `d`, and the machine unlocked. That was it.
 
 ## Getting the Flag
 
-Once the machine was unlocked, I opened `student_grades.docx` and the flag was there.
+Once the machine was unlocked, I opened `student_grades.docx` on the desktop and the flag was there.
 
 **Flag:** `THM{d0nt_l34k_y0ur_w34k_m0dulu5}`
 
