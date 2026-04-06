@@ -114,12 +114,26 @@
     .filter-tab {
   font-family: 'DM Mono', monospace; font-size: 0.95rem;
   letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 16px 40px; border-radius: 4px; cursor: pointer;
-  border: 1px solid var(--border); color: var(--text);
-  background: transparent; transition: all 0.2s;
+  padding: 16px 40px; border-radius: 6px; cursor: pointer;
+  border: 1px solid var(--border-hi);
+  color: var(--text);
+  background: linear-gradient(135deg, rgba(0,178,255,0.06), rgba(0,229,192,0.03));
+  transition: all 0.25s;
+  box-shadow: 0 2px 12px rgba(0,178,255,0.08), inset 0 1px 0 rgba(255,255,255,0.04);
 }
-    .filter-tab:hover { border-color: var(--border-hi); color: var(--blue); background: var(--blue-dim); }
-    .filter-tab.active { border-color: var(--blue); color: var(--heading); background: var(--blue-dim); box-shadow: 0 0 16px rgba(0,178,255,0.15); }
+.filter-tab:hover {
+  border-color: var(--blue);
+  color: var(--heading);
+  background: linear-gradient(135deg, rgba(0,178,255,0.14), rgba(0,229,192,0.06));
+  box-shadow: 0 4px 20px rgba(0,178,255,0.15), inset 0 1px 0 rgba(255,255,255,0.06);
+  transform: translateY(-2px);
+}
+.filter-tab.active {
+  border-color: var(--blue);
+  color: var(--heading);
+  background: linear-gradient(135deg, rgba(0,178,255,0.18), rgba(0,229,192,0.08));
+  box-shadow: 0 0 24px rgba(0,178,255,0.2), inset 0 1px 0 rgba(255,255,255,0.08);
+}
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 380px));
