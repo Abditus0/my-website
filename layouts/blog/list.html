@@ -119,6 +119,8 @@
   color: var(--heading);
   background: rgba(0,178,255,0.08);
   transition: all 0.25s;
+  appearance: none; -webkit-appearance: none;
+  outline: none;
 }
 .filter-tab:hover {
   border-color: var(--blue);
@@ -240,9 +242,9 @@
   </div>
 
   <div class="filter-tabs">
-  <button class="filter-tab active" data-filter="ctf">CTF Challenges <span style="font-size:0.75em;opacity:0.7;">({{ len (where .Site.RegularPages "Section" "blog" "Params.category" "ctf") }})</span></button>
-  <button class="filter-tab" data-filter="writeup">Writeups <span style="font-size:0.75em;opacity:0.7;">({{ len (where .Site.RegularPages "Section" "blog" "Params.category" "writeup") }})</span></button>
-  <button class="filter-tab" data-filter="all">All <span style="font-size:0.75em;opacity:0.7;">({{ len (where .Site.RegularPages "Section" "blog") }})</span></button>
+  <button type="button" class="filter-tab active" data-filter="ctf">CTF Challenges <span style="font-size:0.75em;opacity:0.7;"></span></button>
+  <button type="button" class="filter-tab" data-filter="writeup">Writeups <span style="font-size:0.75em;opacity:0.7;"></span></button>
+  <button type="button" class="filter-tab" data-filter="all">All <span style="font-size:0.75em;opacity:0.7;"></span></button>
 </div>
 
   <div class="blog-grid">
@@ -285,6 +287,19 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const allCards = document.querySelectorAll('.blog-card');
+  const counts = { all: allCards.length };
+  allCards.forEach(card => {
+    const cat = card.dataset.category;
+    counts[cat] = (counts[cat] || 0) + 1;
+  });
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    const span = tab.querySelector('span');
+    const filter = tab.dataset.filter;
+    if (span && counts[filter] !== undefined) span.textContent = `(${counts[filter]})`;
+  });
+
   function createShootingStar() {
     const star = document.createElement('div');
     star.className = 'shooting-star';
@@ -308,9 +323,10 @@
       });
     });
   });
+
   document.querySelectorAll('.blog-card').forEach(card => {
-  card.style.display = card.dataset.category === 'ctf' ? 'flex' : 'none';
-});
+    card.style.display = card.dataset.category === 'ctf' ? 'flex' : 'none';
+  });
 </script>
 </body>
 </html>
