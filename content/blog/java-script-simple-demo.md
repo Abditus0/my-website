@@ -69,9 +69,13 @@ const secret = Math.floor(Math.random() * (20)) + 1;
 The room breaks this down step by step and it is worth following along:
 
 `Math.random()` gives you a random decimal between 0 and just under 1. Something like `0.372`.
+
 Multiply that by 20 and you get somewhere between 0 and just under 20. So like `7.44`.
+
 `Math.floor()` strips the decimal by rounding down. `7.44` becomes `7`.
+
 Adding 1 at the end shifts the whole range from `0-19` up to `1-20`.
+
 
 So `secret` ends up being a whole number from 1 to 20. Every time.
 
@@ -187,7 +191,7 @@ if (guess < 1 || guess > 20) {
 }
 ```
 
-Python uses `or` in plain English. JavaScript uses `||` for the same thing. So `guess < 1 || guess > 20` means "guess is less than 1 or guess is greater than 20." Same idea, different symbols.
+Python uses `or` in plain English. JavaScript uses `||` for the same thing. So `guess < 1 || guess > 20` means "guess is less than 1 or guess is greater than 20." Same idea.
 
 The `else if` structure works exactly like Python's `elif`. Check the first condition, if it is false move to the next one, keep going until something is true or you fall through to the plain `else` at the bottom.
 
@@ -225,7 +229,7 @@ try {
 }
 ```
 
-Progress! Now the program actually responds to your guess. But it still only gives you one shot. Guess wrong and it just tells you "too low" and exits. Not exactly gripping gameplay. One more task to go.
+Progress! Now the program actually responds to your guess. But it still only gives you one shot. Guess wrong and it just tells you "too low" and exits. Not exactly what we want. One more task to go.
 
 **Question: The secret is 10. What will the program display if the user guesses 15?** `Too high, try again.`
 
@@ -244,7 +248,7 @@ while (guess !== secret) {
 }
 ```
 
-One thing to notice: Python uses `!=` for not equal. JavaScript uses `!==`. The triple equals thing is a JavaScript quirk. There is also `!=` in JavaScript but `!==` is stricter and generally what you want to use. The room uses `!==` and that is the right call.
+One thing to notice: Python uses `!=` for not equal. JavaScript uses `!==`. The extra equal sign is a JavaScript quirk. There is also `!=` in JavaScript but `!==` is stricter and generally what you want to use. The room uses `!==` and that is the right call.
 
 Everything from Task 4 just gets moved inside the loop:
 ```javascript
@@ -304,7 +308,7 @@ try {
 }
 ```
 
-Run it with `node guess_v3.js` and it actually works like a real game now. Picks a number, loops, gives feedback, and when you finally get it right it tells you how many tries it took. Satisfying.
+Run it with `node guess_v3.js` and it works like a real game now. Picks a number, loops, gives feedback, and when you finally get it right it tells you how many tries it took. Satisfying.
 
 The room also mentions there is a `guess_v4.js` that improves things a bit further. It is not required for this room but it is worth peeking at if you are curious about where the code could go next.
 
@@ -322,12 +326,12 @@ Same three concepts as the Python room, different language:
 
 Variables store your data. `let` for things that change, `const` for things that should not.
 
-Conditionals handle decisions. `if`, `else if`, and `else` in JavaScript work basically the same as Python's `if`, `elif`, and `else`. The main syntax difference is JavaScript uses `||` where Python uses `or`.
+Conditionals handle decisions. `if`, `else if`, and `else` in JavaScript work the same as Python's `if`, `elif`, and `else`. The main syntax difference is JavaScript uses `||` where Python uses `or`.
 
 Loops repeat code. The `while` loop in JavaScript works the same as in Python. Keep running as long as the condition is true, stop when it is not.
 
 The biggest takeaway from doing both rooms back to back is that the logic is genuinely identical. Same game, same structure, same flow. The differences are mostly surface level syntax. Python reads a bit more like plain English. JavaScript has more punctuation and a slightly rougher setup for things like reading user input. But once you know what a variable, a conditional, and a loop are, picking up a new language is mostly just learning its version of those same ideas.
 
-The room suggests comparing the two files side by side and honestly that is worth doing. Put the Python version and the JavaScript version next to each other and just read through them. The similarities are more obvious than the differences.
+The room suggests comparing the two files side by side and that is worth doing. Put the Python version and the JavaScript version next to each other and just read through them. The similarities are more obvious than the differences.
 
 ---
