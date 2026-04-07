@@ -10,9 +10,9 @@ draft: false
 
 # Database SQL Basics
 
-So after all those rooms about how computers work and how code runs, TryHackMe takes a turn and goes "okay now let's talk about where all that data actually lives." And I thought this would be dry. I genuinely expected to be bored. It is a room about databases. That sounds like something you read about in a textbook and immediately forget.
+So after all those rooms about how computers work and how code runs, TryHackMe takes a turn and goes "okay now let's talk about where all that data actually lives." 
 
-But it actually clicked pretty fast, and a big reason for that is the café thing. The whole room is built around a small café trying to track its orders, and that framing makes everything weirdly easy to follow.
+The whole room is built around a small café trying to track its orders, and that framing makes everything easy to follow.
 
 ---
 
@@ -83,9 +83,9 @@ SELECT drink, price FROM Orders;
 
 Now you only see the drink and price columns. Cleaner, easier to read.
 
-**Step 3: Filter results with WHERE**
+**Step 3: Filter results with `WHERE`**
 
-WHERE is where things get actually useful. It lets you keep only the rows that match a condition and filter out everything else.
+`WHERE` is where things get actually useful. It lets you keep only the rows that match a condition and filter out everything else.
 ```sql
 SELECT * FROM Orders WHERE drink = 'Coffee';
 ```
