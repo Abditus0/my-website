@@ -1,6 +1,6 @@
 ---
 title: "JavaScript: Simple Demo — TryHackMe Pre Security Path"
-date: 2026-04-07
+date: 2026-03-30
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's JavaScript: Simple Demo room - Explore what a basic JavaScript program looks like."
 image: "/images/blog/45.png"
