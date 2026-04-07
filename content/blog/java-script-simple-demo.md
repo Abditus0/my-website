@@ -166,9 +166,13 @@ Now the program can pick a number and receive a guess. It just cannot react to i
 The logic is the same as the Python version. Four possible situations to handle:
 
 Guess is outside 1 to 20, tell them it is out of range. 
+
 Guess is less than the secret, tell them it is too low. 
+
 Guess is greater than the secret, tell them it is too high. 
+
 None of the above, which means it has to be equal, so they got it.  
+
 
 In JavaScript that looks like this:
 ```javascript
