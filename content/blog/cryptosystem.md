@@ -57,7 +57,11 @@ So the weakness here is that `p` and `q` are extremely close to each other. In p
 
 Now to actually break this, I need to find `p` and `q` from `n`. Normally that is basically impossible with big numbers. But because these two are so close together, there is a shortcut.
 
-I will be honest, my first instinct was not the mathematical approach. I just copied the `n` value and dropped it into https://factordb.com/ and it handed me `p` and `q` right away. The website just had it in the database already. This is the easy and fast way of getting `p` and `q`. 
+I will be honest, my first instinct was not the mathematical approach. I just copied the `n` value and dropped it into https://factordb.com/ and it handed me `p` and `q` right away.
+
+![](/images/blog/cryptosystem/1.png)
+
+The website just had it in the database already. This is the easy and fast way of getting `p` and `q`. 
 
 But I wanted to actually understand what TryHackMe was trying to teach here, so I looked into the proper method too.
 
@@ -98,6 +102,8 @@ print(q)
 
 Run it and you get the same `p` and `q` as the website gave me earlier. So both methods check out.
 
+![](/images/blog/cryptosystem/2.png)
+
 ---
 
 ## Decrypting the Flag
@@ -127,6 +133,8 @@ print(long_to_bytes(m).decode())
 ```
 
 Run it and you get the flag printed out clean.
+
+![](/images/blog/cryptosystem/3.png)
 
 **Flag:** `THM{Just_s0m3_small_amount_of_RSA!}`
 
