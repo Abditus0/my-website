@@ -35,8 +35,11 @@ That is where programming languages come in. And the one this room uses is Pytho
 The game we are building works like this:
 
 The computer secretly picks a number between 1 and 20.
+
 You keep guessing until you get it right.
+
 After each wrong guess it tells you if you went too low or too high.
+
 
 Here is what a finished session looks like:
 ```shell-session
@@ -110,9 +113,13 @@ This is where conditionals come in. A conditional is basically the program askin
 The logic for the game looks like this in plain English first:
 
 If the guess is less than 1 or greater than 20, tell the user it is out of range.
+
 Else if the guess is less than the secret, tell them it is too low.
+
 Else if the guess is greater than the secret, tell them it is too high.
+
 Else, they got it right.
+
 
 That last else works because if the guess is not less than and not greater than the secret, it has to be equal to it. There is no other option. So you do not need to explicitly check for equality.
 
