@@ -43,7 +43,7 @@ On Threads, `@v3n0mbyt3_` is very active and openly talking with a friend under 
 ![](/images/blog/operation-slither/2.png)
 
 
-I clicked on `_myst1cv1x3n_` Threads profile and saw that there is a Instagram.
+I clicked on `_myst1cv1x3n_` Threads profile and saw that there is also Instagram account.
 
 ![](/images/blog/operation-slither/8.png)
 
@@ -72,7 +72,7 @@ THM{s0cm1nt_00ps3c_f1ng3r_m1scl1ck}
 
 I thought this was going to be the flag for task 1 but it turned out it was for task 2. So I accidentally solved task 2 before task 1. Fine, let's just go with it.
 
-Going back looking at task 2:
+Looking at task 2:
 
 ```
 60GB of data owned by TryTelecomMe is now up for bidding!
