@@ -10,9 +10,7 @@ draft: false
 
 ## What Are We Working With
 
-The challenge description basically tells me everything I need to know upfront. There is a PDF file sitting at `/home/ubuntu/confidential` and inside it there is a QR code that contains an invite code for some hacker group. The QR code is being covered by an image or a sign placed on top of it, hiding it from view.
-
-And the key thing I noticed about the sign is that it looked like a separate layer, not baked into the document itself.
+The challenge description tells me everything I need to know upfront. There is a PDF file sitting at `/home/ubuntu/confidential` and inside it there is a QR code that contains an invite code for some hacker group. The QR code is being covered by an image or a sign placed on top of it, hiding it from view.
 
 So the goal is simple. Get to that QR code and scan it.
 
@@ -20,11 +18,11 @@ So the goal is simple. Get to that QR code and scan it.
 
 ## Opening the File
 
-First thing I did was open the PDF.
+First thing I did was open the PDF and the key thing I noticed about the sign is that it looked like a separate layer, not baked into the document itself.
 
 ![](/images/blog/confidential/1.png)
 
-The default program that opens it is Atril Document Viewer and honestly it is fine for just reading things, but it does not let you interact with or edit anything inside the file. You can look at it all you want but you cannot touch anything.
+The default program that opens it is Atril Document Viewer and it is fine for just reading things, but it does not let you interact with or edit anything inside the file. You can look at it all you want but you cannot touch anything.
 
 That is the first wall. I needed something that would actually let me move things around inside the document so I can remove/move the icon covering the QR code.
 
@@ -46,7 +44,7 @@ This is the whole point of the challenge. The person who made this PDF thought t
 
 ## Scanning the QR Code
 
-With the QR code fully visible now, I just needed to scan it. I used an online QR code scanner for this, you can use your phone camera too if you want, both work.
+With the QR code visible now, I just needed to scan it. I used an online QR code scanner for this, you can use your phone camera too if you want, both work.
 
 ![](/images/blog/confidential/4.png)
 
