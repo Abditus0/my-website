@@ -1,9 +1,9 @@
 ---
 title: "Operation Slither"
-date: 2026-04-08
+date: 2026-04-02
 category: "ctf"
-excerpt: "Walkthrough of the TryHackMe Operation Slither challenge - Tracking down a group of hackers selling stolen data using OSINT."
-image: "/images/blog/47.png"
+excerpt: "Walkthrough of the TryHackMe Operation Slither challenge - Follow the leads and find who's behind this operation."
+image: "/images/blog/49.png"
 readtime: "17 min read"
 draft: false
 ---
