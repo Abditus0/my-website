@@ -90,10 +90,13 @@ gobuster dir --url http://www.onlineshop.thm/ -w /usr/share/wordlists/dirbuster/
 
 Breaking down what that command does:
 
-- `gobuster` is the tool
-- `dir` tells it to run in directory and file enumeration mode
-- `--url http://www.onlineshop.thm/` is the target
-- `-w /usr/share/wordlists/dirbuster/directory-list.txt` is the wordlist it uses to guess directory and file names
+`gobuster` is the tool
+
+`dir` tells it to run in directory and file enumeration mode
+
+`--url http://www.onlineshop.thm/` is the target
+
+`-w /usr/share/wordlists/dirbuster/directory-list.txt` is the wordlist it uses to guess directory and file names
 
 Watch the output roll in. It will flag anything that exists with a status code next to it. A 200 means the page loaded successfully. That is what you are looking for.
 
