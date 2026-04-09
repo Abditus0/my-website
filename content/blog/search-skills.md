@@ -148,15 +148,13 @@ Microsoft has an official Technical Documentation page for their products. Same 
 
 Any serious software product has official documentation. The room lists Snort, Apache HTTP Server, PHP, and Node.js as examples. The point is that official documentation is always the most complete and up to date source of information about how something works. Third party tutorials and blog posts go stale. Official docs get maintained.
 
-**Question: What does the Linux command cat stand for?** `[to be added]`
+**Question: What does the Linux command cat stand for?** `concatenate`
 
-**Question: What is the netstat parameter in MS Windows that displays the executable associated with each active connection and listening port?** `[to be added]`
+**Question: What is the netstat parameter in MS Windows that displays the executable associated with each active connection and listening port?** `-b`
 
 ---
 
 ## Task 7 — Social Media {#task-7}
-
-This one takes a turn I did not fully expect. Social media as a cyber security tool.
 
 The room covers two angles here. The first is OSINT, which is open source intelligence. When you are assessing a company's security, social media is a goldmine of information about the people who work there. LinkedIn is the obvious one. You can find out someone's job title, what technologies they work with, what certifications they have. All of that helps an attacker build a picture of the target's infrastructure without touching a single system.
 
@@ -168,16 +166,12 @@ The second half of the task is about staying current. Cyber security moves fast.
 
 **Question: You are hired to evaluate the security of a particular company. What is a popular social media website you would use to learn about the technical background of one of their employees?** `LinkedIn`
 
-**Question: Continuing with the previous scenario, you are trying to find the answer to the secret question "Which school did you go to as a child?". What social media website would you consider checking?** `Facebook`
+**Question: Continuing with the previous scenario, you are trying to find the answer to the secret question, “Which school did you go to as a child?”. What social media website would you consider checking to find the answer to such secret questions?** `Facebook`
 
 ---
 
 ## Task 8 — Conclusion {#task-8}
 
-The room wraps up pretty simply. The tools and sources covered here are the most common ones cyber security professionals use, but the landscape keeps changing. New sources pop up, old ones go stale, communities shift. The best way to stay on top of it is to follow relevant groups and channels so you hear about new things as they emerge rather than playing catch up.
-
-Honestly this room ended up being more useful than I thought going in. The specialized search engines section alone was worth it. Knowing that Shodan exists and what it can show you changes how you think about internet-connected systems. And the documentation section is a good reminder that a lot of the answers you need are already sitting in the official docs if you bother to look.
-
-Next up is continuing through the Cyber Security 101 path. Still a lot of ground to cover.
+The tools and sources covered here are the most common ones cyber security professionals use, but the landscape keeps changing. New sources pop up, old ones go stale, communities shift. The best way to stay on top of it is to follow relevant groups and channels so you hear about new things as they emerge rather than playing catch up.
 
 ---
