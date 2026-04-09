@@ -1,10 +1,10 @@
 ---
 title: "Linux Fundamentals Part 1 — TryHackMe Cyber Security 101"
-date: 2026-04-09
+date: 2026-04-06
 category: "writeup"
-excerpt: "First room in the Linux Fundamentals series - covering the basics of navigating Linux, searching for files, and shell operators."
+excerpt: "First room in the Linux Fundamentals series - Embark on the journey of learning the fundamentals of Linux. Learn to run some of the first essential commands on an interactive terminal."
 image: "/images/blog/55.png"
-readtime: "20 min read"
+readtime: "15 min read"
 draft: false
 ---
 
