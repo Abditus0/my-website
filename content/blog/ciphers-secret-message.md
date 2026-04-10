@@ -3,6 +3,7 @@ title: "Cipher's Secret Message"
 date: 2026-04-03
 category: "ctf"
 excerpt: "Walkthrough of TryHackMe Cipher's Secret Message challenge - Sharpen your cryptography skills by analyzing code to get the flag."
+image: "/images/blog/58.png"
 readtime: "8 min read"
 draft: false
 ---
