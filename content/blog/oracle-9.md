@@ -4,7 +4,7 @@ date: 2026-03-19
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Oracle 9 challenge - My designation is Oracle 9, I carry with me a sealed transmission."
 image: "/images/blog/18.png"
-readtime: "3 min read"
+readtime: "6 min read"
 draft: false
 ---
 
