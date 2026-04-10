@@ -2,7 +2,7 @@
 title: "Mr. Phisher"
 date: 2026-04-05
 category: "ctf"
-excerpt: "Walkthrough of a TryHackMe Mr. Phisher challenge - I received a suspicious email with a very weird looking attachment. It keeps on asking me to "enable macros". What are those?"
+excerpt: "Walkthrough of a TryHackMe Mr. Phisher challenge - I received a suspicious email with a very weird looking attachment. It keeps on asking me to enable macros. What are those?"
 image: "/images/blog/60.png"
 readtime: "10 min read"
 draft: false
