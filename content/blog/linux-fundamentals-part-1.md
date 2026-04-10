@@ -2,7 +2,7 @@
 title: "Linux Fundamentals Part 1 — TryHackMe Cyber Security 101"
 date: 2026-04-06
 category: "writeup"
-excerpt: "First room in the Linux Fundamentals series - Embark on the journey of learning the fundamentals of Linux. Learn to run some of the first essential commands on an interactive terminal."
+excerpt: "Complete walkthrough of TryHackMe's Linux Fundamentals Part 1 room - Embark on the journey of learning the fundamentals of Linux. Learn to run some of the first essential commands on an interactive terminal."
 image: "/images/blog/55.png"
 readtime: "15 min read"
 draft: false
