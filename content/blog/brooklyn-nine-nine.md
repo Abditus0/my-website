@@ -1,8 +1,8 @@
 ---
 title: "Brooklyn Nine Nine CTF"
-date: 2026-04-11
+date: 2026-04-06
 category: "ctf"
-excerpt: "Walkthrough of a TryHackMe Brooklyn Nine Nine challenge - This room is aimed for beginner level hackers but anyone can try to hack this box. There are two main intended ways to root the box."
+excerpt: "Walkthrough of the TryHackMe Brooklyn Nine Nine challenge - This room is aimed for beginner level hackers but anyone can try to hack this box. There are two main intended ways to root the box."
 image: "/images/blog/61.png"
 readtime: "15 min read"
 draft: false
