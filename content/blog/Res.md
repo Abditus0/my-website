@@ -1,10 +1,10 @@
 ---
-title: "Res CTF"
-date: 2026-04-11
+title: "Res"
+date: 2026-04-07
 category: "ctf"
-excerpt: "Walkthrough of a TryHackMe Res challenge - Hack into a vulnerable database server with an in-memory data-structure store and gain root access."
-image: "/images/blog/res.png"
-readtime: "15 min read"
+excerpt: "Walkthrough of a TryHackMe Res challenge - Hack into a vulnerable database server with an in-memory data-structure in this semi-guided challenge!"
+image: "/images/blog/62.png"
+readtime: "25 min read"
 draft: false
 ---
 
