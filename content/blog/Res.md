@@ -234,7 +234,13 @@ chmod +x /tmp/pwn
 
 I tried that and it just was not working. I restarted the machine again. Nothing changed. I went back to the SUID list, back to GTFOBins, back to trying different commands. Still nothing. Another hour of going absolutely nowhere. At this point I have been stuck on this room for so long that I was genuinely starting to question everything. Am I missing something obvious? Is my approach completely wrong? I had no idea.
 
-I went to TryHackMe's Discord and searched for the room name. Turns out many other people are reporting the exact same thing and the machine is broken. The whole time I was fighting a dead end that was never going to work no matter what I did. That was a relief and incredibly annoying at the same time.
+I went to TryHackMe's Discord and searched for the room name. Turns out that other people are reporting the exact same thing and the machine is broken.
+
+![](/images/blog/res/15.png)
+
+![](/images/blog/res/16.png)
+
+The whole time I was fighting a dead end that was never going to work no matter what I did. That was a relief and incredibly annoying at the same time.
 
 I was disappointed. I just sat there for a couple of minutes. But I was not done yet. I still had one more idea. Bruteforcing vianka's password over SSH:
 
