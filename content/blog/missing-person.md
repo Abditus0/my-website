@@ -3,7 +3,7 @@ title: "Missing Person"
 date: 2026-04-08
 category: "ctf"
 excerpt: "Walkthrough of a TryHackMe Missing Person challenge - Use your OSINT skills to help the police track down a missing person."
-image: "/images/blog/64.png"
+image: "/images/blog/66.png"
 readtime: "10 min read"
 draft: false
 ---
