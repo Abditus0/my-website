@@ -1,5 +1,5 @@
 ---
-title: "Checkpoint CTF"
+title: "Checkpoint"
 date: 2026-04-12
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Checkpoint challenge - Four candidates. Three threats. Make the production call."
