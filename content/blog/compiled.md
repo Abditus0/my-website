@@ -1,5 +1,5 @@
 ---
-title: "Compiled CTF"
+title: "Compiled"
 date: 2026-03-14
 category: "ctf"
 excerpt: "Walkthrough of TryHackMe's Compiled CTF — Strings can only help you so far."

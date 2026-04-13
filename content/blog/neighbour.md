@@ -1,5 +1,5 @@
 ---
-title: "Neighbour CTF"
+title: "Neighbour"
 date: 2026-03-12
 category: "ctf"
 excerpt: "Walkthrough of TryHackMe's Neighbour CTF — Check out our new cloud service, Authentication Anywhere. Can you find other user's secrets?"

@@ -1,5 +1,5 @@
 ---
-title: "TakeOver CTF"
+title: "TakeOver"
 date: 2026-03-13
 category: "ctf"
 excerpt: "Walkthrough of TryHackMe's TakeOver CTF — This challenge revolves around subdomain enumeration."

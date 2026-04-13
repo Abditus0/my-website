@@ -1,5 +1,5 @@
 ---
-title: "Corridor CTF"
+title: "Corridor"
 date: 2026-03-17
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Corridor challenge - Can you escape the Corridor?"

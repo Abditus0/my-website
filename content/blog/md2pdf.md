@@ -1,5 +1,5 @@
 ---
-title: "MD2PDF CTF"
+title: "MD2PDF"
 date: 2026-03-15
 category: "ctf"
 excerpt: "Walkthrough of TryHackMe's MD2PDF CTF - TopTierConversions LTD is proud to present its latest product launch."
