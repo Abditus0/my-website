@@ -1,6 +1,6 @@
 ---
 title: "Active Directory Basics — TryHackMe Cyber Security 101"
-date: 2026-04-11
+date: 2026-04-12
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Active Directory Basics room — This room will introduce the basic concepts and functionality provided by Active Directory."
 image: "/images/blog/69.png"
