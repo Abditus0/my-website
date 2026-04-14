@@ -58,7 +58,7 @@ And it did.
 
 It created the event and populated the description with the actual number.
 
-**Singapore weekly revenue: $873,600**
+**What was the weekly revenue reported from the Singapore branch? (E.g., $320,400)** `$873,600`
 
 ---
 
