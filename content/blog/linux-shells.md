@@ -53,7 +53,7 @@ Most Linux distributions use Bash as the default shell. When you open a terminal
 
 `pwd` stands for Print Working Directory. It tells you where you currently are in the filesystem. When you first open a terminal you are usually in your home directory.
 
-```powershell
+```bash
 user@tryhackme:~$ pwd
 /home/user
 ```
@@ -66,7 +66,7 @@ user@tryhackme:~$ pwd
 
 `grep` is the powerful one. It searches inside a file for a specific word or pattern and returns only the lines that match. Really handy when you are dealing with a massive log file and need to find one specific thing buried in it.
 
-```powershell
+```bash
 user@tryhackme:~$ grep THM dictionary.txt
 The flag is THM
 ```
@@ -85,14 +85,14 @@ Linux does not just have one shell. There are several, and you can actually swit
 
 To check which shell you are currently using:
 
-```powershell
+```bash
 user@tryhackme:~$ echo $SHELL
 /bin/bash
 ```
 
 To see all the shells installed on your system, the file `/etc/shells` has them all listed. Just cat it:
 
-```powershell
+```bash
 user@tryhackme:~$ cat /etc/shells
 # /etc/shells: valid login shells
 /bin/sh
@@ -136,7 +136,7 @@ One thing the room clarifies early: you can write scripts in various programming
 
 First you need a file. Scripts use the `.sh` extension. Open a text editor like nano and create the file:
 
-```powershell
+```bash
 user@tryhackme:~$ nano first_script.sh
 ```
 
@@ -165,13 +165,13 @@ echo "Welcome, $name"
 
 Before you can run the script you have to give it execution permissions:
 
-```powershell
+```bash
 user@tryhackme:~$ chmod +x first_script.sh
 ```
 
 Then run it with `./` before the name. The `./` is important because it tells the shell to look for the file in the current directory specifically. Without it, the shell goes hunting through the PATH directories and does not find your script, which just gives you an error and wastes your time.
 
-```powershell
+```bash
 user@ubuntu:~$ ./first_script.sh
 Hey, What's your name?
 John
@@ -287,7 +287,7 @@ The machine has a script sitting in `/home/user` that searches for a keyword acr
 
 First, become root because you will need the permissions to read through `/var/log`:
 
-```powershell
+```bash
 user@tryhackme:~$ sudo su
 [sudo] password for user: 
 root@tryhackme:/home/user#
