@@ -144,7 +144,7 @@ user@tryhackme:~$ nano first_script.sh
 
 Every script starts with a shebang. That is the `#!` characters at the very top of the file, followed by the path to the interpreter you want to use. For Bash scripts it looks like this:
 
-```shell
+```bash
 #!/bin/bash
 ```
 
@@ -154,7 +154,7 @@ This tells the system "use Bash to run this file." Without it the system might n
 
 A variable just stores a value so you can use it later without having to type it out again every time. Here is a simple script that asks for your name and then greets you with it:
 
-```shell
+```bash
 #!/bin/bash
 echo "Hey, what's your name?"
 read name
@@ -182,7 +182,7 @@ Welcome, John
 
 Loops let you repeat a block of code multiple times. The example the room uses prints numbers 1 through 10:
 
-```shell
+```bash
 #!/bin/bash
 for i in {1..10};
 do
@@ -196,7 +196,7 @@ done
 
 Conditional statements let you run different code depending on whether a condition is true or not. This script shows a secret only if you enter the right name:
 
-```shell
+```bash
 #!/bin/bash
 echo "Please enter your name first:"
 read name
@@ -213,7 +213,7 @@ fi
 
 Comments are lines in your script that do nothing. They are just notes for yourself or whoever reads the code later. You write them with `#` at the start of the line:
 
-```shell
+```bash
 #!/bin/bash
 
 # Asking the user to enter a value.
@@ -244,7 +244,7 @@ A script without comments is painful to read after you have not looked at it for
 
 This task puts everything from Task 4 together into one script. The scenario is a bank locker that needs to verify your identity before letting you in. The script asks for a username, company name, and PIN in sequence using a loop, then checks all three against the correct values using a conditional statement.
 
-```shell
+```bash
 #!/bin/bash 
 
 username=""
