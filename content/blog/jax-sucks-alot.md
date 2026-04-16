@@ -2,7 +2,7 @@
 title: "Jax sucks alot....."
 date: 2026-04-16
 category: "ctf"
-excerpt: "Walkthrough of the TryHackMe Jax challenge - In JavaScript everything is a terrible mistake."
+excerpt: "Walkthrough of the TryHackMe ax sucks alot..... challenge - In JavaScript everything is a terrible mistake."
 image: "/images/blog/79.png"
 readtime: "20 min read"
 draft: false
@@ -11,8 +11,6 @@ draft: false
 # Jax CTF
 
 Horror LLC needs a pentest. Their words: "one of the scarier aspects of our company is our front-end webserver." Bold of them to admit that. The goal is to compromise the root account, no rules, good luck.
-
-Let's go.
 
 ---
 
