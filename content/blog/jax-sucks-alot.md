@@ -32,7 +32,7 @@ First thing I always do is check the page source.
 
 ```html
 <h1>Horror LLC</h1>
-<h4>Built with Nodejs</h4>
+<h4>Built with js</h4>
 <br>
 <h3>Coming soon! Please sign up to our newsletter to receive updates.</h3>
 <br>
