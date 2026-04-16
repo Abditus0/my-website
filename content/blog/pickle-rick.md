@@ -68,9 +68,7 @@ Checked `/robots.txt` and it just has this:
 Wubbalubbadubdub
 ```
 
-![](/images/blog/pickle-rick/4.png)
-
-That is probably a password.
+That is probably the password I'm looking for.
 
 So now I have a username and what looks like a password. I tried SSH with them. Doesn't work because the server wants a public key, not a password. Dead end.
 
