@@ -1,6 +1,6 @@
 ---
 title: "Pickle Rick"
-date: 2026-04-16
+date: 2026-04-17
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Pickle Rick challenge - A Rick and Morty CTF. Help turn Rick back into a human!"
 image: "/images/blog/80.png"
