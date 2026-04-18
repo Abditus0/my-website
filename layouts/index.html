@@ -1183,9 +1183,22 @@ a.skill-card:hover {
   {{ if gt (len $posts) 24 }}
   {{ $totalRemaining := sub (len $posts) 24 }}
   <div id="view-all-btn" style="text-align:center; margin-top:32px;">
-    <p style="font-family:'DM Mono',monospace; font-size:1rem; color:var(--text); margin-bottom:16px; letter-spacing:0.1em;">
-      + {{ $totalRemaining }} more writeups on the blog page
-    </p>
+    <p style="
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.4rem;
+  font-weight:700;
+  color:var(--heading);
+  margin-bottom:18px;
+  letter-spacing:-0.01em;
+  text-align:center;
+">
+  <span style="
+    color:var(--blue);
+    font-size:1.8rem;
+    margin-right:6px;
+  ">+{{ $totalRemaining }}</span>
+  more writeups waiting
+</p>
     <a href="/blog" class="btn-primary">View All Posts →</a>
   </div>
   {{ end }}
