@@ -4,7 +4,7 @@ date: 2026-04-20
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Wireshark: The Basics room — Learn the basics of Wireshark and how to analyse protocols and PCAPs."
 image: "/images/blog/86.png"
-readtime: "24 min read"
+readtime: "30 min read"
 draft: false
 ---
 
