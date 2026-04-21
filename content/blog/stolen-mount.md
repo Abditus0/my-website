@@ -4,7 +4,7 @@ date: 2026-04-21
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Stolen Mount challenge - Analyse network traffic related to an unauthenticated file share access attempt, focusing on potential signs of data exfiltration."
 image: "/images/blog/87.png"
-readtime: "10 min read"
+readtime: "14 min read"
 draft: false
 ---
 
