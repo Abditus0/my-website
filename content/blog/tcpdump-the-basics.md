@@ -149,17 +149,23 @@ To find how many ICMP packets are in the file:
 tcpdump -r traffic.pcap icmp | wc
 ```
 
+![](/images/blog/tcpdump-the-basics/1.png)
+
 To find who asked for the MAC address of `192.168.124.137`, that is an ARP question, so you filter by ARP and look for who was asking:
 
 ```shell
 tcpdump -r traffic.pcap arp -n
 ```
 
+![](/images/blog/tcpdump-the-basics/2.png)
+
 To find the first DNS query and see what hostname appears:
 
 ```shell
 tcpdump -r traffic.pcap port 53 -n
 ```
+
+![](/images/blog/tcpdump-the-basics/3.png)
 
 **Question: How many packets in `traffic.pcap` use the ICMP protocol?** `26`
 
@@ -234,11 +240,15 @@ To find packets with only the RST flag set, you use the strict equality version:
 tcpdump -r traffic.pcap "tcp[tcpflags] == tcp-rst" | wc
 ```
 
+![](/images/blog/tcpdump-the-basics/4.png)
+
 To find who sent packets larger than 15000 bytes:
 
 ```shell
 tcpdump -r traffic.pcap greater 15000 -nn
 ```
+
+![](/images/blog/tcpdump-the-basics/5.png)
 
 **Question: How many packets have only the TCP Reset (RST) flag set?** `57`
 
@@ -287,6 +297,8 @@ To find the MAC address of whoever sent an ARP request, you filter for ARP traff
 ```shell
 tcpdump -r traffic.pcap arp -e
 ```
+
+![](/images/blog/tcpdump-the-basics/6.png)
 
 **Question: What is the MAC address of the host that sent an ARP request?** `52:54:00:7c:d3:5b`
 
