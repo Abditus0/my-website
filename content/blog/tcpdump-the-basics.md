@@ -1,6 +1,6 @@
 ---
 title: "Tcpdump: The Basics — TryHackMe Cyber Security 101"
-date: 2026-04-22
+date: 2026-04-21
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Tcpdump: The Basics room — Learn how to use Tcpdump to save, filter, and display packets."
 image: "/images/blog/89.png"
