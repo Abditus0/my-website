@@ -2,7 +2,7 @@
 title: "h4cked"
 date: 2026-04-22
 category: "ctf"
-excerpt: "Walkthrough of the TryHackMe h4cked challenge - Find out what happened by analysing a .pcap file and hack your way back into the machine"
+excerpt: "Walkthrough of the TryHackMe h4cked challenge - Find out what happened by analysing a .pcap file and hack your way back into the machine."
 image: "/images/blog/88.png"
 readtime: "22 min read"
 draft: false
