@@ -8,6 +8,7 @@ readtime: "22 min read"
 draft: false
 ---
 
+
 # Cryptography Basics
 
 Every time you open your bank app, send a message, or just browse a website with that little padlock icon in the address bar, cryptography is quietly doing its thing in the background. You never see it. It never asks for credit. It just makes sure nobody is reading your stuff or messing with it on the way.
