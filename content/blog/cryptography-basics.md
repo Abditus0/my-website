@@ -2,16 +2,16 @@
 title: "Cryptography Basics — TryHackMe Cyber Security 101"
 date: 2026-04-23
 category: "writeup"
-excerpt: "Complete walkthrough of TryHackMe's Cryptography Basics room — Learn what cryptography actually is, how encryption works, and the math hiding behind all of it."
+excerpt: "Complete walkthrough of TryHackMe's Cryptography Basics room — Learn the basics of cryptography and symmetric encryption."
 image: "/images/blog/92.png"
-readtime: "22 min read"
+readtime: "25 min read"
 draft: false
 ---
 
 
 # Cryptography Basics
 
-Every time you open your bank app, send a message, or just browse a website with that little padlock icon in the address bar, cryptography is quietly doing its thing in the background. You never see it. It never asks for credit. It just makes sure nobody is reading your stuff or messing with it on the way.
+Every time you open your bank app, send a message, or just browse a website, cryptography is quietly doing its thing in the background. You never see it. It never asks for credit. It just makes sure nobody is reading your stuff or messing with it on the way.
 
 This room is the first of three cryptography rooms on TryHackMe. No scary prerequisites, just basic Linux command line stuff. We are talking about the absolute fundamentals here: what cryptography is, why it matters, how basic ciphers work, and the math that makes modern encryption possible.
 
@@ -31,15 +31,9 @@ This room is the first of three cryptography rooms on TryHackMe. No scary prereq
 
 ## Task 1 — Introduction {#task-1}
 
-The room opens with a question that is actually worth thinking about. How do your messages stay private? How does your browser build a secure connection to a server without someone in the middle just reading everything? And how do you even know you are talking to the real server and not some imposter?
+The room opens with a question that is worth thinking about. How do your messages stay private? How does your browser build a secure connection to a server without someone in the middle just reading everything? And how do you even know you are talking to the real server and not some imposter?
 
 The answer to all three is cryptography. It is the foundation that makes the internet not a total disaster. Networking protocols let devices talk to each other across the globe. Cryptography is what makes that talking trustworthy.
-
-This is the first of three introductory rooms:
-
-- Cryptography Basics (this one)
-- Public Key Cryptography Basics
-- Hashing Basics
 
 By the end of this room you will know the key terms, understand why cryptography matters in the real world, know how Caesar Cipher works, understand the difference between symmetric and asymmetric encryption, and have a handle on the basic math that shows up constantly in cryptography.
 
@@ -99,9 +93,7 @@ Other historical ciphers that come up in the room: the Vigenère cipher from the
 
 The room links to the Cryptii website where you can play with Caesar Cipher shifts interactively. Honestly worth spending five minutes on just to see it working visually.
 
-**Question: Knowing that `XRPCTCRGNEI` was encrypted using Caesar Cipher, what is the original plaintext?** `CRYPTOGRAPHY`
-
-For this one I just tried shifting left by different amounts until something readable came out. Key was 5. Not exactly glamorous but it works.
+**Question: Knowing that `XRPCTCRGNEI` was encrypted using Caesar Cipher, what is the original plaintext?** `ICANENCRYPT`
 
 ---
 
@@ -135,8 +127,6 @@ Asymmetric encryption works because of math problems that are easy to do in one 
 
 **Question: Should you trust DES? (Yea/Nay)** `Nay`
 
-A key that gets cracked in under 24 hours with hardware from 1999. Hard no.
-
 **Question: When was AES adopted as an encryption standard?** `2001`
 
 ---
@@ -158,7 +148,7 @@ The truth table:
 
 The symbol for XOR is ⊕. So `1010 ⊕ 1100` works like this: compare bit by bit from left to right. 1⊕1=0, 0⊕1=1, 1⊕0=1, 0⊕0=0. Result is `0110`.
 
-Why does this matter for cryptography? XOR has some properties that make it genuinely useful. If you XOR something with itself you always get 0. If you XOR something with 0 you get it back unchanged. It is also commutative (A⊕B = B⊕A) and associative ((A⊕B)⊕C = A⊕(B⊕C)).
+Why does this matter for cryptography? XOR has some properties that make it useful. If you XOR something with itself you always get 0. If you XOR something with 0 you get it back unchanged. It is also commutative (A⊕B = B⊕A) and associative ((A⊕B)⊕C = A⊕(B⊕C)).
 
 Here is the cool part. Those properties mean XOR can work as a basic symmetric encryption algorithm. Say P is your plaintext and K is your key. Your ciphertext is `C = P ⊕ K`. To decrypt, you compute `C ⊕ K`. That gives you `(P ⊕ K) ⊕ K`, which equals `P ⊕ (K ⊕ K)`, which equals `P ⊕ 0`, which equals P. You got your plaintext back.
 
@@ -182,15 +172,9 @@ For big number calculations the room suggests Python, which handles arbitrarily 
 
 **Question: What's 1001 ⊕ 1010?** `0011`
 
-Work through it bit by bit: 1⊕1=0, 0⊕0=0, 0⊕1=1, 1⊕0=1.
-
 **Question: What's 118613842%9091?** `3565`
 
-Just punch that into Python: `118613842 % 9091`. Done.
-
 **Question: What's 60%12?** `0`
-
-60 divided by 12 is exactly 5. No remainder.
 
 ---
 
