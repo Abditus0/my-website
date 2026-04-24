@@ -3,7 +3,7 @@ title: "Surfer"
 date: 2026-04-24
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Surfer challenge - Surf some internal webpages to find the flag!"
-image: "/images/blog/95.png"
+image: "/images/blog/96.png"
 readtime: "12 min read"
 draft: false
 ---
