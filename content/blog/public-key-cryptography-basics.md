@@ -1,6 +1,6 @@
 ---
 title: "Public Key Cryptography Basics — TryHackMe Cyber Security 101"
-date: 2026-04-23
+date: 2026-04-24
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's Public Key Cryptography Basics room — Discover how public key ciphers such as RSA work and explore their role in applications such as SSH."
 image: "/images/blog/93.png"
