@@ -2,7 +2,7 @@
 title: "Infinity Shell"
 date: 2026-04-25
 category: "ctf"
-excerpt: "Walkthrough of the TryHackMe Infinity Shell challenge - IInvestigate and analyse the traces of an attack from an implanted webshell."
+excerpt: "Walkthrough of the TryHackMe Infinity Shell challenge - Investigate and analyse the traces of an attack from an implanted webshell."
 image: "/images/blog/97.png"
 readtime: "12 min read"
 draft: false
