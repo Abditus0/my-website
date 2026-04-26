@@ -1,6 +1,6 @@
 ---
 title: "John the Ripper: The Basics — TryHackMe Cyber Security 101"
-date: 2026-04-27
+date: 2026-04-26
 category: "writeup"
 excerpt: "Complete walkthrough of TryHackMe's John the Ripper room — Learn how to use John the Ripper, a powerful and adaptable hash-cracking tool."
 image: "/images/blog/95.png"
