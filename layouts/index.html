@@ -1267,86 +1267,120 @@ a.skill-card:hover {
     <div class="section-line"></div>
   </div>
 
-<div style="display:flex;flex-direction:column;gap:16px;max-width:860px;">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px;max-width:860px;">
 
-  <div class="skill-card reveal" style="padding:24px 28px;">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-      <i class="fa-solid fa-network-wired" style="color:var(--blue);font-size:0.85rem;"></i>
-      <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--blue);letter-spacing:0.12em;text-transform:uppercase;">Networking</span>
+    <div class="skill-card reveal" style="padding:28px 32px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <div style="width:34px;height:34px;background:var(--blue-dim);border:1px solid var(--border-hi);border-radius:6px;display:grid;place-items:center;flex-shrink:0;">
+          <i class="fa-solid fa-network-wired" style="color:var(--blue);font-size:0.85rem;"></i>
+        </div>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--blue);letter-spacing:0.12em;text-transform:uppercase;">Networking</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">pfSense</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">VLANs</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Firewall rules</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">DNS / DHCP</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">TCP/IP</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Wireshark</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Nmap</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">tcpdump</span>
+      </div>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;">
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">pfSense</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">VLANs</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Firewall Rules</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">DNS / DHCP</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">TCP/IP</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Wireshark</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Tcpdump</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">SSH</span>
+
+    <div class="skill-card reveal" style="padding:28px 32px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <div style="width:34px;height:34px;background:var(--blue-dim);border:1px solid var(--border-hi);border-radius:6px;display:grid;place-items:center;flex-shrink:0;">
+          <i class="fa-solid fa-server" style="color:var(--blue);font-size:0.85rem;"></i>
+        </div>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--blue);letter-spacing:0.12em;text-transform:uppercase;">Systems Administration</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Windows Server</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Active Directory</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Group Policy</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">NTFS permissions</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Hyper-V</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">VMware</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Linux</span>
+      </div>
     </div>
+
+    <div class="skill-card reveal" style="padding:28px 32px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <div style="width:34px;height:34px;background:var(--blue-dim);border:1px solid var(--border-hi);border-radius:6px;display:grid;place-items:center;flex-shrink:0;">
+          <i class="fa-solid fa-shield-halved" style="color:var(--blue);font-size:0.85rem;"></i>
+        </div>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--blue);letter-spacing:0.12em;text-transform:uppercase;">Security</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">SPF / DKIM / DMARC</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">DMZ architecture</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">SSH hardening</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Network forensics</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">CVE analysis</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Phishing analysis</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Log analysis</span>
+      </div>
+      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border);display:flex;align-items:center;gap:8px;">
+        <i class="fa-solid fa-circle-check" style="color:var(--teal);font-size:0.75rem;"></i>
+        <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);">TryHackMe — <span style="color:var(--teal);">115+ rooms</span> completed</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal" style="padding:28px 32px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <div style="width:34px;height:34px;background:var(--blue-dim);border:1px solid var(--border-hi);border-radius:6px;display:grid;place-items:center;flex-shrink:0;">
+          <i class="fa-solid fa-code" style="color:var(--blue);font-size:0.85rem;"></i>
+        </div>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--blue);letter-spacing:0.12em;text-transform:uppercase;">Scripting & Automation</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">PowerShell</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Python</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Bash</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Task automation</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Error handling & logging</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal" style="padding:28px 32px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <div style="width:34px;height:34px;background:var(--blue-dim);border:1px solid var(--border-hi);border-radius:6px;display:grid;place-items:center;flex-shrink:0;">
+          <i class="fa-solid fa-cloud" style="color:var(--blue);font-size:0.85rem;"></i>
+        </div>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--blue);letter-spacing:0.12em;text-transform:uppercase;">Cloud & Platforms</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">AWS</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Azure</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Docker</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Google Workspace</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Microsoft 365</span>
+      </div>
+    </div>
+
+    <div class="skill-card reveal" style="padding:28px 32px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <div style="width:34px;height:34px;background:var(--blue-dim);border:1px solid var(--border-hi);border-radius:6px;display:grid;place-items:center;flex-shrink:0;">
+          <i class="fa-solid fa-headset" style="color:var(--blue);font-size:0.85rem;"></i>
+        </div>
+        <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--blue);letter-spacing:0.12em;text-transform:uppercase;">IT Support</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Hardware troubleshooting</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Windows</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">End-user support</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Documentation</span>
+        <span style="font-size:0.8rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 11px;border-radius:4px;">Incident tracking</span>
+      </div>
+      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border);display:flex;align-items:center;gap:8px;">
+        <i class="fa-solid fa-circle-check" style="color:var(--teal);font-size:0.75rem;"></i>
+        <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);">1 year on-site experience</span>
+      </div>
+    </div>
+
   </div>
-
-  <div class="skill-card reveal" style="padding:24px 28px;">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-      <i class="fa-solid fa-server" style="color:var(--blue);font-size:0.85rem;"></i>
-      <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--blue);letter-spacing:0.12em;text-transform:uppercase;">Systems Administration</span>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;">
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Windows Server</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Active Directory</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Group Policy</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">NTFS Permissions</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Hyper-V</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">VMware</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Linux</span>
-    </div>
-  </div>
-
-  <div class="skill-card reveal" style="padding:24px 28px;">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-      <i class="fa-solid fa-shield-halved" style="color:var(--blue);font-size:0.85rem;"></i>
-      <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--blue);letter-spacing:0.12em;text-transform:uppercase;">Security</span>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;">
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">SPF / DKIM / DMARC</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">DMZ Architecture</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">SSH Hardening</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Network Traffic Analysis</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">TryHackMe</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">HackTheBox</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">CVE Analysis</span>
-    </div>
-  </div>
-
-  <div class="skill-card reveal" style="padding:24px 28px;">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-      <i class="fa-solid fa-code" style="color:var(--blue);font-size:0.85rem;"></i>
-      <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--blue);letter-spacing:0.12em;text-transform:uppercase;">Scripting & Automation</span>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;">
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">PowerShell</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Python</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Bash</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Task Automation</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Error Handling & Logging</span>
-    </div>
-  </div>
-
-  <div class="skill-card reveal" style="padding:24px 28px;">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-      <i class="fa-solid fa-layer-group" style="color:var(--blue);font-size:0.85rem;"></i>
-      <span style="font-family:'DM Mono',monospace;font-size:0.75rem;color:var(--blue);letter-spacing:0.12em;text-transform:uppercase;">Cloud & Platforms</span>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;">
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">AWS</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Azure</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Docker</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Google Workspace</span>
-      <span style="font-size:0.82rem;color:var(--text);background:var(--bg3);border:1px solid var(--border);padding:4px 12px;border-radius:4px;">Microsoft 365</span>
-    </div>
-  </div>
-
-</div>
 </section>
 
 
