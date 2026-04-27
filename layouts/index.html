@@ -1007,161 +1007,146 @@ a.skill-card:hover {
     <div class="section-line"></div>
   </div>
 
-<div class="projects-grid">
-<a href="https://github.com/Abditus0/SOC-Simulation" target="_blank" class="project-card reveal">
-  <div class="project-github-link">
-    <i class="fa-brands fa-github"></i>
-  </div>
-  <div class="project-icon" style="gap:12px;flex-wrap:wrap;padding:20px;">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="width:48px;height:48px;" title="Python">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" style="width:48px;height:48px;filter:invert(1) brightness(0.7);" title="Flask">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" style="width:48px;height:48px;" title="Windows VM">
-  </div>
-  <div class="project-tag">// Security Operations</div>
-  <div class="project-title">SOC Analyst Simulator</div>
-  <div class="project-desc">Built a full SOC training lab from scratch. Runs real ATT&CK techniques on a Windows VM, feeds alerts into a custom dashboard via Wazuh SIEM, and grades incident reports with AI. 250 attack scenarios, 6 false alarm bundles, and a 282-action background noise simulator to replicate a real alert feed.</div>
-  <div class="project-footer">
-    <div class="project-stack">
-      <span class="tag">Python / Flask</span>
-      <span class="tag">Wazuh</span>
-      <span class="tag">Sysmon</span>
-      <span class="tag">ATT&CK</span>
-      <span class="tag">Claude API</span>
-    </div>
-  </div>
-</a>
-<a href="https://github.com/Abditus0/Google-Workspace-Environment-From-Scratch" target="_blank" class="project-card reveal">
-  <div class="project-github-link">
-    <i class="fa-brands fa-github"></i>
-  </div>
-  <div class="project-icon">
-  <img src="images/projects/google-workspace.png" alt="Google Workspace" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-</div>
-  <div class="project-tag">// Email Infrastructure</div>
-  <div class="project-title">Google Workspace Environment From Scratch</div>
-  <div class="project-desc">Built a full Google Workspace environment from zero. Domain registration, DNS configuration, MX/SPF/DKIM/DMARC setup, user accounts, security policies, and a live mailbox migration from Microsoft 365.</div>
-  <div class="project-footer">
-    <div class="project-stack">
-      <span class="tag">Google Workspace</span>
-      <span class="tag">DNS</span>
-      <span class="tag">Microsoft 365</span>
-      <span class="tag">Email Security</span>
-    </div>
-  </div>
-</a>
-  <a href="https://github.com/Abditus0/pfSense-VLAN-Network-DMZ-Web-Server-Lab" target="_blank" class="project-card reveal">
-  <div class="project-github-link">
-    <i class="fa-brands fa-github"></i>
-  </div>
-  <div class="project-icon">
-  <img src="images/projects/pfsense-network.png" alt="pfSense Network" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-</div>
-  <div class="project-tag">// Network Security</div>
-  <div class="project-title">Enterprise Network Segmentation Lab</div>
-  <div class="project-desc">Built an enterprise style network segmentation lab using pfSense (Router), 4 isolated VLANs, and a hardened DMZ web server, simulating real world firewall rules, least privilege access control, and SSH hardening.</div>
-  <div class="project-footer">
-    <div class="project-stack">
-      <span class="tag">pfSense</span>
-      <span class="tag">VLANs</span>
-      <span class="tag">Ubuntu Server</span>
-      <span class="tag">UFW</span>
-    </div>
-  </div>
-</a>
- <a href="https://github.com/Abditus0/Enterprise-Windows-Domain-Infrastructure-Lab" target="_blank" class="project-card reveal">
-  <div class="project-github-link">
-    <i class="fa-brands fa-github"></i>
-  </div>
-  <div class="project-icon">
-  <img src="images/projects/windows-domain.png" alt="Windows Domain" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-</div>
-  <div class="project-tag">// Systems Administration</div>
-  <div class="project-title">Enterprise Windows Domain Infrastructure Lab</div>
-  <div class="project-desc">Built a full Windows Server domain from scratch. Active Directory, DNS, DHCP, departmental file shares with NTFS permissions, Group Policy, and network print services for a simulated 25 user business.</div>
-  <div class="project-footer">
-    <div class="project-stack">
-      <span class="tag">Windows Server</span>
-      <span class="tag">Active Directory</span>
-      <span class="tag">Group Policy</span>
-      <span class="tag">DHCP/DNS</span>
-    </div>
-  </div>
-</a>
-  <a href="https://github.com/Abditus0/PowerShell-Backup-Script" target="_blank" class="project-card reveal">
-    <div class="project-github-link">
-      <i class="fa-brands fa-github"></i>
-    </div>
-    <div class="project-icon">
-  <img src="images/projects/powershell-backup.png" alt="PowerShell Backup" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-</div>
-    <div class="project-tag">// Automation & Scripting</div>
-    <div class="project-title">PowerShell Backup Script</div>
-    <div class="project-desc">Automated backup script that copies files to a timestamped destination, preserves folder structure, handles duplicates safely, verifies file sizes, and logs every success and error with a summary report.</div>
-    <div class="project-footer">
-      <div class="project-stack">
-        <span class="tag">PowerShell</span>
-        <span class="tag">Automation</span>
-        <span class="tag">Windows</span>
+  <div style="display:flex;flex-direction:column;">
+
+    <div class="reveal" style="display:grid;grid-template-columns:200px 1fr;gap:0;padding:32px 0;border-bottom:1px solid var(--border);">
+      <div style="text-align:right;padding-right:32px;border-right:1px solid var(--border);">
+        <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;">// Security Operations</div>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
+          <span class="tag">Python / Flask</span>
+          <span class="tag">Wazuh</span>
+          <span class="tag">Sysmon</span>
+          <span class="tag">ATT&CK</span>
+          <span class="tag">Claude API</span>
+        </div>
+      </div>
+      <div style="padding-left:32px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:var(--heading);margin-bottom:10px;letter-spacing:-0.01em;">SOC Analyst Simulator</div>
+        <p style="font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:10px;">Built a full SOC training lab from scratch. Runs real ATT&CK techniques on a Windows VM, feeds alerts into a custom dashboard via Wazuh SIEM, and grades my incident reports with AI. 250 attack scenarios, 6 false alarm bundles, and a 282-action background noise simulator to replicate a real alert feed.</p>
+        <p style="font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:20px;">The point was to actually practice the work — reading messy alerts, telling real attacks from false alarms, and writing reports under pressure. Every session is a real repetition with AI feedback at the end.</p>
+        <a href="https://github.com/Abditus0/SOC-Simulation" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--blue);border:1px solid var(--border-hi);padding:8px 18px;border-radius:4px;transition:background 0.2s,gap 0.2s;" onmouseover="this.style.background='var(--blue-dim)';this.style.gap='12px'" onmouseout="this.style.background='transparent';this.style.gap='8px'"><i class="fa-brands fa-github"></i> View on GitHub →</a>
       </div>
     </div>
-  </a>
-  <a href="https://github.com/Abditus0/PowerShell-Password-Reset-Script" target="_blank" class="project-card reveal">
-    <div class="project-github-link">
-      <i class="fa-brands fa-github"></i>
-    </div>
-    <div class="project-icon">
-  <img src="images/projects/ad-password-reset.png" alt="AD Password Reset" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-</div>
-    <div class="project-tag">// Automation & Scripting</div>
-    <div class="project-title">Active Directory Password Reset Script</div>
-    <div class="project-desc">PowerShell script for batch password resets in Active Directory. Processes users from a CSV file, enforces password change at next login, and logs every action with timestamps for full audit.</div>
-    <div class="project-footer">
-      <div class="project-stack">
-        <span class="tag">PowerShell</span>
-        <span class="tag">Active Directory</span>
-        <span class="tag">Automation</span>
+
+    <div class="reveal" style="display:grid;grid-template-columns:200px 1fr;gap:0;padding:32px 0;border-bottom:1px solid var(--border);">
+      <div style="text-align:right;padding-right:32px;border-right:1px solid var(--border);">
+        <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;">// Network Security</div>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
+          <span class="tag">pfSense</span>
+          <span class="tag">VLANs</span>
+          <span class="tag">Ubuntu Server</span>
+          <span class="tag">UFW</span>
+        </div>
+      </div>
+      <div style="padding-left:32px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:var(--heading);margin-bottom:10px;letter-spacing:-0.01em;">Enterprise Network Segmentation Lab</div>
+        <p style="font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:20px;">Built an enterprise-style network segmentation lab using pfSense as the router, 4 isolated VLANs, and a hardened DMZ web server. Simulates real-world firewall rules, least-privilege access control, and SSH hardening across isolated network segments.</p>
+        <a href="https://github.com/Abditus0/pfSense-VLAN-Network-DMZ-Web-Server-Lab" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--blue);border:1px solid var(--border-hi);padding:8px 18px;border-radius:4px;transition:background 0.2s,gap 0.2s;" onmouseover="this.style.background='var(--blue-dim)';this.style.gap='12px'" onmouseout="this.style.background='transparent';this.style.gap='8px'"><i class="fa-brands fa-github"></i> View on GitHub →</a>
       </div>
     </div>
-  </a>
-  <a href="https://github.com/Abditus0/System-Health-Check-Script" target="_blank" class="project-card reveal">
-    <div class="project-github-link">
-      <i class="fa-brands fa-github"></i>
-    </div>
-    <div class="project-icon">
-  <img src="images/projects/system-health-check.png" alt="System Health Check" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-</div>
-    <div class="project-tag">// Automation & Scripting</div>
-    <div class="project-title">System Health Check</div>
-    <div class="project-desc">Python script that generates a system health report. CPU, memory, disk, uptime, network connectivity, and Windows service status, with color coded terminal warnings and automatic timestamped logging.</div>
-    <div class="project-footer">
-      <div class="project-stack">
-        <span class="tag">Python</span>
-        <span class="tag">psutil</span>
-        <span class="tag">Windows</span>
-        <span class="tag">Automation</span>
+
+    <div class="reveal" style="display:grid;grid-template-columns:200px 1fr;gap:0;padding:32px 0;border-bottom:1px solid var(--border);">
+      <div style="text-align:right;padding-right:32px;border-right:1px solid var(--border);">
+        <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;">// Systems Administration</div>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
+          <span class="tag">Windows Server</span>
+          <span class="tag">Active Directory</span>
+          <span class="tag">Group Policy</span>
+          <span class="tag">DHCP/DNS</span>
+        </div>
+      </div>
+      <div style="padding-left:32px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:var(--heading);margin-bottom:10px;letter-spacing:-0.01em;">Enterprise Windows Domain Infrastructure Lab</div>
+        <p style="font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:20px;">Built a full Windows Server domain from scratch for a simulated 25-user business. Active Directory, DNS, DHCP, departmental file shares with NTFS permissions, Group Policy enforcement, and network print services — all configured and documented end to end.</p>
+        <a href="https://github.com/Abditus0/Enterprise-Windows-Domain-Infrastructure-Lab" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--blue);border:1px solid var(--border-hi);padding:8px 18px;border-radius:4px;transition:background 0.2s,gap 0.2s;" onmouseover="this.style.background='var(--blue-dim)';this.style.gap='12px'" onmouseout="this.style.background='transparent';this.style.gap='8px'"><i class="fa-brands fa-github"></i> View on GitHub →</a>
       </div>
     </div>
-  </a>
-  <a href="https://github.com/Abditus0/VMware-to-Hyper-V-VM-Migration" target="_blank" class="project-card reveal">
-    <div class="project-github-link">
-      <i class="fa-brands fa-github"></i>
-    </div>
-    <div class="project-icon">
-  <img src="images/projects/vm-migration.png" alt="VM Migration" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
-</div>
-    <div class="project-tag">// Virtualization</div>
-    <div class="project-title">VMware to Hyper-V VM Migration</div>
-    <div class="project-desc">Step by step migration guide for moving virtual machines from VMware to Hyper-V using StarWind V2V Converter. Covering VMDK to VHDX conversion, VM setup, boot verification, and common post migration troubleshooting.</div>
-    <div class="project-footer">
-      <div class="project-stack">
-        <span class="tag">Hyper-V</span>
-        <span class="tag">VMware</span>
-        <span class="tag">StarWind V2V</span>
-        <span class="tag">Virtualization</span>
+
+    <div class="reveal" style="display:grid;grid-template-columns:200px 1fr;gap:0;padding:32px 0;border-bottom:1px solid var(--border);">
+      <div style="text-align:right;padding-right:32px;border-right:1px solid var(--border);">
+        <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;">// Email Infrastructure</div>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
+          <span class="tag">Google Workspace</span>
+          <span class="tag">DNS</span>
+          <span class="tag">Microsoft 365</span>
+          <span class="tag">Email Security</span>
+        </div>
+      </div>
+      <div style="padding-left:32px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:var(--heading);margin-bottom:10px;letter-spacing:-0.01em;">Google Workspace Environment From Scratch</div>
+        <p style="font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:20px;">Built a full Google Workspace environment from zero. Domain registration, DNS configuration, MX/SPF/DKIM/DMARC setup, user accounts, and security policies — plus a live mailbox migration from Microsoft 365.</p>
+        <a href="https://github.com/Abditus0/Google-Workspace-Environment-From-Scratch" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--blue);border:1px solid var(--border-hi);padding:8px 18px;border-radius:4px;transition:background 0.2s,gap 0.2s;" onmouseover="this.style.background='var(--blue-dim)';this.style.gap='12px'" onmouseout="this.style.background='transparent';this.style.gap='8px'"><i class="fa-brands fa-github"></i> View on GitHub →</a>
       </div>
     </div>
-  </a>
-</div>
+
+    <div class="reveal" style="display:grid;grid-template-columns:200px 1fr;gap:0;padding:32px 0;border-bottom:1px solid var(--border);">
+      <div style="text-align:right;padding-right:32px;border-right:1px solid var(--border);">
+        <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;">// Automation & Scripting</div>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
+          <span class="tag">PowerShell</span>
+          <span class="tag">Active Directory</span>
+          <span class="tag">Automation</span>
+        </div>
+      </div>
+      <div style="padding-left:32px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:var(--heading);margin-bottom:10px;letter-spacing:-0.01em;">Active Directory Password Reset Script</div>
+        <p style="font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:20px;">PowerShell script for batch password resets in Active Directory. Processes users from a CSV file, enforces password change at next login, and logs every action with timestamps for a full audit trail.</p>
+        <a href="https://github.com/Abditus0/PowerShell-Password-Reset-Script" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--blue);border:1px solid var(--border-hi);padding:8px 18px;border-radius:4px;transition:background 0.2s,gap 0.2s;" onmouseover="this.style.background='var(--blue-dim)';this.style.gap='12px'" onmouseout="this.style.background='transparent';this.style.gap='8px'"><i class="fa-brands fa-github"></i> View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="reveal" style="display:grid;grid-template-columns:200px 1fr;gap:0;padding:32px 0;border-bottom:1px solid var(--border);">
+      <div style="text-align:right;padding-right:32px;border-right:1px solid var(--border);">
+        <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;">// Automation & Scripting</div>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
+          <span class="tag">Python</span>
+          <span class="tag">psutil</span>
+          <span class="tag">Windows</span>
+          <span class="tag">Automation</span>
+        </div>
+      </div>
+      <div style="padding-left:32px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:var(--heading);margin-bottom:10px;letter-spacing:-0.01em;">System Health Check</div>
+        <p style="font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:20px;">Python script that generates a full system health report — CPU, memory, disk, uptime, network connectivity, and Windows service status — with color-coded terminal warnings and automatic timestamped logging.</p>
+        <a href="https://github.com/Abditus0/System-Health-Check-Script" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--blue);border:1px solid var(--border-hi);padding:8px 18px;border-radius:4px;transition:background 0.2s,gap 0.2s;" onmouseover="this.style.background='var(--blue-dim)';this.style.gap='12px'" onmouseout="this.style.background='transparent';this.style.gap='8px'"><i class="fa-brands fa-github"></i> View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="reveal" style="display:grid;grid-template-columns:200px 1fr;gap:0;padding:32px 0;border-bottom:1px solid var(--border);">
+      <div style="text-align:right;padding-right:32px;border-right:1px solid var(--border);">
+        <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;">// Automation & Scripting</div>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
+          <span class="tag">PowerShell</span>
+          <span class="tag">Automation</span>
+          <span class="tag">Windows</span>
+        </div>
+      </div>
+      <div style="padding-left:32px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:var(--heading);margin-bottom:10px;letter-spacing:-0.01em;">PowerShell Backup Script</div>
+        <p style="font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:20px;">Automated backup script that copies files to a timestamped destination, preserves folder structure, handles duplicates safely, verifies file sizes, and logs every success and error with a full summary report.</p>
+        <a href="https://github.com/Abditus0/PowerShell-Backup-Script" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--blue);border:1px solid var(--border-hi);padding:8px 18px;border-radius:4px;transition:background 0.2s,gap 0.2s;" onmouseover="this.style.background='var(--blue-dim)';this.style.gap='12px'" onmouseout="this.style.background='transparent';this.style.gap='8px'"><i class="fa-brands fa-github"></i> View on GitHub →</a>
+      </div>
+    </div>
+
+    <div class="reveal" style="display:grid;grid-template-columns:200px 1fr;gap:0;padding:32px 0;">
+      <div style="text-align:right;padding-right:32px;border-right:1px solid var(--border);">
+        <div style="font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--teal);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:12px;">// Virtualization</div>
+        <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end;">
+          <span class="tag">Hyper-V</span>
+          <span class="tag">VMware</span>
+          <span class="tag">StarWind V2V</span>
+          <span class="tag">Virtualization</span>
+        </div>
+      </div>
+      <div style="padding-left:32px;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:700;color:var(--heading);margin-bottom:10px;letter-spacing:-0.01em;">VMware to Hyper-V VM Migration</div>
+        <p style="font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:20px;">Migrated virtual machines from VMware to Hyper-V using StarWind V2V Converter. Covers the full process: VMDK to VHDX conversion, VM setup, boot verification, and post-migration troubleshooting — fully documented.</p>
+        <a href="https://github.com/Abditus0/VMware-to-Hyper-V-VM-Migration" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--blue);border:1px solid var(--border-hi);padding:8px 18px;border-radius:4px;transition:background 0.2s,gap 0.2s;" onmouseover="this.style.background='var(--blue-dim)';this.style.gap='12px'" onmouseout="this.style.background='transparent';this.style.gap='8px'"><i class="fa-brands fa-github"></i> View on GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 </section>
   
 <!-- ─── BLOG ─── -->
