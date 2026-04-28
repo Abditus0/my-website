@@ -6,5 +6,8 @@
     "env": {
       "HUGO_VERSION": "0.158.0"
     }
-  }
+  },
+  "rewrites": [
+    { "source": "/portfolio", "destination": "/api/portfolio" }
+  ]
 }
