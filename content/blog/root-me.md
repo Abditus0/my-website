@@ -3,8 +3,8 @@ title: "RootMe"
 date: 2026-05-01
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe RootMe challenge - A ctf for beginners, can you root me?"
-image: "/images/blog/104.png"
-readtime: "15 min read"
+image: "/images/blog/105.png"
+readtime: "28 min read"
 draft: false
 ---
 
