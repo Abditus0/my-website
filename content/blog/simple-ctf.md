@@ -1,9 +1,9 @@
 ---
 title: "Simple CTF"
-date: 2026-05-02
+date: 2026-05-03
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Simple CTF challenge - Beginner level ctf"
-image: "/images/blog/102.png"
+image: "/images/blog/107.png"
 readtime: "35 min read"
 draft: false
 ---
