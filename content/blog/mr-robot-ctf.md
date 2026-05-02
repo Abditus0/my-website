@@ -1,6 +1,6 @@
 ---
 title: "Mr Robot CTF"
-date: 2026-05-01
+date: 2026-05-02
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Mr Robot CTF - Based on the Mr. Robot show, can you root this box?"
 image: "/images/blog/106.png"
