@@ -2,9 +2,9 @@
 title: "Attacktive Directory"
 date: 2026-05-03
 category: "ctf"
-excerpt: "Walkthrough of the TryHackMe Attacktive Directory - 999% of Corporate networks run off of AD. But can you exploit a vulnerable Domain Controller?"
+excerpt: "Walkthrough of the TryHackMe Attacktive Directory - 99% of Corporate networks run off of AD. But can you exploit a vulnerable Domain Controller?"
 image: "/images/blog/109.png"
-readtime: "35 min read"
+readtime: "30 min read"
 draft: false
 ---
 
