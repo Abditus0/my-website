@@ -28,8 +28,6 @@ c4n y0u c4p7u23 7h3 f149?
 
 This one took me about one second. It is leet speak. Numbers replace letters. 4 is A, 0 is O, 7 is T, 3 is E, 1 is I.
 
-![](/images/blog/c4ptur3-th3-fl4g/1.png)
-
 `can you capture the flag?`
 
 ### Level 2
@@ -39,6 +37,8 @@ This one took me about one second. It is leet speak. Numbers replace letters. 4 
 ```
 
 Binary. Groups of 8 zeros and ones separated by spaces. There are hundreds of tools online that convert binary to text, just paste it in.
+
+![](/images/blog/c4ptur3-th3-fl4g/1.png)
 
 `lets try some binary out!`
 
