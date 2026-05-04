@@ -1,6 +1,6 @@
 ---
 title: "Web Application Basics — TryHackMe Cyber Security 101"
-date: 2026-05-04
+date: 2026-05-03
 category: "writeup"
 excerpt: "Walkthrough of TryHackMe's Web Application Basics room — Learn the basics of web applications: HTTP, URLs, request methods, response codes, and headers."
 image: "/images/blog/110.png"
