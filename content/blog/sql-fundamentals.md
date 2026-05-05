@@ -44,7 +44,7 @@ There are two main flavors:
 
 Here's what a NoSQL document might look like:
 
-```json
+```
 {
     _id: ObjectId("4556712cd2b2397ce1b47661"),
     name: { first: "Thomas", last: "Anderson" },
