@@ -90,7 +90,7 @@ Cracked again. Password is `andrea`.
 Logged in as quinn, did an `ls`, and there it is. A flag file. But remember you can't just read files from inside FTP, you have to download them to your machine first.
 
 ```bash
-get <flagfile>
+get ftp_flag.txt
 ```
 
 ![](/images/blog/net-sec-challenge/4.png)
