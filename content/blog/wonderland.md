@@ -4,7 +4,7 @@ date: 2026-05-24
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Wonderland room - Fall down the rabbit hole and enter wonderland."
 image: "/images/blog/129.png"
-readtime: "28 min read"
+readtime: "30 min read"
 draft: false
 ---
 
