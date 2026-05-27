@@ -399,11 +399,11 @@ It should answer 4 questions clearly:
 
 Here is an example:
 
-```
+
 A black-box external penetration test was conducted against the system "Relevant" between May 26-27 2026. The objective was to identify vulnerabilities that could be exploited by an external attacker with no prior knowledge or credentials. The assessment identified critical vulnerabilities that allowed full administrative compromise of the target system. An unauthenticated attacker on the network was able to obtain administrator-level access within approximately 1 hour, exposing all data on the system to theft, modification, or destruction.
 
 The root causes were misconfigured file-sharing permissions, credentials stored in plaintext on accessible shares, and a Windows Server configuration that grants web-application processes unnecessary privileges. All identified issues are remediable through configuration changes and credential hygiene. No software vendor patches are required. I recommend the system not be released to production until findings in this report are addressed.
-```
+
 
 Notice that there are no tool names, no CVE numbers, no .aspx, SMB, PrintSpoofer. It tells a manager exactly what they need to know.
 
