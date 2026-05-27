@@ -433,11 +433,11 @@ Here you can mention OWASP, NIST SP800-115, or PTES. PTES is the most common for
 
 Lets a technical reader skim every issue at a glance. Looks like this:
 
-1. Anonymous SMB access exposes credentials. Severity: Critical. CVSS: 9.8
-2. Plaintext credentials stored in accessible share. Severity: High. CVSS: 8.4
-3. SMB share is writable to authenticated users and serves as web root. Severity: Critical. CVSS: 9.1
-4. IIS application pool runs with SeImpersonatePrivilege. Severity: High. CVSS: 7.8
-5. SMB signing not required (potential relay). Severity: Medium. CVSS: 5.9
+1. Anonymous SMB access exposes credentials. **Severity:** Critical. **CVSS:** 9.8
+2. Plaintext credentials stored in accessible share. **Severity:** High. **CVSS:** 8.4
+3. SMB share is writable to authenticated users and serves as web root. **Severity:** Critical. **CVSS:** 9.1
+4. IIS application pool runs with SeImpersonatePrivilege. **Severity:** High. **CVSS:** 7.8
+5. SMB signing not required (potential relay). **Severity:** Medium. **CVSS:** 5.9
 
 For the CVSS you can use an official calculator but for learning just pick reasonable values. In real work you'd justify each one.
 
