@@ -445,7 +445,7 @@ For the CVSS you can use an official calculator but for learning just pick reaso
 
 This is the meat. One subsection per vulnerability, with a consistent template. Here's the standard template:
 
-```
+
 FINDING #N: [Title]
 
 Severity: [Critical/High/Medium/Low]
@@ -466,11 +466,11 @@ Remediation:
 
 References:
   Links to MITRE, vendor docs, CVEs, etc.
-```
+
 
 And here is the example:
 
-```
+
 ### Finding #2: Plaintext Credentials Stored in Accessible SMB Share
 
 **Severity:** High **CVSS:** 8.4 **Affected Asset:** \\10.81.164.9\nt4wrksv\password.txt
@@ -517,7 +517,7 @@ Any unauthenticated attacker who can reach the SMB service (port 445) can retrie
 
 - MITRE ATT&CK: T1552.001 — Unsecured Credentials: Credentials In Files
 - NIST SP 800-63B — Digital Identity Guidelines
-```
+
 
 The description and impact are written so a manager can understand them. The evidence has copy-pastable commands so a sysadmin can reproduce it. The remediation gives specific, actionable steps, not "improve credentials management."
 
