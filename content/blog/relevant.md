@@ -494,6 +494,7 @@ Any unauthenticated attacker who can reach the SMB service (port 445) can retrie
 2. Connected to the share and retrieved the file:
 
     smbclient //10.81.164.9/nt4wrksv -N
+    
     smb: \> get password.txt
 
 3. Decoded the base64 content:
