@@ -504,6 +504,7 @@ Any unauthenticated attacker who can reach the SMB service (port 445) can retrie
     Output (redacted in this report):
 
     Bob - !P@[REDACTED]
+    
     Bill - Juw[REDACTED]
 
 #### Remediation
