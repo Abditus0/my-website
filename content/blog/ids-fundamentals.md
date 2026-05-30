@@ -180,7 +180,7 @@ Breaking that down:
 - `-A console` send alerts to the console output so you can see them in real time.
 - `-c /etc/snort/snort.conf` use this config file.
 
-Snort starts up and just sits there watching. Now open a second terminal (don't kill the first one) and ping the loopback:
+Now open a second terminal (don't kill the first one) and ping the loopback:
 
 ```bash
 ping 127.0.0.1
