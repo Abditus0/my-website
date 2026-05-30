@@ -194,9 +194,7 @@ Back in the Snort terminal, alerts start flooding in:
 07/24-10:46:54.410544  [] [1:1000001:1] Loopback Ping Detected [] [Priority: 0] {ICMP} 127.0.0.1 -> 127.0.0.1
 ```
 
-Boom, your rule is working. The format is timestamp, then `[generator:sid:rev]`, then the alert message, then the protocol and src -> dst. Once you've seen a few you can read them at a glance.
-
-Ctrl+C the ping. Ctrl+C Snort. Done with live mode.
+Boom, your rule is working. The format is timestamp, then `[generator:sid:rev]`, then the alert message, then the protocol and src -> dst.
 
 ### Running Snort on a PCAP
 
@@ -244,7 +242,7 @@ The SSH alerts look something like this:
 [] [1:1000002:1] SSH connection attempt [] [Priority: 0] {TCP} 10.11.90.211:XXXXX -> ...:22
 ```
 
-The `[1:1000002:1]` part is `[generator:sid:rev]` so the sid for the SSH rule is `1000002`. The source IP at the start of the line (10.11.90.211) is the attacker connecting in. Both fall right out of reading the alert output.
+The `[1:1000002:1]` part is `[generator:sid:rev]` so the sid for the SSH rule is `1000002`. The source IP at the start of the line (10.11.90.211) is the attacker connecting in.
 
 For the "other rule message besides SSH" question, look at the other alerts that aren't SSH-related. You'll see the Ping Detected messages firing from ICMP traffic in the PCAP. That's your answer.
 
