@@ -2,7 +2,7 @@
 title: "Relevant"
 date: 2026-05-27
 category: "ctf"
-excerpt: "Walkthrough of the TryHackMe Relevant room - APenetration Testing Challenge"
+excerpt: "Walkthrough of the TryHackMe Relevant room - Penetration Testing Challenge with report"
 image: "/images/blog/132.png"
 readtime: "60 min read"
 draft: false
