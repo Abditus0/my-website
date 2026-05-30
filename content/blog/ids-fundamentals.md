@@ -92,7 +92,7 @@ The room says you'll mostly use NIDS mode, which is correct. The packet sniffer 
 
 ## Task 4 — Snort Usage {#task-4}
 
-Hands on time. Start the machine and use split view (or RDP/SSH in if you've got the VPN going).
+Hands on time.
 
 Quick note about "promiscuous mode" the task mentions. By default, a network interface only processes packets addressed TO that host. Promiscuous mode tells the interface "hand me ALL packets you see, even ones not for me." This is what lets Snort run as a NIDS watching all traffic on a network segment. If you only want to monitor traffic for your own host, you don't need promiscuous mode. For real network-wide IDS, you do.
 
@@ -128,11 +128,11 @@ Reading left to right:
 
 **Protocol.** `icmp`. The protocol to match. Can be tcp, udp, icmp, ip.
 
-**Source IP.** `any`. Where the traffic comes from. `any` means literally any IP. You could also put a specific IP, a CIDR range, or a variable like `$HOME_NET`.
+**Source IP.** `any`. Where the traffic comes from. You could also put a specific IP, a CIDR range, or a variable like `$HOME_NET`.
 
 **Source port.** `any`. Where traffic came from. For ICMP this doesn't really matter, ICMP doesn't have ports.
 
-**Direction operator.** `->`. Means "from source to destination." There's also `<>` which means bidirectional. There is NO `<-` operator, you just flip the source and destination if you want the other direction. Trips people up, the operator is one-way or two-way only.
+**Direction operator.** `->`. Means "from source to destination." There's also `<>` which means bidirectional. There is NO `<-` operator, you just flip the source and destination if you want the other direction. The operator is one-way or two-way only.
 
 **Destination IP.** `$HOME_NET`. The variable defined in `snort.conf` that represents your network range. Using variables is way cleaner than hardcoding IPs.
 
@@ -144,7 +144,7 @@ Then the parenthesized part is the rule metadata:
 - `sid:10001` is the Signature ID, a unique number for this rule. Numbers below 1,000,000 are reserved for the official Snort rules. Custom rules should use 1,000,000 and above. The room uses some lower numbers in examples but in practice keep yours above a million to avoid collisions.
 - `rev:1` is the revision number. Bump this every time you edit the rule so you can track changes.
 
-Every rule follows this format. Once you've seen a couple they all look similar.
+Every rule follows this format.
 
 ### Adding a custom rule
 
