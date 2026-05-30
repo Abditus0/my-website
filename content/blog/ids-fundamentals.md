@@ -80,7 +80,7 @@ Snort can be run in three different modes depending on what you want to do with 
 
 **Packet logging mode.** Reads packets and logs them to a file in PCAP format. Useful when you want to capture traffic for later analysis (forensic investigation, replaying through different tools, that kind of thing). You can do detection while logging too, so you get both the alerts and the raw traffic dump.
 
-**Network Intrusion Detection System (NIDS) mode.** The main event. Real-time traffic monitoring with rule matching. This is what you're using Snort FOR. The other modes are just nice extras.
+**Network Intrusion Detection System (NIDS) mode.** The main one. Real-time traffic monitoring with rule matching. This is what you're using Snort for. The other modes are just nice extras.
 
 The room says you'll mostly use NIDS mode, which is correct. The packet sniffer and packet logging modes are useful to know about but they're not why you installed Snort.
 
