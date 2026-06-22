@@ -4,7 +4,7 @@ date: 2026-06-05
 category: "ctf"
 excerpt: "Walkthrough of the TryHackMe Cyborg room - A box involving encrypted archives, source code analysis and more."
 image: "/images/blog/136.png"
-readtime: "35 min read"
+readtime: "45 min read"
 draft: false
 ---
 
