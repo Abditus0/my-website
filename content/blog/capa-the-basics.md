@@ -3,7 +3,7 @@ title: "CAPA: The Basics — TryHackMe Cyber Security 101"
 date: 2026-06-09
 category: "writeup"
 excerpt: "Walkthrough of TryHackMe's CAPA: The Basics room — Learn to use CAPA to identify malicious capabilities."
-image: "/images/blog/136.png"
+image: "/images/blog/138.png"
 readtime: "50 min read"
 draft: false
 ---
