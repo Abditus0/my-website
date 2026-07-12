@@ -664,6 +664,12 @@ a.stat-cve:hover::after { color: var(--cve); }
   .blog-item { grid-template-columns: auto 1fr; }
   .blog-meta { display: none; }
 }
+@media (max-height: 880px) {
+  .hero-stats { gap: 18px; bottom: 56px; }
+  .stat-num { font-size: 3.1rem; }
+  .stat { padding: 8px 16px; }
+  .stat-cve-id { font-size: 0.72rem; margin-top: 4px; }
+}
     @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
