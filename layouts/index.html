@@ -281,23 +281,22 @@ a.stat:hover .stat-label { color: var(--text); }
 .stat-cve-top {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.45rem; font-weight: 800;
-  color: var(--heading);
+  color: var(--cve);
   text-transform: uppercase; letter-spacing: 0.03em;
   line-height: 1;
   transition: color 0.2s;
 }
-.stat-cve-top span { color: var(--cve); }
 .stat-cve-id {
   display: inline-block;
   margin-top: 12px;
   font-family: 'DM Mono', monospace;
   font-size: 0.82rem; font-weight: 500;
-  color: var(--cve);
+  color: var(--text);
   letter-spacing: 0.05em;
   padding: 5px 12px;
-  border: 1px solid color-mix(in srgb, var(--cve) 40%, transparent);
+  border: 1px solid var(--border-hi);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--cve) 8%, transparent);
+  background: rgba(255,255,255,0.03);
   transition: background 0.2s, border-color 0.2s;
 }
 a.stat-cve:hover {
