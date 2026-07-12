@@ -278,20 +278,38 @@ a.stat:hover .stat-label { color: var(--text); }
     /* ───────────────── SECTIONS ───────────────── */
 
 .stat-cve { --cve: #ffb020; }
-.stat-cve .stat-num { color: var(--cve); }
+.stat-cve-top {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.45rem; font-weight: 800;
+  color: var(--heading);
+  text-transform: uppercase; letter-spacing: 0.03em;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.stat-cve-top span { color: var(--cve); }
+.stat-cve-id {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.82rem; font-weight: 500;
+  color: var(--cve);
+  letter-spacing: 0.05em;
+  padding: 5px 12px;
+  border: 1px solid color-mix(in srgb, var(--cve) 40%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--cve) 8%, transparent);
+  transition: background 0.2s, border-color 0.2s;
+}
 a.stat-cve:hover {
   border-color: var(--cve);
   background: color-mix(in srgb, var(--cve) 6%, transparent);
   box-shadow: 0 8px 32px color-mix(in srgb, var(--cve) 18%, transparent);
 }
-a.stat-cve:hover .stat-num { color: var(--cve); }
+a.stat-cve:hover .stat-cve-top { color: var(--cve); }
 a.stat-cve:hover::after { color: var(--cve); }
-.stat-cve-id {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.8rem;
-  color: var(--cve);
-  letter-spacing: 0.05em;
-  margin-top: 6px;
+a.stat-cve:hover .stat-cve-id {
+  background: color-mix(in srgb, var(--cve) 15%, transparent);
+  border-color: var(--cve);
 }
     section {
       position: relative; z-index: 1;
@@ -782,9 +800,8 @@ a.skill-card:hover {
   </div>
 
 <div class="hero-stats">
-  <a href="#security-research" class="stat stat-cve">
-    <div class="stat-num">1</div>
-    <div class="stat-label">CVE Published</div>
+<a href="#security-research" class="stat stat-cve">
+    <div class="stat-cve-top"><span>1</span> CVE Published</div>
     <div class="stat-cve-id">CVE-2026-11359</div>
   </a>
   <a href="#projects" class="stat">
