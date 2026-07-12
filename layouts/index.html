@@ -745,6 +745,7 @@ a.skill-card:hover {
   </div>
   <ul class="nav-links">
   <li><a href="#about">About</a></li>
+  <li><a href="#cve">CVE</a></li>
   <li><a href="#certifications">Certifications</a></li>
   <li><a href="#projects">Projects</a></li>
   <li><a href="/blog">Blog</a></li>
@@ -775,7 +776,7 @@ a.skill-card:hover {
   </div>
 
 <div class="hero-stats">
-<a href="#security-research" class="stat stat-cve">
+<a href="#cve" class="stat stat-cve">
     <div class="stat-num">CVE</div>
     <div class="stat-cve-id">CVE-2026-11359</div>
   </a>
@@ -854,11 +855,62 @@ a.skill-card:hover {
     </div>
   </div>
 </section>
+<!-- ─── CVE ─── -->
+<section id="cve">
+  <div class="section-header reveal">
+    <span class="section-num">02 /</span>
+    <h2 class="section-title">CVE</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p class="placeholder">
+        I discovered my first officially recognized security vulnerability, published as <strong>CVE-2026-11359</strong>. In plain terms: a popular WordPress plugin had an action that was only supposed to be available to site administrators — installing and activating other software onto the site. But the code never checked who was asking, so even the lowest-privilege user account could trigger it.
+      </p>
+      <p class="placeholder">
+        Technically, it was a Missing Authorization flaw (CWE-862): the plugin's AJAX handler was missing both a capability check and nonce validation, letting any authenticated user perform an admin-only action. I reported it through responsible disclosure, and it was assigned an official CVE ID and published to the National Vulnerability Database.
+      </p>
+      <div style="margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="/blog/cve-2026-11359/" class="btn-primary">Read the full story →</a>
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11359" target="_blank" class="btn-secondary">View on NVD →</a>
+      </div>
+    </div>
+
+    <div class="about-card reveal">
+      <div class="about-card-title">// CVE Details</div>
+      <div class="info-row">
+        <span class="info-key">CVE ID</span>
+        <span class="info-val">CVE-2026-11359</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Severity</span>
+        <span class="info-val">4.3 · Medium (CVSS 3.1)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Type</span>
+        <span class="info-val">Missing Authorization</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Weakness</span>
+        <span class="info-val">CWE-862</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Affected</span>
+        <span class="info-val">ProfileGrid WooCommerce ≤ 3.4</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">Status</span>
+        <span class="info-val">Published · NVD</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ─── CERTIFICATIONS ─── -->
 <section id="certifications">
   <div class="section-header reveal">
-    <span class="section-num">02 /</span>
+    <span class="section-num">03 /</span>
     <h2 class="section-title">Certifications</h2>
     <div class="section-line"></div>
   </div>
@@ -936,7 +988,7 @@ a.skill-card:hover {
 <!-- ─── PROJECTS ─── -->
 <section id="projects">
   <div class="section-header reveal">
-    <span class="section-num">03 /</span>
+    <span class="section-num">04 /</span>
     <h2 class="section-title">Projects</h2>
     <div class="section-line"></div>
   </div>
@@ -1056,7 +1108,7 @@ a.skill-card:hover {
 <!-- ─── BLOG ─── -->
 <section id="blog">
   <div class="section-header reveal">
-    <span class="section-num">04 /</span>
+    <span class="section-num">05 /</span>
     <a href="/blog" style="text-decoration: none;">
   <h2 class="section-title" style="cursor: pointer; transition: color 0.3s, transform 0.3s;">Blog <span style="color:var(--blue);font-size:0.5em;font-family:'DM Mono',monospace;vertical-align:middle;">({{ len (where .Site.RegularPages "Section" "blog") }})</span></h2>
 </a>
@@ -1116,7 +1168,7 @@ a.skill-card:hover {
 <!-- ─── EXPERIENCE ─── -->
 <section id="experience">
   <div class="section-header reveal">
-    <span class="section-num">05 /</span>
+    <span class="section-num">06 /</span>
     <h2 class="section-title">Experience</h2>
     <div class="section-line"></div>
   </div>
@@ -1170,7 +1222,7 @@ a.skill-card:hover {
 <!-- ─── CONTACT ─── -->
 <section id="contact" style="padding: 140px clamp(24px, 5vw, 72px);">
   <div class="section-header reveal">
-    <span class="section-num">06 /</span>
+    <span class="section-num">07 /</span>
     <h2 class="section-title">Get In Touch</h2>
     <div class="section-line"></div>
   </div>
@@ -1208,6 +1260,7 @@ a.skill-card:hover {
   <div class="footer-right">
     <a href="#hero">Top</a>
     <a href="#about">About</a>
+  <a href="#cve">CVE</a>
   <a href="#certifications">Certifications</a>
   <a href="#projects">Projects</a>
   <a href="/blog">Blog</a>
