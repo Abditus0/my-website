@@ -276,6 +276,23 @@ a.stat:hover .stat-num { color: var(--blue); }
 a.stat:hover .stat-label { color: var(--text); }
 
     /* ───────────────── SECTIONS ───────────────── */
+
+.stat-cve { --cve: #ffb020; }
+.stat-cve .stat-num { color: var(--cve); }
+a.stat-cve:hover {
+  border-color: var(--cve);
+  background: color-mix(in srgb, var(--cve) 6%, transparent);
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--cve) 18%, transparent);
+}
+a.stat-cve:hover .stat-num { color: var(--cve); }
+a.stat-cve:hover::after { color: var(--cve); }
+.stat-cve-id {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--cve);
+  letter-spacing: 0.05em;
+  margin-top: 6px;
+}
     section {
       position: relative; z-index: 1;
       padding: 100px clamp(24px, 5vw, 72px);
@@ -759,6 +776,11 @@ a.skill-card:hover {
   </div>
 
 <div class="hero-stats">
+  <a href="#security-research" class="stat stat-cve">
+    <div class="stat-num">1</div>
+    <div class="stat-label">CVE Published</div>
+    <div class="stat-cve-id">CVE-2026-11359</div>
+  </a>
   <a href="#projects" class="stat">
     <div class="stat-num">8<span>+</span></div>
     <div class="stat-label">Projects Completed</div>
