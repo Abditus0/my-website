@@ -733,15 +733,16 @@ a.skill-card:hover {
 /* ───────────────── CVE ───────────────── */
 .cve-list { display: flex; flex-direction: column; }
 .cve-row {
-  display: grid; grid-template-columns: 240px 1fr; gap: 0;
+  display: grid; grid-template-columns: 250px 1fr; gap: 0;
   padding: 32px 0; border-bottom: 1px solid var(--border);
 }
 .cve-list .cve-row:last-child { border-bottom: none; }
 
 .cve-meta { text-align: right; padding-right: 32px; border-right: 1px solid var(--border); }
 .cve-id {
-  font-family: 'DM Mono', monospace; font-size: 1.35rem; font-weight: 500;
-  color: var(--heading); letter-spacing: 0.01em; line-height: 1.2;
+  font-family: 'DM Mono', monospace; font-size: 1.5rem; font-weight: 500;
+  color: var(--heading); letter-spacing: 0; line-height: 1.2;
+  white-space: nowrap;
 }
 .cve-sev {
   display: inline-block; margin-top: 14px; white-space: nowrap;
