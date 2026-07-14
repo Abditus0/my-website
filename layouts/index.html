@@ -733,15 +733,15 @@ a.skill-card:hover {
 /* ───────────────── CVE ───────────────── */
 .cve-list { display: flex; flex-direction: column; }
 .cve-row {
-  display: grid; grid-template-columns: 200px 1fr; gap: 0;
+  display: grid; grid-template-columns: 240px 1fr; gap: 0;
   padding: 32px 0; border-bottom: 1px solid var(--border);
 }
 .cve-list .cve-row:last-child { border-bottom: none; }
 
 .cve-meta { text-align: right; padding-right: 32px; border-right: 1px solid var(--border); }
 .cve-id {
-  font-family: 'DM Mono', monospace; font-size: 1.05rem;
-  color: var(--heading); letter-spacing: 0.04em;
+  font-family: 'DM Mono', monospace; font-size: 1.35rem; font-weight: 500;
+  color: var(--heading); letter-spacing: 0.01em; line-height: 1.2;
 }
 .cve-sev {
   display: inline-block; margin-top: 14px; white-space: nowrap;
@@ -930,7 +930,7 @@ a.skill-card:hover {
         <p class="cve-desc last">
           The <code style="font-family:'DM Mono',monospace;color:var(--blue);">pg_install_profilegrid()</code> handler was missing both a capability check and nonce validation, letting any authenticated user perform an admin-only action. I reported it through responsible disclosure, it was assigned an official CVE ID by Wordfence, and published to the National Vulnerability Database.
         </p>
-        <a href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/ecommerce-user-profiles-by-profilegrid/memberships-and-user-profiles-for-woocommerce-34-missing-authorization-to-authenticated-subscriber-profilegrid-plugin-installation-and-activation" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View full advisory on Wordfence →</a>
+        <a href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/ecommerce-user-profiles-by-profilegrid/memberships-and-user-profiles-for-woocommerce-34-missing-authorization-to-authenticated-subscriber-profilegrid-plugin-installation-and-activation" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View on Wordfence →</a>
       </div>
     </div>
 
