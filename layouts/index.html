@@ -731,44 +731,104 @@ a.skill-card:hover {
   transform: translateX(8px);
 }
 /* ───────────────── CVE ───────────────── */
-.cve-list { display: flex; flex-direction: column; }
-.cve-row {
-  display: grid; grid-template-columns: 180px 1fr; gap: 0;
-  padding: 28px 0; border-bottom: 1px solid var(--border);
-}
-.cve-list .cve-row:last-child { border-bottom: none; }
+.cve-list { display: flex; flex-direction: column; gap: 20px; }
 
-.cve-score { text-align: right; padding-right: 32px; border-right: 1px solid var(--border); }
-.cve-score-num {
-  font-family: 'Space Grotesk', sans-serif; font-size: 3.4rem; font-weight: 700;
-  line-height: 1; letter-spacing: -0.03em; color: var(--sev);
+.cve-card {
+  position: relative; overflow: hidden;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 30px 34px;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
 }
-.cve-score-tag {
-  display: inline-block; margin-top: 12px;
-  font-family: 'DM Mono', monospace; font-size: 0.66rem;
-  letter-spacing: 0.16em; text-transform: uppercase; color: var(--sev);
-  border: 1px solid var(--sev); border-radius: 3px; padding: 3px 10px;
+.cve-card::before {
+  content: ''; position: absolute;
+  left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--sev);
+}
+.cve-card:hover {
+  border-color: color-mix(in srgb, var(--sev) 40%, transparent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 34px rgba(0,0,0,0.35);
+}
+
+.cve-head {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 20px; flex-wrap: wrap; margin-bottom: 16px;
+}
+.cve-id {
+  font-family: 'DM Mono', monospace; font-size: 0.9rem;
+  color: var(--blue); letter-spacing: 0.08em;
+}
+.cve-status {
+  display: flex; align-items: center; gap: 7px; margin-top: 8px;
+  font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--teal);
+}
+.cve-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--teal); animation: pulse 1.5s infinite;
+}
+
+.cve-chip {
+  display: flex; align-items: baseline; gap: 9px;
+  border: 1px solid var(--sev); border-radius: 4px; padding: 8px 14px;
   background: color-mix(in srgb, var(--sev) 12%, transparent);
 }
-.cve-score-date {
-  font-family: 'DM Mono', monospace; font-size: 0.8rem;
-  color: var(--muted); margin-top: 12px; line-height: 1.6;
+.cve-chip-num {
+  font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem;
+  font-weight: 700; line-height: 1; color: var(--sev);
+}
+.cve-chip-lab {
+  font-family: 'DM Mono', monospace; font-size: 0.66rem;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--sev);
 }
 
-.cve-body { padding-left: 32px; }
-.cve-id {
-  font-family: 'DM Mono', monospace; font-size: 0.85rem;
-  color: var(--blue); letter-spacing: 0.08em; margin-bottom: 6px;
-}
 .cve-title {
-  font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700;
-  color: var(--heading); line-height: 1.25; margin-bottom: 12px;
+  font-family: 'Space Grotesk', sans-serif; font-size: 1.7rem; font-weight: 700;
+  color: var(--heading); line-height: 1.25; margin-bottom: 14px;
 }
-.cve-desc { font-size: 1.1rem; color: var(--muted); line-height: 1.75; margin-bottom: 14px; }
-.cve-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 22px; }
+.cve-desc { font-size: 1.05rem; color: var(--muted); line-height: 1.75; margin-bottom: 14px; }
+
+.cve-scale { margin: 26px 0; }
+.cve-scale-track { position: relative; height: 5px; display: flex; }
+.cve-scale-track span { display: block; height: 100%; }
+.cve-scale-track span:first-child { border-radius: 3px 0 0 3px; }
+.cve-scale-track span:last-child { border-radius: 0 3px 3px 0; }
+.cve-scale-mark {
+  position: absolute; top: 50%;
+  width: 13px; height: 13px; border-radius: 50%;
+  background: var(--sev); border: 2px solid var(--bg2);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--sev) 25%, transparent);
+}
+.cve-scale-legend {
+  display: flex; justify-content: space-between; margin-top: 12px;
+  font-family: 'DM Mono', monospace; font-size: 0.64rem;
+  color: var(--muted); letter-spacing: 0.1em;
+}
+
+.cve-metrics {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px; margin-bottom: 22px;
+}
+.cve-metric {
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: 4px; padding: 12px 14px;
+}
+.cve-metric-k {
+  font-family: 'DM Mono', monospace; font-size: 0.62rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 5px;
+}
+.cve-metric-v {
+  font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem;
+  font-weight: 600; color: var(--heading);
+}
+
+.cve-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
 .cve-tag {
   font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--text);
-  background: var(--bg2); border: 1px solid var(--border);
+  background: var(--bg3); border: 1px solid var(--border);
   border-radius: 3px; padding: 5px 10px;
 }
 .cve-actions { display: flex; gap: 14px; flex-wrap: wrap; }
@@ -779,14 +839,10 @@ a.skill-card:hover {
 .sev-low      { --sev: #00e5c0; }
 
 @media (max-width: 900px) {
-  .cve-row { grid-template-columns: 1fr; }
-  .cve-score {
-    text-align: left; padding: 0 0 20px;
-    border-right: none; border-bottom: 1px solid var(--border);
-  }
-  .cve-body { padding: 20px 0 0; }
-  .cve-title { font-size: 1.4rem; }
+  .cve-card { padding: 24px 20px; }
+  .cve-title { font-size: 1.35rem; }
   .cve-desc { font-size: 1rem; }
+  .cve-metrics { grid-template-columns: repeat(2, 1fr); }
 }
 
   </style>
@@ -924,31 +980,56 @@ a.skill-card:hover {
 
   <div class="cve-list">
 
-    <div class="cve-row reveal sev-medium">
-      <div class="cve-score">
-        <div class="cve-score-num">4.3</div>
-        <div class="cve-score-tag">Medium</div>
-        <div class="cve-score-date">CVSS 3.1<br>Published Jul 2026</div>
+    <div class="cve-card reveal sev-medium">
+      <div class="cve-head">
+        <div>
+          <div class="cve-id">CVE-2026-11359</div>
+          <div class="cve-status"><span class="cve-dot"></span>Published · NVD · Jul 2026</div>
+        </div>
+        <div class="cve-chip">
+          <span class="cve-chip-num">4.3</span>
+          <span class="cve-chip-lab">Medium</span>
+        </div>
       </div>
-      <div class="cve-body">
-        <div class="cve-id">CVE-2026-11359</div>
-        <div class="cve-title">Missing Authorization → Plugin Installation</div>
-        <p class="cve-desc">
-          A WordPress plugin exposed an admin-only action — installing and activating other software onto the site — through an AJAX handler that never checked who was asking. Any logged-in user, down to the lowest-privilege Subscriber account, could trigger it.
-        </p>
-        <p class="cve-desc">
-          The <code style="font-family:'DM Mono',monospace;color:var(--blue);">pg_install_profilegrid()</code> handler was missing both a capability check and nonce validation. Reported through responsible disclosure, assigned an official CVE ID by Wordfence, and published to the National Vulnerability Database.
-        </p>
-        <div class="cve-tags">
-          <span class="cve-tag">CWE-862</span>
-          <span class="cve-tag">ProfileGrid WooCommerce ≤ 3.4</span>
-          <span class="cve-tag">AV:N/AC:L/PR:L/UI:N</span>
-          <span class="cve-tag">Wordfence · CNA</span>
+
+      <div class="cve-title">Missing Authorization → Plugin Installation</div>
+
+      <p class="cve-desc">
+        A WordPress plugin exposed an admin-only action — installing and activating other software onto the site — through an AJAX handler that never checked who was asking. Any logged-in user, down to the lowest-privilege Subscriber account, could trigger it.
+      </p>
+      <p class="cve-desc">
+        The <code style="font-family:'DM Mono',monospace;color:var(--blue);">pg_install_profilegrid()</code> handler was missing both a capability check and nonce validation. Reported through responsible disclosure, assigned a CVE by Wordfence, and published to the National Vulnerability Database.
+      </p>
+
+      <div class="cve-scale">
+        <div class="cve-scale-track">
+          <span style="width:39%;background:rgba(0,229,192,0.35);"></span>
+          <span style="width:30%;background:rgba(255,166,43,0.35);"></span>
+          <span style="width:20%;background:rgba(255,107,53,0.35);"></span>
+          <span style="width:11%;background:rgba(255,45,85,0.35);"></span>
+          <span class="cve-scale-mark" style="left:43%;"></span>
         </div>
-        <div class="cve-actions">
-          <a href="/blog/cve-2026-11359/" class="btn-primary">Read the full story →</a>
-          <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11359" target="_blank" class="btn-secondary">View on NVD →</a>
+        <div class="cve-scale-legend">
+          <span>0.0 LOW</span><span>4.0 MEDIUM</span><span>7.0 HIGH</span><span>9.0 CRITICAL</span>
         </div>
+      </div>
+
+      <div class="cve-metrics">
+        <div class="cve-metric"><div class="cve-metric-k">Attack Vector</div><div class="cve-metric-v">Network</div></div>
+        <div class="cve-metric"><div class="cve-metric-k">Complexity</div><div class="cve-metric-v">Low</div></div>
+        <div class="cve-metric"><div class="cve-metric-k">Privileges</div><div class="cve-metric-v">Low</div></div>
+        <div class="cve-metric"><div class="cve-metric-k">User Interaction</div><div class="cve-metric-v">None</div></div>
+      </div>
+
+      <div class="cve-tags">
+        <span class="cve-tag">CWE-862</span>
+        <span class="cve-tag">ProfileGrid WooCommerce ≤ 3.4</span>
+        <span class="cve-tag">Wordfence · CNA</span>
+      </div>
+
+      <div class="cve-actions">
+        <a href="/blog/cve-2026-11359/" class="btn-primary">Read the full story →</a>
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11359" target="_blank" class="btn-secondary">View on NVD →</a>
       </div>
     </div>
 
