@@ -924,12 +924,12 @@ a.skill-card:hover {
       </div>
 
       <div class="cve-body">
-        <div class="cve-title">Authorization Bypass in WordPress Plugin</div>
+        <div class="cve-title">Authorization Bypass Vulnerability</div>
         <p class="cve-desc">
-          A WordPress plugin exposed an admin-only action — installing and activating other software onto the site — through an AJAX handler that never checked who was asking. Any logged-in user, down to the lowest-privilege Subscriber account, could trigger it.
+          A Vulnerabilityin a WordPress plugin used on e-commerce sites. It was missing a permission check (and a nonce check), which meant a low-privilege user with just a basic Subscriber account could make it install and activate another plugin on the site, something only an admin should be able to do.
         </p>
         <p class="cve-desc last">
-          The <code style="font-family:'DM Mono',monospace;color:var(--blue);">pg_install_profilegrid()</code> handler was missing both a capability check and nonce validation, letting any authenticated user perform an admin-only action. I reported it through responsible disclosure, it was assigned an official CVE ID by Wordfence, and published to the National Vulnerability Database.
+          It's a broken access control issue, one of the most common problems in real web apps and number one on the OWASP Top 10.
         </p>
         <a href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/ecommerce-user-profiles-by-profilegrid/memberships-and-user-profiles-for-woocommerce-34-missing-authorization-to-authenticated-subscriber-profilegrid-plugin-installation-and-activation" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View on Wordfence →</a>
       </div>
