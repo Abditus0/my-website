@@ -733,45 +733,37 @@ a.skill-card:hover {
 /* ───────────────── CVE ───────────────── */
 .cve-list { display: flex; flex-direction: column; }
 .cve-row {
-  display: grid; grid-template-columns: 180px 1fr; gap: 0;
-  padding: 28px 0; border-bottom: 1px solid var(--border);
+  display: grid; grid-template-columns: 200px 1fr; gap: 0;
+  padding: 32px 0; border-bottom: 1px solid var(--border);
 }
 .cve-list .cve-row:last-child { border-bottom: none; }
 
-.cve-score { text-align: right; padding-right: 32px; border-right: 1px solid var(--border); }
-.cve-score-num {
-  font-family: 'Space Grotesk', sans-serif; font-size: 3.4rem; font-weight: 700;
-  line-height: 1; letter-spacing: -0.03em; color: var(--sev);
+.cve-meta { text-align: right; padding-right: 32px; border-right: 1px solid var(--border); }
+.cve-id {
+  font-family: 'DM Mono', monospace; font-size: 1.05rem;
+  color: var(--heading); letter-spacing: 0.04em;
 }
-.cve-score-tag {
-  display: inline-block; margin-top: 12px;
-  font-family: 'DM Mono', monospace; font-size: 0.66rem;
-  letter-spacing: 0.16em; text-transform: uppercase; color: var(--sev);
-  border: 1px solid var(--sev); border-radius: 3px; padding: 3px 10px;
+.cve-sev {
+  display: inline-block; margin-top: 14px; white-space: nowrap;
+  font-family: 'DM Mono', monospace; font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--sev); border: 1px solid var(--sev); border-radius: 999px;
+  padding: 5px 14px;
   background: color-mix(in srgb, var(--sev) 12%, transparent);
 }
-.cve-score-date {
+.cve-date {
   font-family: 'DM Mono', monospace; font-size: 0.8rem;
-  color: var(--muted); margin-top: 12px; line-height: 1.6;
+  color: var(--muted); margin-top: 14px; line-height: 1.6;
 }
 
 .cve-body { padding-left: 32px; }
-.cve-id {
-  font-family: 'DM Mono', monospace; font-size: 0.85rem;
-  color: var(--blue); letter-spacing: 0.08em; margin-bottom: 6px;
-}
 .cve-title {
-  font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700;
-  color: var(--heading); line-height: 1.25; margin-bottom: 12px;
+  font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem; font-weight: 700;
+  color: var(--heading); letter-spacing: -0.01em; line-height: 1.25;
+  margin-bottom: 10px;
 }
-.cve-desc { font-size: 1.1rem; color: var(--muted); line-height: 1.75; margin-bottom: 14px; }
-.cve-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 22px; }
-.cve-tag {
-  font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--text);
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 3px; padding: 5px 10px;
-}
-.cve-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.cve-desc { font-size: 1rem; color: var(--muted); line-height: 1.75; margin-bottom: 10px; }
+.cve-desc.last { margin-bottom: 20px; }
 
 .sev-critical { --sev: #ff2d55; }
 .sev-high     { --sev: #ff6b35; }
@@ -780,13 +772,12 @@ a.skill-card:hover {
 
 @media (max-width: 900px) {
   .cve-row { grid-template-columns: 1fr; }
-  .cve-score {
+  .cve-meta {
     text-align: left; padding: 0 0 20px;
     border-right: none; border-bottom: 1px solid var(--border);
   }
   .cve-body { padding: 20px 0 0; }
-  .cve-title { font-size: 1.4rem; }
-  .cve-desc { font-size: 1rem; }
+  .cve-title { font-size: 1.35rem; }
 }
 
   </style>
@@ -918,37 +909,28 @@ a.skill-card:hover {
 <section id="cve">
   <div class="section-header reveal">
     <span class="section-num">02 /</span>
-    <h2 class="section-title">CVE</h2>
+    <h2 class="section-title">Security Research</h2>
     <div class="section-line"></div>
   </div>
 
   <div class="cve-list">
 
     <div class="cve-row reveal sev-medium">
-      <div class="cve-score">
-        <div class="cve-score-num">4.3</div>
-        <div class="cve-score-tag">Medium</div>
-        <div class="cve-score-date">CVSS 3.1<br>Published Jul 2026</div>
-      </div>
-      <div class="cve-body">
+      <div class="cve-meta">
         <div class="cve-id">CVE-2026-11359</div>
-        <div class="cve-title">Missing Authorization → Plugin Installation</div>
+        <div class="cve-sev">Medium · CVSS 4.3</div>
+        <div class="cve-date">Published<br>Jul 2026</div>
+      </div>
+
+      <div class="cve-body">
+        <div class="cve-title">Authorization Bypass in WordPress Plugin</div>
         <p class="cve-desc">
           A WordPress plugin exposed an admin-only action — installing and activating other software onto the site — through an AJAX handler that never checked who was asking. Any logged-in user, down to the lowest-privilege Subscriber account, could trigger it.
         </p>
-        <p class="cve-desc">
-          The <code style="font-family:'DM Mono',monospace;color:var(--blue);">pg_install_profilegrid()</code> handler was missing both a capability check and nonce validation. Reported through responsible disclosure, assigned an official CVE ID by Wordfence, and published to the National Vulnerability Database.
+        <p class="cve-desc last">
+          The <code style="font-family:'DM Mono',monospace;color:var(--blue);">pg_install_profilegrid()</code> handler was missing both a capability check and nonce validation, letting any authenticated user perform an admin-only action. I reported it through responsible disclosure, it was assigned an official CVE ID by Wordfence, and published to the National Vulnerability Database.
         </p>
-        <div class="cve-tags">
-          <span class="cve-tag">CWE-862</span>
-          <span class="cve-tag">ProfileGrid WooCommerce ≤ 3.4</span>
-          <span class="cve-tag">AV:N/AC:L/PR:L/UI:N</span>
-          <span class="cve-tag">Wordfence · CNA</span>
-        </div>
-        <div class="cve-actions">
-          <a href="/blog/cve-2026-11359/" class="btn-primary">Read the full story →</a>
-          <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11359" target="_blank" class="btn-secondary">View on NVD →</a>
-        </div>
+        <a href="https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/ecommerce-user-profiles-by-profilegrid/memberships-and-user-profiles-for-woocommerce-34-missing-authorization-to-authenticated-subscriber-profilegrid-plugin-installation-and-activation" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View full advisory on Wordfence →</a>
       </div>
     </div>
 
