@@ -730,6 +730,65 @@ a.skill-card:hover {
   color: var(--blue);
   transform: translateX(8px);
 }
+/* ───────────────── CVE ───────────────── */
+.cve-list { display: flex; flex-direction: column; }
+.cve-row {
+  display: grid; grid-template-columns: 180px 1fr; gap: 0;
+  padding: 28px 0; border-bottom: 1px solid var(--border);
+}
+.cve-list .cve-row:last-child { border-bottom: none; }
+
+.cve-score { text-align: right; padding-right: 32px; border-right: 1px solid var(--border); }
+.cve-score-num {
+  font-family: 'Space Grotesk', sans-serif; font-size: 3.4rem; font-weight: 700;
+  line-height: 1; letter-spacing: -0.03em; color: var(--sev);
+}
+.cve-score-tag {
+  display: inline-block; margin-top: 12px;
+  font-family: 'DM Mono', monospace; font-size: 0.66rem;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--sev);
+  border: 1px solid var(--sev); border-radius: 3px; padding: 3px 10px;
+  background: color-mix(in srgb, var(--sev) 12%, transparent);
+}
+.cve-score-date {
+  font-family: 'DM Mono', monospace; font-size: 0.8rem;
+  color: var(--muted); margin-top: 12px; line-height: 1.6;
+}
+
+.cve-body { padding-left: 32px; }
+.cve-id {
+  font-family: 'DM Mono', monospace; font-size: 0.85rem;
+  color: var(--blue); letter-spacing: 0.08em; margin-bottom: 6px;
+}
+.cve-title {
+  font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700;
+  color: var(--heading); line-height: 1.25; margin-bottom: 12px;
+}
+.cve-desc { font-size: 1.1rem; color: var(--muted); line-height: 1.75; margin-bottom: 14px; }
+.cve-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 22px; }
+.cve-tag {
+  font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--text);
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 3px; padding: 5px 10px;
+}
+.cve-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.sev-critical { --sev: #ff2d55; }
+.sev-high     { --sev: #ff6b35; }
+.sev-medium   { --sev: #ffa62b; }
+.sev-low      { --sev: #00e5c0; }
+
+@media (max-width: 900px) {
+  .cve-row { grid-template-columns: 1fr; }
+  .cve-score {
+    text-align: left; padding: 0 0 20px;
+    border-right: none; border-bottom: 1px solid var(--border);
+  }
+  .cve-body { padding: 20px 0 0; }
+  .cve-title { font-size: 1.4rem; }
+  .cve-desc { font-size: 1rem; }
+}
+
   </style>
 </head>
 <body>
@@ -863,47 +922,36 @@ a.skill-card:hover {
     <div class="section-line"></div>
   </div>
 
-  <div class="about-grid">
-    <div class="about-text reveal">
-      <p class="placeholder">
-        I discovered my first officially recognized security vulnerability, published as <strong>CVE-2026-11359</strong>. In plain terms: a popular WordPress plugin had an action that was only supposed to be available to site administrators — installing and activating other software onto the site. But the code never checked who was asking, so even the lowest-privilege user account could trigger it.
-      </p>
-      <p class="placeholder">
-        Technically, it was a Missing Authorization flaw (CWE-862): the plugin's AJAX handler was missing both a capability check and nonce validation, letting any authenticated user perform an admin-only action. I reported it through responsible disclosure, and it was assigned an official CVE ID and published to the National Vulnerability Database.
-      </p>
-      <div style="margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap;">
-        <a href="/blog/cve-2026-11359/" class="btn-primary">Read the full story →</a>
-        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11359" target="_blank" class="btn-secondary">View on NVD →</a>
+  <div class="cve-list">
+
+    <div class="cve-row reveal sev-medium">
+      <div class="cve-score">
+        <div class="cve-score-num">4.3</div>
+        <div class="cve-score-tag">Medium</div>
+        <div class="cve-score-date">CVSS 3.1<br>Published Jul 2026</div>
+      </div>
+      <div class="cve-body">
+        <div class="cve-id">CVE-2026-11359</div>
+        <div class="cve-title">Missing Authorization → Plugin Installation</div>
+        <p class="cve-desc">
+          A WordPress plugin exposed an admin-only action — installing and activating other software onto the site — through an AJAX handler that never checked who was asking. Any logged-in user, down to the lowest-privilege Subscriber account, could trigger it.
+        </p>
+        <p class="cve-desc">
+          The <code style="font-family:'DM Mono',monospace;color:var(--blue);">pg_install_profilegrid()</code> handler was missing both a capability check and nonce validation. Reported through responsible disclosure, assigned an official CVE ID by Wordfence, and published to the National Vulnerability Database.
+        </p>
+        <div class="cve-tags">
+          <span class="cve-tag">CWE-862</span>
+          <span class="cve-tag">ProfileGrid WooCommerce ≤ 3.4</span>
+          <span class="cve-tag">AV:N/AC:L/PR:L/UI:N</span>
+          <span class="cve-tag">Wordfence · CNA</span>
+        </div>
+        <div class="cve-actions">
+          <a href="/blog/cve-2026-11359/" class="btn-primary">Read the full story →</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11359" target="_blank" class="btn-secondary">View on NVD →</a>
+        </div>
       </div>
     </div>
 
-    <div class="about-card reveal">
-      <div class="about-card-title">// CVE Details</div>
-      <div class="info-row">
-        <span class="info-key">CVE ID</span>
-        <span class="info-val">CVE-2026-11359</span>
-      </div>
-      <div class="info-row">
-        <span class="info-key">Severity</span>
-        <span class="info-val">Medium (CVSS 4.3)</span>
-      </div>
-      <div class="info-row">
-        <span class="info-key">Type</span>
-        <span class="info-val">Missing Authorization</span>
-      </div>
-      <div class="info-row">
-        <span class="info-key">Weakness</span>
-        <span class="info-val">CWE-862</span>
-      </div>
-      <div class="info-row">
-        <span class="info-key">Affected</span>
-        <span class="info-val">ProfileGrid WooCommerce ≤ 3.4</span>
-      </div>
-      <div class="info-row">
-        <span class="info-key">Status</span>
-        <span class="info-val">Published · NVD</span>
-      </div>
-    </div>
   </div>
 </section>
 
