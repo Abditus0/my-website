@@ -3,7 +3,7 @@ title: "FlareVM: Arsenal of Tools — TryHackMe Cyber Security 101"
 date: 2026-07-16
 category: "writeup"
 excerpt: "Walkthrough of TryHackMe's FlareVM: Arsenal of Tools room — Learn the arsenal of investigative tools in FlareVM."
-image: "/images/blog/141.png"
+image: "/images/blog/142.png"
 readtime: "25 min read"
 draft: false
 ---
