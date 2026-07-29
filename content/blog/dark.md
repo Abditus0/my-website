@@ -3,7 +3,7 @@ title: "Dark"
 date: 2026-07-29
 category: "ctf"
 excerpt: "Walkthrough of the HackSmarter Dark room - You have been hired to perform a penetration test on a single host in a company's network. Your task is to identify all vulnerabilities and demonstrate impact to the client by elevating your privileges to root."
-image: "/images/blog/142.png"
+image: "/images/blog/143.png"
 readtime: "20 min read"
 draft: false
 ---
