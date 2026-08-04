@@ -1,6 +1,6 @@
 ---
 title: "Security Principles — TryHackMe Cyber Security 101"
-date: 2026-05-18
+date: 2026-08-04
 category: "writeup"
 excerpt: "Walkthrough of TryHackMe's Security Principles room — Learn about the security triad and the various security models and principles."
 image: "/images/blog/144.png"
