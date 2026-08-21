@@ -916,6 +916,25 @@ a.skill-card:hover {
 
   <div class="cve-list">
 
+    <div class="cve-row reveal sev-high">
+      <div class="cve-meta">
+        <div class="cve-id">CVE-2026-16145</div>
+        <div class="cve-sev">High · CVSS 7.2</div>
+        <div class="cve-date">Published<br>Aug 2026</div>
+      </div>
+
+      <div class="cve-body">
+        <div class="cve-title">Unauthenticated Stored Cross-Site Scripting</div>
+        <p class="cve-desc">
+          A vulnerability in a WordPress anti-spam and CAPTCHA plugin. It took the 'action' value straight from admin-ajax.php requests, saved it without sanitizing it, and printed it back out without escaping it. Since that save path had no authentication gate on it, anyone at all could send a request with a script payload inside that parameter and get it stored on the site permanently.
+        </p>
+        <p class="cve-desc last">
+          The payload then runs in the browser of every visitor who loads the affected page, including logged-in administrators. It's stored XSS, and the unauthenticated part is what makes it serious. No account, no login, no clicking a malicious link, just a single request from a complete stranger.
+        </p>
+        <a href="https://www.cve.org/CVERecord?id=CVE-2026-16145" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View Official CVE →</a>
+      </div>
+    </div>
+
     <div class="cve-row reveal sev-medium">
       <div class="cve-meta">
         <div class="cve-id">CVE-2026-11359</div>
