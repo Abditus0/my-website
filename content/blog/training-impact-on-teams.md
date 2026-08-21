@@ -1,6 +1,6 @@
 ---
 title: "Training Impact on Teams — TryHackMe Cyber Security 101"
-date: 2026-05-18
+date: 2026-08-18
 category: "writeup"
 excerpt: "Walkthrough of TryHackMe's Training Impact on Teams room — Discover the impact of training on teams and organisations."
 image: "/images/blog/145.png"
