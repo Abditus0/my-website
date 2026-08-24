@@ -828,7 +828,7 @@ a.skill-card:hover {
 
 <div class="hero-stats">
   <a href="#cve" class="stat">
-    <div class="stat-num">2 <span style="font-size:2rem;letter-spacing:0.02em;">CVEs</span></div>
+    <div class="stat-num">3 <span style="font-size:2rem;letter-spacing:0.02em;">CVEs</span></div>
     <div class="stat-label">Published</div>
   </a>
   <a href="#projects" class="stat">
@@ -932,6 +932,25 @@ a.skill-card:hover {
           The payload then runs in the browser of every visitor who loads the affected page, including logged-in administrators. It's stored XSS, and the unauthenticated part is what makes it serious. Just a single request from a complete stranger will trigger it.
         </p>
         <a href="https://www.cve.org/CVERecord?id=CVE-2026-16145" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View Official CVE →</a>
+      </div>
+    </div>
+
+        <div class="cve-row reveal sev-high">
+      <div class="cve-meta">
+        <div class="cve-id">CVE-2026-16145</div>
+        <div class="cve-sev">High · CVSS 7.2</div>
+        <div class="cve-date">Published<br>Aug 2026</div>
+      </div>
+
+      <div class="cve-body">
+        <div class="cve-title">Unauthenticated Stored Cross-Site Scripting (XSS)</div>
+        <p class="cve-desc">
+          A vulnerability in a WordPress spam-protection plugin saved comment submissions to its logs without properly cleaning them, so anyone could leave a comment with a script hidden inside and have it stored on the site.
+        </p>
+        <p class="cve-desc last">
+          When an administrator later opens those logs to review them, the script runs in their browser. The unauthenticated part is what makes it serious. A single comment from a complete stranger will trigger it.
+        </p>
+        <a href="https://www.cve.org/CVERecord?id=CVE-2026-28003" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View Official CVE →</a>
       </div>
     </div>
 
