@@ -982,6 +982,28 @@ a.skill-card:hover {
       </div>
     </div>
 
+    <div class="cve-row reveal sev-high">
+      <div class="cve-meta">
+        <div class="cve-id">CVE-2026-81288</div>
+        <div class="cve-sev">
+          <span class="cve-sev-label">High</span>
+          <span class="cve-sev-score">7.1 CVSS</span>
+        </div>
+      </div>
+
+      <div class="cve-body">
+        <div class="cve-title">Unauthenticated Stored Cross-Site Scripting (XSS)</div>
+        <p class="cve-desc">
+          A vulnerability in a WordPress WooCommerce upsell plugin. It re-enabled `script` tags inside WordPress's HTML sanitizer but never limited that to its own pages, so it accidentally switched off the protection that normally strips scripts out of comments. That let any logged-out visitor leave a comment with a script hidden inside and have it stored on the site untouched.
+        </p>
+        <p class="cve-desc last">
+          The script then runs the moment an administrator opens the Comments screen to moderate the queue, firing inside their logged-in admin session before they even approve it. Once approved, it also runs for every visitor on the post.
+        </p>
+        <a href="https://www.cve.org/CVERecord?id=CVE-2026-81288" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View Official CVE →</a>
+      </div>
+    </div>
+
+
         <div class="cve-row reveal sev-high">
       <div class="cve-meta">
         <div class="cve-id">CVE-2026-28003</div>
