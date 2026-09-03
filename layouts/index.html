@@ -916,6 +916,24 @@ a.skill-card:hover {
 
   <div class="cve-list">
 
+    <div class="cve-row reveal sev-critical">
+      <div class="cve-meta">
+        <div class="cve-id">CVE-2026-81286</div>
+        <div class="cve-sev">CRITICAL · CVSS 9.3</div>
+      </div>
+
+      <div class="cve-body">
+        <div class="cve-title">Unauthenticated SQL Injection</div>
+        <p class="cve-desc">
+          When a store used distance-based shipping, the checkout took the buyer's location and fed it into a database query without cleaning it first. That gap let an attacker sneak their own commands into the query instead of a real location.
+        </p>
+        <p class="cve-desc last">
+          Because location gets sent during a normal guest checkout, anyone could pull this off without logging in. It was shown to read private data straight out of the database, including password hashes.
+        </p>
+        <a href="https://www.cve.org/CVERecord?id=CVE-2026-81286" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View Official CVE →</a>
+      </div>
+    </div>
+
     <div class="cve-row reveal sev-high">
       <div class="cve-meta">
         <div class="cve-id">CVE-2026-16145</div>
