@@ -745,12 +745,36 @@ a.skill-card:hover {
   white-space: nowrap;
 }
 .cve-sev {
-  display: inline-block; margin-top: 14px; white-space: nowrap;
-  font-family: 'DM Mono', monospace; font-size: 0.7rem; font-weight: 500;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--sev); border: 1px solid var(--sev); border-radius: 999px;
-  padding: 5px 14px;
+  display: inline-flex; flex-direction: column; align-items: center; gap: 3px;
+  margin-top: 14px; white-space: nowrap;
+  font-family: 'DM Mono', monospace;
+  border: 1px solid var(--sev); border-radius: 10px;
+  padding: 8px 18px;
   background: color-mix(in srgb, var(--sev) 12%, transparent);
+}
+.cve-sev-label {
+  font-size: 0.9rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--sev);
+}
+.cve-sev-score {
+  font-size: 0.68rem; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* make CRITICAL unmistakable: solid fill + pulsing glow */
+.sev-critical .cve-sev {
+  background: var(--sev);
+  border-color: var(--sev);
+  animation: sevPulse 2s ease-in-out infinite;
+}
+.sev-critical .cve-sev-label { color: #fff; font-size: 1rem; }
+.sev-critical .cve-sev-score { color: rgba(255,255,255,0.9); }
+
+@keyframes sevPulse {
+  0%, 100% { box-shadow: 0 0 18px color-mix(in srgb, var(--sev) 35%, transparent); }
+  50%      { box-shadow: 0 0 30px color-mix(in srgb, var(--sev) 60%, transparent); }
 }
 .cve-date {
   font-family: 'DM Mono', monospace; font-size: 0.8rem;
@@ -766,9 +790,9 @@ a.skill-card:hover {
 .cve-desc { font-size: 1rem; color: var(--muted); line-height: 1.75; margin-bottom: 10px; }
 .cve-desc.last { margin-bottom: 20px; }
 
-.sev-critical { --sev: #ff2d55; }
-.sev-high     { --sev: #ff4030; }
-.sev-medium   { --sev: #ffa62b; }
+.sev-critical { --sev: #ff1f3d; }
+.sev-high     { --sev: #ff7a1a; }
+.sev-medium   { --sev: #ffc531; }
 .sev-low      { --sev: #00e5c0; }
 
 @media (max-width: 900px) {
@@ -919,8 +943,10 @@ a.skill-card:hover {
     <div class="cve-row reveal sev-critical">
       <div class="cve-meta">
         <div class="cve-id">CVE-2026-81286</div>
-        <div class="cve-sev">CRITICAL · CVSS 9.3</div>
-      </div>
+        <div class="cve-sev">
+          <span class="cve-sev-label">Critical</span>
+          <span class="cve-sev-score">9.3 CVSS</span>
+</div>
 
       <div class="cve-body">
         <div class="cve-title">Unauthenticated SQL Injection</div>
@@ -937,8 +963,10 @@ a.skill-card:hover {
     <div class="cve-row reveal sev-high">
       <div class="cve-meta">
         <div class="cve-id">CVE-2026-16145</div>
-        <div class="cve-sev">High · CVSS 7.2</div>
-      </div>
+        <div class="cve-sev">
+          <span class="cve-sev-label">High</span>
+          <span class="cve-sev-score">7.2 CVSS</span>
+</div>
 
       <div class="cve-body">
         <div class="cve-title">Unauthenticated Stored Cross-Site Scripting (XSS)</div>
@@ -955,8 +983,10 @@ a.skill-card:hover {
         <div class="cve-row reveal sev-high">
       <div class="cve-meta">
         <div class="cve-id">CVE-2026-28003</div>
-        <div class="cve-sev">High · CVSS 7.1</div>
-      </div>
+        <div class="cve-sev">
+          <span class="cve-sev-label">High</span>
+           <span class="cve-sev-score">7.1 CVSS</span>
+</div>
 
       <div class="cve-body">
         <div class="cve-title">Unauthenticated Stored Cross-Site Scripting (XSS)</div>
@@ -973,8 +1003,10 @@ a.skill-card:hover {
     <div class="cve-row reveal sev-medium">
       <div class="cve-meta">
         <div class="cve-id">CVE-2026-11359</div>
-        <div class="cve-sev">Medium · CVSS 4.3</div>
-      </div>
+        <div class="cve-sev">
+          <span class="cve-sev-label">Medium</span>
+          <span class="cve-sev-score">4.3 CVSS</span>
+</div>
 
       <div class="cve-body">
         <div class="cve-title">Authorization Bypass Vulnerability</div>
