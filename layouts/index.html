@@ -852,7 +852,7 @@ a.skill-card:hover {
 
 <div class="hero-stats">
   <a href="#cve" class="stat">
-    <div class="stat-num">5 <span style="font-size:2rem;letter-spacing:0.02em;">CVEs</span></div>
+    <div class="stat-num">6 <span style="font-size:2rem;letter-spacing:0.02em;">CVEs</span></div>
     <div class="stat-label">Published</div>
   </a>
   <a href="#projects" class="stat">
@@ -982,6 +982,25 @@ a.skill-card:hover {
       </div>
     </div>
 
+    <div class="cve-row reveal sev-high">
+      <div class="cve-meta">
+        <div class="cve-id">CVE-2026-83593</div>
+        <div class="cve-sev">
+          <span class="cve-sev-label">High</span>
+          <span class="cve-sev-score">7.2 CVSS</span>
+        </div>
+      </div>
+
+      <div class="cve-body">
+        <div class="cve-title">Unauthenticated Stored Cross-Site Scripting (XSS)</div>
+        <p class="cve-desc">
+          A vulnerability in a WordPress AI chatbot plugin. It let unauthenticated visitors save chat conversations, and it cleaned the submitted text in the wrong order, stripping dangerous markup first, then decoding it afterward. That meant a script payload disguised with encoded characters slipped past the filter and got stored on the site with its attack code intact.        </p>
+        <p class="cve-desc last">
+          When the chatbot's stored sessions are later opened and viewed, the payload is decoded back into live markup and runs in the browser. A single chat submission from a complete stranger will trigger it.        </p>
+        <a href="https://www.cve.org/CVERecord?id=CVE-2026-83593" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View Official CVE →</a>
+      </div>
+    </div>
+    
     <div class="cve-row reveal sev-high">
       <div class="cve-meta">
         <div class="cve-id">CVE-2026-81288</div>
