@@ -22,21 +22,29 @@ Usual first move, nmap:
 nmap -sCV 10.81.179.111
 ```
 
-![](/images/blog/overpass/1.png)
-
 Two open ports, 22 and 80. Pretty standard. SSH and a web server. Nothing exotic, so port 80 is where I'm starting.
 
 ---
 
 ## Port 80
 
-Opened the site up and had a look around. There's a download page where you can grab the actual Overpass software, and there's an about us page too. The about us page had a few names on it, which I noted down because names are always worth keeping around, they turn into usernames sooner or later.
+Opened the site up and had a look around.
 
-But the real gift here is the download page. They're handing out the Source Code and the Build Script for their own password manager. So I grabbed both.
+![](/images/blog/overpass/1.png)
+
+There's a download page where you can grab the Overpass software.
 
 ![](/images/blog/overpass/2.png)
 
-Getting the source code for the exact thing you're trying to break is basically cheating in your favor, so I settled in to actually read it.
+There is also an about us page too.
+
+![](/images/blog/overpass/3.png)
+
+The about us page had a few names on it, which I noted down because names are always worth keeping around, they turn into usernames sooner or later.
+
+But the real gift here is the download page. They're handing out the Source Code and the Build Script for their own password manager. So I grabbed both.
+
+Getting the source code for the exact thing you're trying to break is basically cheating in your favor, so let's read it.
 
 ---
 
@@ -44,9 +52,9 @@ Getting the source code for the exact thing you're trying to break is basically 
 
 Okay so after reading through it, I understand how the whole encryption works and it is absolutely not secure. It uses a rot47 cipher for the "encryption," and the fun part about rot47 is that if you apply it twice you just get the original text back. So it's not really encryption at all, it's a costume.
 
-The build script also told me where the manager stores its saved passwords. The path is `~/.overpass`. So if I ever land on a machine where someone actually used this thing, that's the file I want to grab and decode.
+The build script also told me where the manager stores its saved passwords. The path is `~/.overpass`. So if I ever land on a machine where someone used this thing, that's the file I want to grab and decode.
 
-Here's the catch though. The source code tells me exactly how the password manager works, but I don't have any actual `.overpass` files yet. That file only exists on a machine where someone has actually used the manager. So all this knowledge is useless until I get a foothold first. Good to know, filed away, moving on.
+Here's the catch though. The source code tells me exactly how the password manager works, but I don't have any actual `.overpass` files yet. That file only exists on a machine where someone has used the manager. So all this knowledge is useless until I get a foothold first.
 
 Let me go find a way in. Fired up gobuster:
 
@@ -54,27 +62,31 @@ Let me go find a way in. Fired up gobuster:
 gobuster dir -u http://10.81.179.111 -w /usr/share/wordlists/dirb/common.txt
 ```
 
-![](/images/blog/overpass/3.png)
+![](/images/blog/overpass/4.png)
 
-Only one new path that actually looked interesting: `/admin`. And an admin panel is exactly the kind of thing that might be my way in, so let's see how it works.
+Only one new path that looked interesting: `/admin`. And an admin panel is exactly the kind of thing that might be my way in, so let's see how it works.
 
 ---
 
 ## The Cookie Trick
 
-The admin page just shows a login form, but before typing anything I checked the source, and there's a `login.js` doing the heavy lifting.
-
-![](/images/blog/overpass/4.png)
-
-Reading through it, this screams cookie manipulation. The way the login check is written, it basically trusts a cookie to decide if you're logged in, which means I can just set that cookie to whatever I want and walk in the front door.
-
-So here's the move. Open F12, go to Storage, then Cookies. Create a brand new cookie with the name `SessionToken` and give it literally any value you like. Then refresh the admin page.
+The admin page just shows a login form.
 
 ![](/images/blog/overpass/5.png)
 
-And there it is, I'm inside the admin panel. And the very first thing sitting there is a private SSH key belonging to James.
+Before typing anything I checked the source, and there's a `login.js` doing the heavy lifting.
 
 ![](/images/blog/overpass/6.png)
+
+![](/images/blog/overpass/7.png)
+
+Reading through it, this screams cookie manipulation. The way the login check is written, it basically trusts a cookie to decide if you're logged in, which means I can just set that cookie to whatever I want.
+
+So here's the move. Open F12, go to Storage, then Cookies. Create a brand new cookie with the name `SessionToken` and give it literally any value you like. Then refresh the admin page.
+
+![](/images/blog/overpass/8.png)
+
+And there it is, I'm inside the admin panel. And the very first thing there is a private SSH key belonging to James.
 
 This is really bad for them. If you have someone's private SSH key plus their username, that's a straight shot into SSH. And I know the username is James, so this is great news for me.
 
@@ -82,7 +94,7 @@ This is really bad for them. If you have someone's private SSH key plus their us
 
 ## SSH as James
 
-Here's the flow to actually use that key. First make a file on my machine and paste the key into it:
+Here's the flow to use that key. First make a file on my machine and paste the key into it:
 
 ```bash
 nano id_rsa
@@ -100,7 +112,7 @@ Then try to log in:
 ssh -i id_rsa james@10.81.179.111
 ```
 
-![](/images/blog/overpass/7.png)
+![](/images/blog/overpass/9.png)
 
 And it asks me for a passphrase. Of course it does. The key is protected. No problem though, we can crack that with john.
 
@@ -116,9 +128,11 @@ Then throw rockyou at it:
 john id_rsa.hash --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 
-![](/images/blog/overpass/8.png)
+![](/images/blog/overpass/10.png)
 
 And the passphrase comes back: `james13`. Used that on the SSH login and I'm in as james.
+
+![](/images/blog/overpass/11.png)
 
 ---
 
@@ -132,15 +146,15 @@ From the build script I knew the passwords live at `~/.overpass`, so:
 cat ~/.overpass
 ```
 
-![](/images/blog/overpass/9.png)
+![](/images/blog/overpass/12.png)
 
-There's the string. And since I already know it's just rot47 wearing a trench coat, I threw it at an online decoder and got:
+There's the string. And since I already know it's just rot47, I threw it at an online decoder and got:
 
 ```
 [{"name":"System","pass":"saydrawnlyingpicture"}]
 ```
 
-![](/images/blog/overpass/10.png)
+![](/images/blog/overpass/13.png)
 
 A password. Nice. So I tried switching users with it, thinking this was my ticket to another account. Except james doesn't have permission to do almost anything, and the password itself didn't get me anywhere useful either. Total dead end.
 
@@ -152,11 +166,13 @@ So the overpass string goes in the bin. Time to actually look around the box.
 
 ## The User Flag
 
-While poking around james's home directory I found the user flag sitting there. Grabbed it:
+While poking around james's home directory I found the user flag.
 
 ```
 thm{65c1aaf000506e56996822c6281e6bf7}
 ```
+
+![](/images/blog/overpass/14.png)
 
 Honestly though I was already more interested in getting to root than celebrating the user flag, so I kept digging.
 
@@ -166,7 +182,7 @@ There was also a `todo.txt` mentioning someone called Paradox, which felt like i
 
 ## The To-Do Note
 
-Poking around blindly didn't get me very far, so I circled back to that `todo.txt` and actually read it properly this time:
+Poking around blindly didn't get me very far, so I circled back to that `todo.txt` and read it properly this time:
 
 ```
 To Do:
@@ -178,7 +194,7 @@ To Do:
   They're not updating on the website
 ```
 
-The whole thing is funny (the sticky note bit especially, from the people who make a password manager), but the last line is the one that actually matters. An automated build script that runs on its own and pushes builds somewhere. That word "automated" is basically flashing lights for a cron job.
+The last line is the important one. An automated build script that runs on its own and pushes builds somewhere. That word "automated" is basically a cron job.
 
 ---
 
@@ -190,7 +206,7 @@ Let me check the system crontab:
 cat /etc/crontab
 ```
 
-![](/images/blog/overpass/11.png)
+![](/images/blog/overpass/15.png)
 
 And look at the last line:
 
@@ -198,7 +214,7 @@ And look at the last line:
 * * * * * root curl overpass.thm/downloads/src/buildscript.sh | bash
 ```
 
-Let me break down what this actually does, because this is the whole ballgame. Every single minute, as root, the machine runs curl to fetch a script from `overpass.thm`, then pipes it straight into bash. So whatever that URL hands back gets executed as root, no questions asked.
+Let me break down what this does, because this is the whole ballgame. Every single minute, as root, the machine runs curl to fetch a script from `overpass.thm`, then pipes it straight into bash. So whatever that URL hands back gets executed as root, no questions asked.
 
 So the plan writes itself. If `overpass.thm` is resolved through `/etc/hosts`, and if I can write to that hosts file, then I can point `overpass.thm` at my own machine. Then when cron fires, it'll fetch MY script instead of theirs, and run it as root.
 
@@ -208,7 +224,7 @@ First let me check if I can even write to the hosts file:
 ls -la /etc/hosts
 ```
 
-![](/images/blog/overpass/12.png)
+![](/images/blog/overpass/16.png)
 
 I can write to it. Beautiful. Open it up:
 
@@ -216,7 +232,9 @@ I can write to it. Beautiful. Open it up:
 nano /etc/hosts
 ```
 
-Then change the line for `overpass.thm` so it points to my THM VPN IP instead of wherever it was pointing before. Save it.
+Then change the line for `overpass.thm` so it points to my THM VPN IP instead of wherever it was pointing before.
+
+![](/images/blog/overpass/17.png)
 
 So now, every minute, the box is basically going to run:
 
@@ -247,11 +265,13 @@ Second, a web server to actually serve the `buildscript.sh` file that the cronta
 sudo python3 -m http.server 80
 ```
 
-Really important detail here that will bite you if you miss it. Run that http server from the directory that CONTAINS the `downloads/` folder, not from inside `downloads/` itself. If you're in the wrong spot, curl gets a 404 and nothing happens and you sit there wondering why it's not working. Been there.
+Really important detail here that will bite you if you miss it. Run that http server from the directory that CONTAINS the `downloads/` folder, not from inside `downloads/` itself. If you're in the wrong spot, curl gets a 404 and nothing happens.
 
-Then just wait. The cron runs every minute, so it's a short wait. After a bit I saw the `200 OK` show up in my http server log, meaning the box grabbed my file, and a second later my netcat listener lit up with a shell.
+Then just wait. The cron runs every minute. After a bit I saw the `200 OK` show up in my http server log, meaning the box grabbed my file, and a second later my netcat listener lit up with a shell.
 
-![](/images/blog/overpass/13.png)
+![](/images/blog/overpass/18.png)
+
+![](/images/blog/overpass/19.png)
 
 And it's a root shell. Just like that.
 
@@ -270,6 +290,8 @@ And now with root I grabbed the root flag too:
 ```
 thm{7f336f8c359dbac18d54fdd64ea753bb}
 ```
+
+![](/images/blog/overpass/20.png)
 
 Box done.
 
@@ -292,7 +314,5 @@ The best part was the password manager itself being a complete dead end. The who
 The cookie trick was a clean reminder to always read the client side JavaScript before you start typing into a login form. They literally handed me the admin panel because the login check trusted a cookie I could set myself.
 
 And the crontab at the end is honestly one of the tidier root paths you'll see. A writable `/etc/hosts` plus a root cron job doing `curl | bash` on a domain you control is basically an open invitation. No exploit to compile, no CVE hunting, just point the domain at yourself, serve your own script, and wait sixty seconds. Just remember to run your web server from the right directory or you'll be staring at 404s wondering where your shell went.
-
-Good room, would recommend.
 
 ---
