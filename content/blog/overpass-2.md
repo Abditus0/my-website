@@ -2,7 +2,7 @@
 title: "Overpass 2 - Hacked"
 date: 2026-09-15
 category: "ctf"
-excerpt: "Overpass got hacked and the SOC team caught the thing on a packet capture. Time to work out how the attacker got in, then break back into the box myself."
+excerpt: "Walkthrough of the TryHackMe Overpass room - Overpass got hacked and the SOC team caught the thing on a packet capture. Time to work out how the attacker got in, then break back into the box myself."
 image: "/images/blog/151.png"
 readtime: "40 min read"
 draft: false
