@@ -117,7 +117,7 @@ That's a good one. Another name, **Tony Skid**, and this one is the security guy
 
 And last, `Enterprise-Sync.txt`:
 
-``bash
+```bash
 Johnny Leet keeps the whole infrastructure up to date and helps you sync all of your apps.
 ...
 To contact our sync manager call this number: 7331 0000 1337
