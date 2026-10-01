@@ -966,12 +966,6 @@ a.skill-card:hover {
 
       <div class="cve-body">
         <div class="cve-title">Unauthenticated Stored Cross-Site Scripting (XSS)</div>
-        <p class="cve-desc">
-          A vulnerability in a WordPress anti-spam and CAPTCHA plugin. It took the 'action' value from admin-ajax.php requests, saved it without sanitizing it, and printed it back out without escaping it. Since that save path had no authentication gate on it, anyone at all could send a request with a script payload inside that parameter and get it stored on the site permanently.
-        </p>
-        <p class="cve-desc last">
-          The payload then runs in the browser of every visitor who loads the affected page, including logged-in administrators. It's stored XSS, and the unauthenticated part is what makes it serious. Just a single request from a complete stranger will trigger it.
-        </p>
         <a href="https://www.cve.org/CVERecord?id=CVE-2026-16145" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View Official CVE →</a>
       </div>
     </div>
@@ -987,10 +981,6 @@ a.skill-card:hover {
 
       <div class="cve-body">
         <div class="cve-title">Unauthenticated Stored Cross-Site Scripting (XSS)</div>
-        <p class="cve-desc">
-          A vulnerability in a WordPress AI chatbot plugin. It let unauthenticated visitors save chat conversations, and it cleaned the submitted text in the wrong order, stripping dangerous markup first, then decoding it afterward. That meant a script payload disguised with encoded characters slipped past the filter and got stored on the site with its attack code intact.        </p>
-        <p class="cve-desc last">
-          When the chatbot's stored sessions are later opened and viewed, the payload is decoded back into live markup and runs in the browser. A single chat submission from a complete stranger will trigger it.        </p>
         <a href="https://www.cve.org/CVERecord?id=CVE-2026-83593" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View Official CVE →</a>
       </div>
     </div>
@@ -1006,12 +996,6 @@ a.skill-card:hover {
 
       <div class="cve-body">
         <div class="cve-title">Unauthenticated Stored Cross-Site Scripting (XSS)</div>
-        <p class="cve-desc">
-          A vulnerability in a WordPress WooCommerce upsell plugin. It re-enabled `script` tags inside WordPress's HTML sanitizer but never limited that to its own pages, so it accidentally switched off the protection that normally strips scripts out of comments. That let any logged-out visitor leave a comment with a script hidden inside and have it stored on the site untouched.
-        </p>
-        <p class="cve-desc last">
-          The script then runs the moment an administrator opens the Comments screen to moderate the queue, firing inside their logged-in admin session before they even approve it. Once approved, it also runs for every visitor on the post.
-        </p>
         <a href="https://www.cve.org/CVERecord?id=CVE-2026-81288" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View Official CVE →</a>
       </div>
     </div>
@@ -1028,12 +1012,6 @@ a.skill-card:hover {
 
       <div class="cve-body">
         <div class="cve-title">Unauthenticated Stored Cross-Site Scripting (XSS)</div>
-        <p class="cve-desc">
-          A vulnerability in a WordPress spam-protection plugin saved comment submissions to its logs without properly cleaning them, so anyone could leave a comment with a script hidden inside and have it stored on the site.
-        </p>
-        <p class="cve-desc last">
-          When an administrator later opens those logs to review them, the script runs in their browser. The unauthenticated part is what makes it serious. A single comment from a complete stranger will trigger it.
-        </p>
         <a href="https://www.cve.org/CVERecord?id=CVE-2026-28003" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View Official CVE →</a>
       </div>
     </div>
@@ -1049,10 +1027,6 @@ a.skill-card:hover {
 
       <div class="cve-body">
         <div class="cve-title">Unauthenticated Reflected Cross-Site Scripting (XSS)</div>
-        <p class="cve-desc">
-          A vulnerability in a WordPress plugin. Several of its page blocks had a hidden mode where, if a request asked for it, the block would throw away its real settings and take them from the request instead, with no login or permission check. A few of those settings get printed directly into the page's styling with no cleaning, so an attacker could break out and inject their own script.        </p>
-        <p class="cve-desc last">
-          Because activating the plugin automatically publishes a classifieds page containing those blocks, any logged-out visitor could send a crafted request (or just get someone to click a link) and have their JavaScript run on the site.        </p>
         <a href="https://www.cve.org/CVERecord?id=CVE-2026-84819" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View Official CVE →</a>
       </div>
     </div>
@@ -1068,12 +1042,6 @@ a.skill-card:hover {
 
       <div class="cve-body">
         <div class="cve-title">Authorization Bypass Vulnerability</div>
-        <p class="cve-desc">
-          A Vulnerability in a WordPress plugin used on e-commerce sites. It was missing a permission check (and a nonce check), which meant a low-privilege user with just a basic Subscriber account could make it install and activate another plugin on the site, something only an admin should be able to do.
-        </p>
-        <p class="cve-desc last">
-          It's a broken access control issue, one of the most common problems in real web apps and number one on the OWASP Top 10.
-        </p>
         <a href="https://www.cve.org/CVERecord?id=CVE-2026-11359" target="_blank" style="display:inline-flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:600;color:var(--bg);background:var(--blue);border:1px solid var(--blue);padding:12px 24px;border-radius:6px;letter-spacing:0.04em;box-shadow:0 4px 16px rgba(0,178,255,0.25);transition:transform 0.2s,box-shadow 0.2s,gap 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 24px rgba(0,178,255,0.4)';this.style.gap='14px'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 16px rgba(0,178,255,0.25)';this.style.gap='10px'"><i class="fa-solid fa-shield-halved"></i> View Official CVE →</a>
       </div>
     </div>
