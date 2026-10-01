@@ -20,7 +20,7 @@ nmap -sCV -p- 10.112.146.88
 
 And a big wall of open ports comes back, which is what you expect from an AD machine:
 
-``bash
+```bash
 PORT STATE SERVICE VERSION
 53/tcp open domain Simple DNS Plus
 88/tcp open kerberos-sec Microsoft Windows Kerberos
