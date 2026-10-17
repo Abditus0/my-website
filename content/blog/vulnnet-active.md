@@ -311,6 +311,8 @@ The system flag lives in the Administrator's Desktop, same place it always does:
 THM{d540c0645975900e5bb9167aa431fc9b}
 ```
 
+![](/images/blog/vuln-net-active/12.png)
+
 Box done.
 
 ---
